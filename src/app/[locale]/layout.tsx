@@ -3,6 +3,7 @@ import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import {SITE_URL, SITE_NAME, INDEXABLE} from '@/config/site';
 import '../globals.css';
 
 export function generateStaticParams() {
@@ -10,8 +11,9 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  // scoatem asta când conectăm plecari.com în Faza 1
-  robots: {index: false, follow: false}
+  metadataBase: new URL(SITE_URL),
+  title: {default: SITE_NAME, template: `%s · ${SITE_NAME}`},
+  robots: INDEXABLE ? undefined : {index: false, follow: false}
 };
 
 export default async function LocaleLayout({
@@ -22,9 +24,7 @@ export default async function LocaleLayout({
   params: Promise<{locale: string}>;
 }) {
   const {locale} = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
   return (

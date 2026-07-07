@@ -4,6 +4,13 @@
     "subtitle": "Cruises, flights, stays and city breaks, made simple."
   },
   "Affiliate": {
-  "disclosure": "Some links on this page are affiliate links. If you book through them, we may earn a commission at no extra cost to you. Our recommendations stay honest."
-}
+    "disclosure": "Some links on this page are affiliate links. If you book through them, we may earn a commission at no extra cost to you. Our recommendations stay honest."
+  },
+  "Cookies": {
+    "title": "Cookie preferences",
+    "message": "We use cookies for analytics and affiliate tracking, with your consent.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "reject": "Essential only"
+  }
 }

@@ -1,11 +1,9 @@
-// src/components/SearchWidget.tsx
-// Wrapper pentru "motoarele de căutare" (widget-uri Travelpayouts etc.).
-// - se încarcă LAZY (la scroll, cu 200px avans) -> nu strică viteza/SEO
-// - rezervă înălțime (minHeight) -> zero salt de layout (CLS)
-// scriptSrc = URL-ul scriptului de widget copiat din dashboard-ul de afiliere.
+// src/components/SearchWidget.tsx — actualizat: încarcă widget-ul DOAR
+// după consimțământ (cookies de la parteneri = non-esențiale, cer consent).
 'use client';
 
 import {useEffect, useRef, useState} from 'react';
+import {useConsent} from '@/lib/consent';
 
 type Props = {
   scriptSrc: string;
@@ -14,10 +12,12 @@ type Props = {
 };
 
 export function SearchWidget({scriptSrc, minHeight = 320, title}: Props) {
+  const {consent, setConsent} = useConsent();
   const ref = useRef<HTMLDivElement>(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    if (consent !== 'all') return; // fără consimțământ complet, nu încărcăm
     const el = ref.current;
     if (!el || loaded) return;
 
@@ -38,12 +38,24 @@ export function SearchWidget({scriptSrc, minHeight = 320, title}: Props) {
 
     io.observe(el);
     return () => io.disconnect();
-  }, [scriptSrc, loaded]);
+  }, [scriptSrc, loaded, consent]);
 
   return (
     <section className="search-widget" aria-label={title ?? 'Căutare'}>
       {title && <h2>{title}</h2>}
-      <div ref={ref} style={{minHeight}} />
+      {consent === 'all' ? (
+        <div ref={ref} style={{minHeight}} />
+      ) : (
+        <div className="widget-consent-gate" style={{minHeight}}>
+          <p>
+            Acest instrument de căutare folosește cookies de la partenerii
+            noștri. Activează-le pentru a-l încărca.
+          </p>
+          <button type="button" className="primary" onClick={() => setConsent('all')}>
+            Activează și încarcă
+          </button>
+        </div>
+      )}
     </section>
   );
 }

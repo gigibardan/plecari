@@ -34,3 +34,10 @@ body {
 .breadcrumbs li:not(:last-child)::after{content:'/';margin-left:.5rem;color:#9ca3af}
 .affiliate-disclosure{font-size:.85rem;color:#6b7280;background:#f9fafb;padding:.75rem 1rem;border-radius:.5rem;margin:1rem 0}
 .search-widget{margin:1.5rem 0}
+.cookie-consent{position:fixed;bottom:1rem;left:1rem;right:1rem;max-width:640px;margin:0 auto;background:#111827;color:#fff;padding:1rem 1.25rem;border-radius:.75rem;box-shadow:0 10px 30px rgba(0,0,0,.3);display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;z-index:50}
+.cookie-consent a{color:#93c5fd}
+.cookie-consent-actions{display:flex;gap:.5rem}
+.cookie-consent button,.widget-consent-gate button{border:1px solid #374151;background:transparent;color:#fff;padding:.5rem .9rem;border-radius:.5rem;cursor:pointer}
+.cookie-consent button.primary,.widget-consent-gate button.primary{background:#0ea5e9;border-color:#0ea5e9}
+.widget-consent-gate{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;text-align:center;background:#f9fafb;border:1px dashed #d1d5db;border-radius:.75rem;padding:1.5rem;color:#374151}
+.widget-consent-gate button{color:#111827;border-color:#d1d5db}

@@ -1,13 +1,10 @@
 // src/app/[locale]/legal/[slug]/page.tsx
-// Ruta pentru paginile legale/statice. Segmentul static "legal" are
-// prioritate față de [vertical], deci nu există conflict de rutare.
 import {use} from 'react';
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
 import {setRequestLocale} from 'next-intl/server';
 import {pages} from '@/lib/content';
 import {getAlternates} from '@/lib/metadata';
-import {MDXContent} from '@/components/MDXContent';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 
 type Props = {params: Promise<{locale: string; slug: string}>};
@@ -39,7 +36,7 @@ export default function LegalPage({params}: Props) {
   if (!p) notFound();
 
   return (
-    <main className="legal" style={{padding: '2rem', maxWidth: 760, margin: '0 auto'}}>
+    <main className="legal" style={{maxWidth: 760, margin: '0 auto'}}>
       <Breadcrumbs
         locale={locale}
         items={[
@@ -49,11 +46,12 @@ export default function LegalPage({params}: Props) {
       />
       <h1>{p.title}</h1>
       {p.updated && (
-        <p style={{color: '#6b7280', fontSize: '.9rem'}}>
+        <p style={{color: '#6f6154', fontSize: '.9rem'}}>
           Ultima actualizare: {p.updated}
         </p>
       )}
-      <MDXContent code={p.code} />
+      {/* HTML compilat la build din markdown — fără new Function */}
+      <div dangerouslySetInnerHTML={{__html: p.body}} />
     </main>
   );
 }

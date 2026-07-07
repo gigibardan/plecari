@@ -1,4 +1,4 @@
-// velite.config.ts  (la RĂDĂCINA proiectului) — versiune actualizată
+// velite.config.ts — versiune fără eval (compilează markdown -> HTML la build)
 import {defineConfig, s} from 'velite';
 
 export default defineConfig({
@@ -23,13 +23,16 @@ export default defineConfig({
         datePublished: s.string(),
         dateModified: s.string().optional(),
         featured: s.boolean().default(false),
+        // elemente "speciale" mutate în frontmatter (randate ca React, fără eval):
+        answer: s.string().optional(), // paragraful-răspuns (AnswerBox)
+        widget: s.string().optional(), // scriptSrc pentru motorul de căutare
         faq: s
           .array(s.object({question: s.string(), answer: s.string()}))
           .optional(),
-        code: s.mdx()
+        // corpul articolului: markdown (inclusiv tabele GFM) -> HTML la build
+        body: s.markdown()
       })
     },
-    // NOU: pagini statice (legale, despre, contact etc.)
     pages: {
       name: 'Page',
       pattern: 'pages/**/*.mdx',
@@ -39,7 +42,7 @@ export default defineConfig({
         locale: s.enum(['ro', 'en']),
         slug: s.string(),
         updated: s.string().optional(),
-        code: s.mdx()
+        body: s.markdown() // markdown -> HTML
       })
     }
   }

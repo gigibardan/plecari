@@ -5,19 +5,14 @@ import {notFound} from 'next/navigation';
 import {setRequestLocale} from 'next-intl/server';
 import {articles} from '@/lib/content';
 import {getAlternates} from '@/lib/metadata';
-import {MDXContent} from '@/components/MDXContent';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {FAQ} from '@/components/FAQ';
 import {AffiliateDisclosure} from '@/components/AffiliateDisclosure';
 import {JsonLd} from '@/components/JsonLd';
 import {articleSchema} from '@/lib/schema';
-// Componente disponibile ÎN interiorul fișierelor MDX:
 import {AnswerBox} from '@/components/AnswerBox';
-import {CompareTable} from '@/components/CompareTable';
 import {SearchWidget} from '@/components/SearchWidget';
 import {verticalLabel} from '@/config/verticals';
-
-const mdxComponents = {AnswerBox, CompareTable, SearchWidget};
 
 type Props = {
   params: Promise<{locale: string; vertical: string; slug: string}>;
@@ -56,7 +51,7 @@ export default function ArticlePage({params}: Props) {
   if (!a) notFound();
 
   return (
-    <main className="article" style={{padding: '2rem', maxWidth: 760, margin: '0 auto'}}>
+    <main className="article" style={{maxWidth: 760, margin: '0 auto'}}>
       <Breadcrumbs
         locale={locale}
         items={[
@@ -77,7 +72,19 @@ export default function ArticlePage({params}: Props) {
       />
 
       <h1>{a.title}</h1>
-      <MDXContent code={a.code} components={mdxComponents} />
+
+      {a.answer && <AnswerBox>{a.answer}</AnswerBox>}
+
+      {/* corpul: HTML compilat la build (markdown + tabele) — fără new Function */}
+      <div dangerouslySetInnerHTML={{__html: a.body}} />
+
+      {a.widget && (
+        <SearchWidget
+          title={locale === 'en' ? 'Search & compare' : 'Caută și compară'}
+          scriptSrc={a.widget}
+          minHeight={300}
+        />
+      )}
 
       {a.faq && a.faq.length > 0 && (
         <FAQ heading="Întrebări frecvente" items={a.faq} />

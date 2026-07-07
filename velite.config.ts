@@ -1,4 +1,4 @@
-// velite.config.ts — versiune fără eval (compilează markdown -> HTML la build)
+// velite.config.ts — adaugă cta[] + widgetHeight la articole
 import {defineConfig, s} from 'velite';
 
 export default defineConfig({
@@ -23,13 +23,15 @@ export default defineConfig({
         datePublished: s.string(),
         dateModified: s.string().optional(),
         featured: s.boolean().default(false),
-        // elemente "speciale" mutate în frontmatter (randate ca React, fără eval):
-        answer: s.string().optional(), // paragraful-răspuns (AnswerBox)
-        widget: s.string().optional(), // scriptSrc pentru motorul de căutare
+        answer: s.string().optional(),
+        widget: s.string().optional(), // scriptSrc motor de căutare
+        widgetHeight: s.number().optional(), // înălțime rezervată (px)
+        cta: s
+          .array(s.object({label: s.string(), href: s.string()}))
+          .optional(), // butoane de afiliere
         faq: s
           .array(s.object({question: s.string(), answer: s.string()}))
           .optional(),
-        // corpul articolului: markdown (inclusiv tabele GFM) -> HTML la build
         body: s.markdown()
       })
     },
@@ -42,7 +44,7 @@ export default defineConfig({
         locale: s.enum(['ro', 'en']),
         slug: s.string(),
         updated: s.string().optional(),
-        body: s.markdown() // markdown -> HTML
+        body: s.markdown()
       })
     }
   }

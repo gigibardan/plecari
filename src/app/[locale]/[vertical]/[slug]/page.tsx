@@ -8,6 +8,7 @@ import {getAlternates} from '@/lib/metadata';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {FAQ} from '@/components/FAQ';
 import {AffiliateDisclosure} from '@/components/AffiliateDisclosure';
+import {AffiliateButton} from '@/components/AffiliateButton';
 import {JsonLd} from '@/components/JsonLd';
 import {articleSchema} from '@/lib/schema';
 import {AnswerBox} from '@/components/AnswerBox';
@@ -75,15 +76,24 @@ export default function ArticlePage({params}: Props) {
 
       {a.answer && <AnswerBox>{a.answer}</AnswerBox>}
 
-      {/* corpul: HTML compilat la build (markdown + tabele) — fără new Function */}
       <div dangerouslySetInnerHTML={{__html: a.body}} />
 
       {a.widget && (
         <SearchWidget
           title={locale === 'en' ? 'Search & compare' : 'Caută și compară'}
           scriptSrc={a.widget}
-          minHeight={300}
+          minHeight={a.widgetHeight ?? 320}
         />
+      )}
+
+      {a.cta && a.cta.length > 0 && (
+        <div className="cta-group">
+          {a.cta.map((c, i) => (
+            <AffiliateButton key={i} href={c.href}>
+              {c.label}
+            </AffiliateButton>
+          ))}
+        </div>
       )}
 
       {a.faq && a.faq.length > 0 && (

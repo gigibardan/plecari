@@ -1,4 +1,4 @@
-// src/app/[locale]/page.tsx — homepage
+// src/app/[locale]/page.tsx — homepage, Hero B centrat peste foto duotone
 import {use} from 'react';
 import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
@@ -8,9 +8,8 @@ import {getAlternates} from '@/lib/metadata';
 import {FEATURED, REST} from '@/config/verticals';
 import {SearchWidget} from '@/components/SearchWidget';
 
-// TODO: când alegi un widget în Travelpayouts (Tools → Widgets), pune aici
-// scriptul lui. Cât e gol, hero-ul arată un placeholder curat "în curând".
-const HERO_WIDGET_SRC = 'https://tpwgt.com/content?currency=ron&trs=547266&shmarker=747505&show_hotels=true&powered_by=true&locale=ro&searchUrl=www.aviasales.ro%2Fsearch&primary_override=%23C15540&color_button=%231F5E56&color_icons=%231F5E56&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=10&plain=true&promo_id=7879&campaign_id=100';
+const HERO_WIDGET_SRC =
+  'https://tpwgt.com/content?currency=ron&trs=547266&shmarker=747505&show_hotels=true&powered_by=true&locale=ro&searchUrl=www.aviasales.ro%2Fsearch&primary_override=%23C15540&color_button=%231F5E56&color_icons=%231F5E56&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=10&plain=true&promo_id=7879&campaign_id=100';
 
 type Props = {params: Promise<{locale: string}>};
 
@@ -32,33 +31,28 @@ export default function HomePage({params}: Props) {
 
   return (
     <>
-      <section className="home-hero">
-        <p className="home-hero-eyebrow">
-          {l === 'en' ? 'Your travel guide' : 'Ghidul tău de călătorie'}
-        </p>
-        <h1>{t('title')}</h1>
-        <p className="home-hero-sub">{t('subtitle')}</p>
+      <section className="hero">
+        {/* straturi de fundal: foto -> duotone -> văl */}
+        <div className="hero-photo" />
+        <div className="hero-tint" />
+        <div className="hero-veil" />
 
-        <div className="hero-search">
-          {HERO_WIDGET_SRC ? (
+        <div className="hero-wrap">
+          <p className="hero-eyebrow">Plecări</p>
+          <h1 className="hero-title">{t('title')}</h1>
+          <p className="hero-sub">{t('subtitle')}</p>
+
+          <div className="hero-search">
             <SearchWidget
               title={
                 l === 'en'
-                  ? 'Search flights, stays, insurance & more'
-                  : 'Caută zboruri, cazări, asigurări și mai mult'
+                  ? 'Search flights, stays & more'
+                  : 'Caută zboruri, cazări și mai mult'
               }
               scriptSrc={HERO_WIDGET_SRC}
-              minHeight={180}
+              minHeight={200}
             />
-          ) : (
-            <div className="hero-search-placeholder">
-              <p>
-                {l === 'en'
-                  ? 'Search engine — connecting soon.'
-                  : 'Motorul de căutare — se conectează în curând.'}
-              </p>
-            </div>
-          )}
+          </div>
         </div>
       </section>
 

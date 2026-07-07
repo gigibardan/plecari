@@ -1,22 +1,37 @@
-import type { Metadata } from 'next';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
-import { SITE_URL, SITE_NAME, INDEXABLE } from '@/config/site';
+// src/app/[locale]/layout.tsx — versiune completă actualizată (design)
+import type {Metadata} from 'next';
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {setRequestLocale} from 'next-intl/server';
+import {notFound} from 'next/navigation';
+import {Fraunces, Hanken_Grotesk} from 'next/font/google';
+import {routing} from '@/i18n/routing';
+import {SITE_URL, SITE_NAME, INDEXABLE} from '@/config/site';
+import {ConsentProvider} from '@/lib/consent';
+import {CookieConsent} from '@/components/CookieConsent';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
 import '../globals.css';
-import { ConsentProvider } from '@/lib/consent';
-import { CookieConsent } from '@/components/CookieConsent';
-import { Link } from '@/i18n/navigation';
+
+const fontDisplay = Fraunces({
+  subsets: ['latin', 'latin-ext'], // latin-ext = diacritice RO corecte
+  variable: '--font-display',
+  display: 'swap'
+});
+
+const fontBody = Hanken_Grotesk({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-body',
+  display: 'swap'
+});
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({locale}));
 }
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: SITE_NAME, template: `%s · ${SITE_NAME}` },
-  robots: INDEXABLE ? undefined : { index: false, follow: false }
+  title: {default: SITE_NAME, template: `%s · ${SITE_NAME}`},
+  robots: INDEXABLE ? undefined : {index: false, follow: false}
 };
 
 export default async function LocaleLayout({
@@ -24,25 +39,24 @@ export default async function LocaleLayout({
   params
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{locale: string}>;
 }) {
-  const { locale } = await params;
+  const {locale} = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className={`${fontDisplay.variable} ${fontBody.variable}`}
+    >
       <body>
         <NextIntlClientProvider>
           <ConsentProvider>
+            <Header locale={locale} />
             {children}
+            <Footer locale={locale} />
             <CookieConsent />
-            <footer style={{ padding: '2rem', textAlign: 'center', fontSize: '.85rem' }}>
-              <Link href="/legal/confidentialitate">Confidențialitate</Link>{' · '}
-              <Link href="/legal/cookies">Cookies</Link>{' · '}
-              <Link href="/legal/disclosure">Afiliere</Link>{' · '}
-              <Link href="/legal/termeni">Termeni</Link>
-            </footer>
           </ConsentProvider>
         </NextIntlClientProvider>
       </body>

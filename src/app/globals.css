@@ -1,43 +1,368 @@
 @import "tailwindcss";
+/* ^ Dacă ești pe Tailwind v3, înlocuiește linia de sus cu directivele tale:
+   @tailwind base; @tailwind components; @tailwind utilities; */
+
+/* ============================================================
+   PLECĂRI — sistem de design (editorial cald)
+   ============================================================ */
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+  /* Culori — paletă pământie caldă */
+  --cream: #fbf6ee;      /* fundal pagină */
+  --paper: #ffffff;      /* carduri */
+  --sand: #f3e9da;       /* suprafață subtilă */
+  --ink: #2b2018;        /* text principal (espresso cald) */
+  --ink-soft: #6f6154;   /* text secundar */
+  --clay: #c15540;       /* accent principal (teracotă) */
+  --clay-dark: #a6432f;  /* accent apăsat / text pe fundal deschis */
+  --teal: #1f5e56;       /* accent secundar (linkuri) */
+  --teal-dark: #164740;
+  --ochre: #e0a22b;      /* highlight cald */
+  --line: #eae0d2;       /* borduri calde */
+
+  /* Tipografie */
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+
+  /* Formă */
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow: 0 6px 28px rgba(43, 32, 24, 0.09);
+  --shadow-sm: 0 2px 10px rgba(43, 32, 24, 0.06);
+
+  --wrap: 1120px;
 }
 
-@theme inline {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-}
+/* ---------- Reset & bază ---------- */
+* { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
-}
+html { -webkit-text-size-adjust: 100%; }
 
 body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background:
+    radial-gradient(1100px 460px at 50% -220px, #fbeeda 0%, transparent 70%),
+    var(--cream);
+  line-height: 1.6;
+  font-size: 1.0625rem;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
 }
-.answer-box{border-left:4px solid #0ea5e9;background:#f0f9ff;padding:1rem 1.25rem;border-radius:.5rem;margin:1.5rem 0}
-.faq-item{border-bottom:1px solid #e5e7eb;padding:1rem 0}
-.faq-item dt{font-weight:600;margin-bottom:.4rem}
-.compare-table{width:100%;border-collapse:collapse}
-.compare-table th,.compare-table td{border:1px solid #e5e7eb;padding:.6rem .8rem;text-align:left}
-.compare-table thead th{background:#f9fafb}
-.breadcrumbs ol{display:flex;gap:.5rem;list-style:none;padding:0;font-size:.9rem;flex-wrap:wrap}
-.breadcrumbs li:not(:last-child)::after{content:'/';margin-left:.5rem;color:#9ca3af}
-.affiliate-disclosure{font-size:.85rem;color:#6b7280;background:#f9fafb;padding:.75rem 1rem;border-radius:.5rem;margin:1rem 0}
-.search-widget{margin:1.5rem 0}
-.cookie-consent{position:fixed;bottom:1rem;left:1rem;right:1rem;max-width:640px;margin:0 auto;background:#111827;color:#fff;padding:1rem 1.25rem;border-radius:.75rem;box-shadow:0 10px 30px rgba(0,0,0,.3);display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:space-between;z-index:50}
-.cookie-consent a{color:#93c5fd}
-.cookie-consent-actions{display:flex;gap:.5rem}
-.cookie-consent button,.widget-consent-gate button{border:1px solid #374151;background:transparent;color:#fff;padding:.5rem .9rem;border-radius:.5rem;cursor:pointer}
-.cookie-consent button.primary,.widget-consent-gate button.primary{background:#0ea5e9;border-color:#0ea5e9}
-.widget-consent-gate{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;text-align:center;background:#f9fafb;border:1px dashed #d1d5db;border-radius:.75rem;padding:1.5rem;color:#374151}
-.widget-consent-gate button{color:#111827;border-color:#d1d5db}
+
+::selection { background: var(--ochre); color: var(--ink); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 550;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); margin: 0 0 0.6em; }
+h2 { font-size: clamp(1.5rem, 3.2vw, 2.05rem); margin: 1.8em 0 0.5em; }
+h3 { font-size: 1.25rem; margin: 1.5em 0 0.4em; }
+
+a { color: var(--teal); text-decoration-color: color-mix(in srgb, var(--teal) 35%, transparent); text-underline-offset: 3px; }
+a:hover { color: var(--teal-dark); }
+
+/* ---------- Butoane ---------- */
+button.primary,
+.btn-primary {
+  background: var(--clay-dark);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+button.primary:hover,
+.btn-primary:hover { background: var(--clay); transform: translateY(-1px); }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--cream) 82%, transparent);
+  backdrop-filter: blur(12px) saturate(1.1);
+  border-bottom: 1px solid var(--line);
+}
+.site-header-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.brand-mark {
+  width: 26px; height: 26px;
+  fill: none;
+  stroke: var(--clay);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transform: rotate(2deg);
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+  margin: 0; padding: 0;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.94rem;
+  transition: color 0.15s, background 0.15s;
+}
+.site-nav a:hover { color: var(--ink); background: var(--sand); }
+.site-nav a.active { color: var(--clay-dark); background: color-mix(in srgb, var(--clay) 12%, transparent); }
+
+/* Switch limbă */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+.lang-switch .on { color: var(--clay-dark); }
+.lang-switch .sep { color: var(--line); }
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  width: 42px; height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobil */
+@media (max-width: 880px) {
+  .nav-toggle { display: flex; }
+  .site-nav {
+    position: absolute;
+    left: 0; right: 0; top: 100%;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem 1.5rem;
+    margin-left: 0;
+    display: none;
+    box-shadow: var(--shadow);
+  }
+  .site-nav.is-open { display: flex; }
+  .site-nav ul { flex-direction: column; align-items: stretch; gap: 0.15rem; }
+  .site-nav a { padding: 0.7rem 0.8rem; font-size: 1rem; }
+  .nav-lang { margin-top: 0.5rem; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  margin-top: 5rem;
+  background: var(--ink);
+  color: color-mix(in srgb, #fff 82%, var(--ink));
+}
+.site-footer-inner {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2.5rem;
+}
+.site-footer .brand-name { color: #fff; font-size: 1.6rem; }
+.footer-brand p { color: color-mix(in srgb, #fff 62%, var(--ink)); max-width: 30ch; margin: 0.6rem 0 0; }
+.footer-col h3 {
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0 0 1rem;
+}
+.footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.55rem; }
+.footer-col a {
+  color: color-mix(in srgb, #fff 78%, var(--ink));
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.footer-col a:hover { color: var(--ochre); }
+.site-footer-bottom {
+  border-top: 1px solid color-mix(in srgb, #fff 12%, transparent);
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, #fff 55%, var(--ink));
+}
+@media (max-width: 720px) {
+  .site-footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ============================================================
+   CONȚINUT (articole & pagini legale) — tipografie de lectură
+   ============================================================ */
+.article, .legal, .hub {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  padding: 2.5rem 1.25rem 1rem !important;
+}
+.hub { max-width: 1120px !important; }
+
+.article p, .legal p { margin: 0 0 1.15em; color: var(--ink); }
+.article ul, .legal ul, .article ol, .legal ol { margin: 0 0 1.2em; padding-left: 1.3em; }
+.article li, .legal li { margin: 0.35em 0; }
+.article a, .legal a { font-weight: 500; }
+
+/* ---------- AnswerBox ---------- */
+.answer-box {
+  border: none;
+  border-left: 4px solid var(--clay);
+  background: color-mix(in srgb, var(--clay) 7%, var(--paper));
+  padding: 1.15rem 1.35rem;
+  border-radius: var(--radius-sm);
+  margin: 1.75rem 0;
+  box-shadow: var(--shadow-sm);
+  font-size: 1.08rem;
+}
+.answer-box p { margin: 0; }
+
+/* ---------- Tabel comparație ---------- */
+.compare-table-wrap { overflow-x: auto; margin: 1.5rem 0; border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.compare-table { width: 100%; border-collapse: collapse; background: var(--paper); font-size: 0.98rem; }
+.compare-table caption { text-align: left; padding: 0.9rem 1rem; color: var(--ink-soft); font-size: 0.9rem; }
+.compare-table th, .compare-table td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--line); }
+.compare-table thead th { background: var(--sand); font-family: var(--font-body); font-weight: 700; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); }
+.compare-table tbody th[scope="row"] { font-weight: 600; }
+.compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: none; }
+
+/* ---------- FAQ ---------- */
+.faq { margin: 2.5rem 0; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
+.faq-item dt { font-family: var(--font-display); font-weight: 550; font-size: 1.1rem; margin-bottom: 0.4rem; }
+.faq-item dd { margin: 0; color: var(--ink-soft); }
+
+/* ---------- Breadcrumbs ---------- */
+.breadcrumbs ol { display: flex; gap: 0.5rem; list-style: none; padding: 0; margin: 0 0 1.5rem; font-size: 0.85rem; flex-wrap: wrap; }
+.breadcrumbs a { color: var(--ink-soft); text-decoration: none; }
+.breadcrumbs a:hover { color: var(--clay-dark); }
+.breadcrumbs li:not(:last-child)::after { content: '/'; margin-left: 0.5rem; color: var(--line); }
+.breadcrumbs [aria-current="page"] { color: var(--ink); }
+
+/* ---------- Disclosure ---------- */
+.affiliate-disclosure { font-size: 0.85rem; color: var(--ink-soft); background: var(--sand); padding: 0.85rem 1.1rem; border-radius: var(--radius-sm); margin: 2rem 0 0; }
+
+/* ---------- Hub (listă articole) ---------- */
+.hub ul { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.hub li { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; box-shadow: var(--shadow-sm); transition: transform 0.15s, box-shadow 0.15s; }
+.hub li:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.hub li a { font-family: var(--font-display); font-size: 1.2rem; text-decoration: none; color: var(--ink); }
+.hub li p { color: var(--ink-soft); font-size: 0.95rem; margin: 0.4rem 0 0; }
+
+/* ---------- Search widget + poarta de consimțământ ---------- */
+.search-widget { margin: 2rem 0; }
+.widget-consent-gate {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.9rem; text-align: center;
+  background: var(--sand);
+  border: 1px dashed color-mix(in srgb, var(--clay) 40%, var(--line));
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  color: var(--ink-soft);
+}
+
+/* ============================================================
+   COOKIE CONSENT
+   ============================================================ */
+.cookie-consent {
+  position: fixed;
+  bottom: 1rem; left: 1rem; right: 1rem;
+  max-width: 660px; margin: 0 auto;
+  background: var(--ink);
+  color: color-mix(in srgb, #fff 88%, var(--ink));
+  padding: 1.1rem 1.35rem;
+  border-radius: var(--radius);
+  box-shadow: 0 14px 40px rgba(43, 32, 24, 0.35);
+  display: flex; flex-wrap: wrap; gap: 0.9rem;
+  align-items: center; justify-content: space-between;
+  z-index: 60;
+}
+.cookie-consent-text { margin: 0; font-size: 0.92rem; flex: 1 1 280px; }
+.cookie-consent a { color: var(--ochre); }
+.cookie-consent-actions { display: flex; gap: 0.5rem; }
+.cookie-consent button {
+  border: 1px solid color-mix(in srgb, #fff 22%, transparent);
+  background: transparent; color: #fff;
+  padding: 0.55rem 1rem; border-radius: 999px; cursor: pointer;
+  font-family: var(--font-body); font-weight: 600; font-size: 0.88rem;
+}
+.cookie-consent button.primary { background: var(--clay); border-color: var(--clay); }
+.cookie-consent button.primary:hover { background: var(--clay-dark); }

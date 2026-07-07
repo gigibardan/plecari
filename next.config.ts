@@ -1,15 +1,16 @@
-import type { NextConfig } from "next";
-import createNextIntlPlugin from "next-intl/plugin";
+import type {NextConfig} from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
-	/* config options here */
+  async redirects() {
+    return [{source: '/', destination: '/ro', permanent: false}];
+  }
 };
 
-const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 export default withNextIntl(nextConfig);
 
 // Enable calling `getCloudflareContext()` in `next dev`.
-// See https://opennext.js.org/cloudflare/bindings#local-access-to-bindings.
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+import {initOpenNextCloudflareForDev} from '@opennextjs/cloudflare';
 initOpenNextCloudflareForDev();

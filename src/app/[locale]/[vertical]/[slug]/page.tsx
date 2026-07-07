@@ -15,6 +15,7 @@ import {articleSchema} from '@/lib/schema';
 import {AnswerBox} from '@/components/AnswerBox';
 import {CompareTable} from '@/components/CompareTable';
 import {SearchWidget} from '@/components/SearchWidget';
+import {verticalLabel} from '@/config/verticals';
 
 const mdxComponents = {AnswerBox, CompareTable, SearchWidget};
 
@@ -60,7 +61,7 @@ export default function ArticlePage({params}: Props) {
         locale={locale}
         items={[
           {name: 'Acasă', path: '/'},
-          {name: vertical, path: `/${vertical}`},
+          {name: verticalLabel(vertical, locale), path: `/${vertical}`},
           {name: a.title, path: `/${vertical}/${slug}`}
         ]}
       />

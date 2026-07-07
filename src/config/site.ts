@@ -1,7 +1,7 @@
 import {routing} from '@/i18n/routing';
 
 // 🔴 SINGURA linie de schimbat în Faza 1: pune 'https://plecari.com'
-export const SITE_URL = 'https://plecari.gheorghe-bardan.workers.dev';
+export const SITE_URL = 'https://plecari.com';
 
 export const SITE_NAME = 'Plecări';
 export const LOCALES = routing.locales;

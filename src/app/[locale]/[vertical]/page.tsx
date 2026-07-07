@@ -8,24 +8,14 @@ import {articles} from '@/lib/content';
 import {getAlternates} from '@/lib/metadata';
 import {Link} from '@/i18n/navigation';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
-
-// Verticalele valide. Le mutăm într-un config dedicat când crește lista.
-const VERTICALS = [
-  'croaziere',
-  'zboruri',
-  'cazari',
-  'asigurari',
-  'esim-roaming',
-  'inchirieri-auto',
-  'city-breaks'
-];
+import {VERTICAL_SLUGS, verticalLabel} from '@/config/verticals';
 
 type Props = {params: Promise<{locale: string; vertical: string}>};
 
 export function generateStaticParams() {
   const params: {locale: string; vertical: string}[] = [];
   for (const locale of routing.locales) {
-    for (const vertical of VERTICALS) {
+    for (const vertical of VERTICAL_SLUGS) {
       params.push({locale, vertical});
     }
   }
@@ -34,43 +24,42 @@ export function generateStaticParams() {
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
   const {locale, vertical} = await params;
-  if (!VERTICALS.includes(vertical)) return {};
+  if (!VERTICAL_SLUGS.includes(vertical)) return {};
   return {
-    title: vertical,
+    title: verticalLabel(vertical, locale),
     alternates: getAlternates(locale, `/${vertical}`)
   };
 }
 
 export default function VerticalHub({params}: Props) {
   const {locale, vertical} = use(params);
-  if (!VERTICALS.includes(vertical)) notFound();
+  if (!VERTICAL_SLUGS.includes(vertical)) notFound();
   setRequestLocale(locale);
 
+  const label = verticalLabel(vertical, locale);
   const posts = articles.filter(
     (a) => a.locale === locale && a.vertical === vertical
   );
 
   return (
-    <main className="hub" style={{padding: '2rem', maxWidth: 900, margin: '0 auto'}}>
+    <main className="hub">
       <Breadcrumbs
         locale={locale}
         items={[
           {name: 'Acasă', path: '/'},
-          {name: vertical, path: `/${vertical}`}
+          {name: label, path: `/${vertical}`}
         ]}
       />
-      <h1>{vertical}</h1>
+      <h1>{label}</h1>
 
       {/* AICI vine widget-ul (motorul de căutare) al verticalei:
           <SearchWidget title="..." scriptSrc="..." /> */}
 
-      <ul style={{listStyle: 'none', padding: 0}}>
+      <ul>
         {posts.map((a) => (
-          <li key={a.slug} style={{margin: '1.25rem 0'}}>
-            <Link href={`/${vertical}/${a.slug}`}>
-              <strong>{a.title}</strong>
-            </Link>
-            <p style={{color: '#4b5563', margin: '.25rem 0 0'}}>{a.description}</p>
+          <li key={a.slug}>
+            <Link href={`/${vertical}/${a.slug}`}>{a.title}</Link>
+            <p>{a.description}</p>
           </li>
         ))}
       </ul>

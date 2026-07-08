@@ -62,7 +62,7 @@ export default function HomePage({params}: Props) {
         </div>
         <div className="featured-grid">
           {FEATURED.map((v) => (
-            <Link key={v.slug} href={`/${v.slug}`} className="featured-card">
+            <Link key={v.slug} href={`/${v.slug}`} className="featured-card" prefetch={false}>
               <span className="featured-card-label">
                 {l === 'en' ? v.label.en : v.label.ro}
               </span>
@@ -83,7 +83,7 @@ export default function HomePage({params}: Props) {
         </div>
         <div className="rest-grid">
           {REST.map((v) => (
-            <Link key={v.slug} href={`/${v.slug}`} className="rest-card">
+            <Link key={v.slug} href={`/${v.slug}`} className="rest-card" prefetch={false}>
               <span>{l === 'en' ? v.label.en : v.label.ro}</span>
               <span className="rest-card-arrow" aria-hidden>
                 →

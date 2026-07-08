@@ -15,7 +15,7 @@ export function Header({locale}: {locale: string}) {
   return (
     <header className="site-header">
       <div className="site-header-inner">
-        <Link href="/" className="brand" onClick={() => setOpen(false)}>
+        <Link href="/" className="brand" onClick={() => setOpen(false)} prefetch={false}>
           <svg className="brand-mark" viewBox="0 0 24 24" aria-hidden>
             <path d="M22 2 11 13" />
             <path d="M22 2 15 22 11 13 2 9 22 2Z" />
@@ -45,6 +45,7 @@ export function Header({locale}: {locale: string}) {
                     href={`/${v.slug}`}
                     className={active ? 'active' : ''}
                     onClick={() => setOpen(false)}
+                    prefetch={false}
                   >
                     {l === 'en' ? v.label.en : v.label.ro}
                   </Link>

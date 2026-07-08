@@ -105,7 +105,9 @@ export default function VerticalHub({params}: Props) {
             <ul className="hub-list">
               {posts.map((a) => (
                 <li key={a.slug} className="hub-card">
-                  <Link href={`/${vertical}/${a.slug}`}>{a.title}</Link>
+                  <Link href={`/${vertical}/${a.slug}`} prefetch={false}>
+                    {a.title}
+                  </Link>
                   <p>{a.description}</p>
                 </li>
               ))}

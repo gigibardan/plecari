@@ -21,7 +21,9 @@ export function Breadcrumbs({items, locale}: {items: Crumb[]; locale: string}) {
         {items.map((c, i) => (
           <li key={i}>
             {i < items.length - 1 ? (
-              <Link href={c.path}>{c.name}</Link>
+              <Link href={c.path} prefetch={false}>
+                {c.name}
+              </Link>
             ) : (
               <span aria-current="page">{c.name}</span>
             )}

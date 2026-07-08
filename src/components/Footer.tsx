@@ -22,7 +22,9 @@ export function Footer({locale}: {locale: string}) {
           <ul>
             {VERTICALS.map((v) => (
               <li key={v.slug}>
-                <Link href={`/${v.slug}`}>{l === 'en' ? v.label.en : v.label.ro}</Link>
+                <Link href={`/${v.slug}`} prefetch={false}>
+                  {l === 'en' ? v.label.en : v.label.ro}
+                </Link>
               </li>
             ))}
           </ul>
@@ -32,20 +34,22 @@ export function Footer({locale}: {locale: string}) {
           <h3>Info</h3>
           <ul>
             <li>
-              <Link href="/legal/confidentialitate">
+              <Link href="/legal/confidentialitate" prefetch={false}>
                 {l === 'en' ? 'Privacy' : 'Confidențialitate'}
               </Link>
             </li>
             <li>
-              <Link href="/legal/cookies">Cookies</Link>
+              <Link href="/legal/cookies" prefetch={false}>Cookies</Link>
             </li>
             <li>
-              <Link href="/legal/disclosure">
+              <Link href="/legal/disclosure" prefetch={false}>
                 {l === 'en' ? 'Affiliate disclosure' : 'Afiliere'}
               </Link>
             </li>
             <li>
-              <Link href="/legal/termeni">{l === 'en' ? 'Terms' : 'Termeni'}</Link>
+              <Link href="/legal/termeni" prefetch={false}>
+                {l === 'en' ? 'Terms' : 'Termeni'}
+              </Link>
             </li>
           </ul>
         </div>

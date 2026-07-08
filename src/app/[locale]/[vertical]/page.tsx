@@ -11,6 +11,8 @@ import {VERTICAL_SLUGS, getVertical} from '@/config/verticals';
 import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {SearchWidget} from '@/components/SearchWidget';
 import {AffiliateButton} from '@/components/AffiliateButton';
+export const dynamic = 'force-static';
+export const revalidate = false;
 
 type Props = {params: Promise<{locale: string; vertical: string}>};
 

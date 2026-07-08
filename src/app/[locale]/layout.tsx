@@ -1,5 +1,5 @@
-// src/app/[locale]/layout.tsx — versiune completă actualizată (design)
-import type {Metadata} from 'next';
+// src/app/[locale]/layout.tsx — versiune completă actualizată (design + PWA)
+import type {Metadata, Viewport} from 'next'; // Adăugat Viewport
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
@@ -13,7 +13,7 @@ import {Footer} from '@/components/Footer';
 import '../globals.css';
 
 const fontDisplay = Fraunces({
-  subsets: ['latin', 'latin-ext'], // latin-ext = diacritice RO corecte
+  subsets: ['latin', 'latin-ext'],
   variable: '--font-display',
   display: 'swap'
 });
@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {default: SITE_NAME, template: `%s · ${SITE_NAME}`},
   robots: INDEXABLE ? undefined : {index: false, follow: false}
+};
+
+// Blocul adăugat pentru culoarea temei pe mobil
+export const viewport: Viewport = {
+  themeColor: '#C15540',
 };
 
 export default async function LocaleLayout({

@@ -5,6 +5,7 @@ import {useState} from 'react';
 import {Link, usePathname} from '@/i18n/navigation';
 import {VERTICALS} from '@/config/verticals';
 import {LanguageSwitcher} from './LanguageSwitcher';
+import Image from 'next/image';
 
 export function Header({locale}: {locale: string}) {
   const [open, setOpen] = useState(false);

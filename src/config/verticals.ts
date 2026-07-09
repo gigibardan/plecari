@@ -100,7 +100,26 @@ export const VERTICALS: Vertical[] = [
     widget: '',
     widgetHeight: 200,
     cta: []
-  }
+  },
+  {
+    slug: 'experiente',
+    featured: false,
+    label: {ro: 'Experiențe', en: 'Experiences'},
+    desc: {ro: 'Tururi, activități și excursii în orice destinație.', en: 'Tours, activities, and excursions at any destination.'},
+    intro: {
+      ro: 'Tururi ghidate, excursii de o zi și experiențe locale — găsește ce să faci în orice oraș.',
+      en: 'Guided tours, day trips, and local experiences — find things to do in any city.'
+    },
+    image: '/verticals/experiente.webp',
+    widget: '',           // NU folosim SearchWidget (TP) aici
+    widgetHeight: 200,
+    cta: [
+      {
+        label: 'Caută experiențe pe GetYourGuide',
+        href: 'https://www.getyourguide.com/?partner_id=EKAA80H&utm_medium=online_publisher'
+      }
+    ]
+  },
 ];
 
 export const VERTICAL_SLUGS: string[] = VERTICALS.map((v) => v.slug);

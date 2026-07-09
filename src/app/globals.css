@@ -309,3 +309,14 @@ button.primary:hover,
 @media (max-width: 380px) {
   .verticals-grid { grid-template-columns: 1fr; }
 }
+
+/* GetYourGuide widget spacing */
+.gyg-widget {
+  margin-block: 2rem;
+}
+.gyg-widget-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}

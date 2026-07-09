@@ -1,4 +1,4 @@
-// src/app/[locale]/layout.tsx — versiune completă actualizată (design + PWA)
+// src/app/[locale]/layout.tsx — versiune completă actualizată (design + PWA + Analytics)
 import type {Metadata, Viewport} from 'next'; // Adăugat Viewport
 import {NextIntlClientProvider, hasLocale} from 'next-intl';
 import {setRequestLocale} from 'next-intl/server';
@@ -10,6 +10,7 @@ import {ConsentProvider} from '@/lib/consent';
 import {CookieConsent} from '@/components/CookieConsent';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
+import {GoogleAnalytics} from '@next/third-parties/google'; // <-- 1. IMPORTUL ADĂUGAT AICI
 import '../globals.css';
 
 const fontDisplay = Fraunces({
@@ -74,6 +75,9 @@ export default async function LocaleLayout({
             <CookieConsent />
           </ConsentProvider>
         </NextIntlClientProvider>
+
+        {/* <-- 2. COMPONENTA ADĂUGATĂ AICI ÎN BODY (AICI SETEZI TAGUL PENTRU PLECĂRI) */}
+        <GoogleAnalytics gaId="G-HTF361X0TW" />
       </body>
     </html>
   );

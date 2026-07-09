@@ -14,6 +14,7 @@ import {articleSchema} from '@/lib/schema';
 import {AnswerBox} from '@/components/AnswerBox';
 import {SearchWidget} from '@/components/SearchWidget';
 import {GYGWidget} from '@/components/GYGWidget';
+import {ArticleBody} from '@/components/ArticleBody';
 import {verticalLabel} from '@/config/verticals';
 
 type Props = {
@@ -53,6 +54,7 @@ export default function ArticlePage({params}: Props) {
   if (!a) notFound();
 
   const l = locale === 'en' ? 'en' : 'ro';
+  const gygLocaleCode = a.gygLocale ?? (l === 'en' ? 'en-US' : 'ro-RO');
 
   return (
     <main className="article" style={{maxWidth: 760, margin: '0 auto'}}>
@@ -79,23 +81,37 @@ export default function ArticlePage({params}: Props) {
 
       {a.answer && <AnswerBox>{a.answer}</AnswerBox>}
 
-      <div dangerouslySetInnerHTML={{__html: a.body}} />
+      {/* ── CITY WIDGET (sus, card orașul) ── */}
+      {a.gygLocationId && (
+        <GYGWidget
+          type="city"
+          locationId={a.gygLocationId}
+          locale={gygLocaleCode}
+        />
+      )}
 
-      {/* Widget GYG — carduri de experiențe (din frontmatter gygQuery) */}
+      {/* ── CONȚINUT + AVAILABILITY WIDGETS INLINE ── */}
+      <ArticleBody
+        html={a.body}
+        tours={a.gygTours}
+        locale={l}
+      />
+
+      {/* ── ACTIVITY WIDGET (jos, carduri experiențe) ── */}
       {a.gygQuery && (
         <GYGWidget
           type="activity-manual"
           query={a.gygQuery}
-          locale={a.gygLocale ?? (locale === 'en' ? 'en-US' : 'ro-RO')}
+          locale={gygLocaleCode}
           numberOfItems={3}
           title={l === 'en' ? 'Book experiences' : 'Rezervă experiențe'}
         />
       )}
 
-      {/* Widget TP — motor de căutare (din frontmatter widget) */}
+      {/* Widget TP — motor de căutare */}
       {a.widget && (
         <SearchWidget
-          title={locale === 'en' ? 'Search & compare' : 'Caută și compară'}
+          title={l === 'en' ? 'Search & compare' : 'Caută și compară'}
           scriptSrc={a.widget}
           minHeight={a.widgetHeight ?? 320}
         />

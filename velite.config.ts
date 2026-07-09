@@ -1,4 +1,4 @@
-// velite.config.ts — cu suport GYG widget în articole (gygQuery + gygLocale)
+// velite.config.ts — complet cu gygQuery, gygLocale, gygLocationId, gygTours
 import {defineConfig, s} from 'velite';
 
 export default defineConfig({
@@ -28,6 +28,19 @@ export default defineConfig({
         widgetHeight: s.number().optional(),
         gygQuery: s.string().optional(),
         gygLocale: s.string().optional(),
+        gygLocationId: s.string().optional(),
+        gygTours: s
+          .array(
+            s.object({
+              tourId: s.string(),
+              afterHeading: s.string(),
+              label: s.string().optional(),
+              locale: s.string().optional(),
+              currency: s.string().optional(),
+              variant: s.enum(['horizontal', 'vertical']).optional()
+            })
+          )
+          .optional(),
         cta: s
           .array(s.object({label: s.string(), href: s.string()}))
           .optional(),

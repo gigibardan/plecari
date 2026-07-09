@@ -1,10 +1,10 @@
 // src/components/GYGWidget.tsx
 // Widget GetYourGuide — consent-gated, lazy-loaded.
-// Tipuri suportate:
-//   - activity-auto: widget automat pe bază de oraș/query
-//   - activity-manual: widget manual cu query + număr de carduri
-//   - city: card oraș cu buton "Things to do"
-//   - availability: disponibilitate live pentru o experiență specifică
+// Tipuri:
+//   activity-auto   — widget automat pe bază de query
+//   activity-manual  — carduri cu query + control
+//   city             — card oraș cu buton
+//   availability     — disponibilitate live per tur (tourId)
 'use client';
 
 import {useEffect, useRef, useState} from 'react';
@@ -14,27 +14,29 @@ const GYG_PARTNER_ID = 'EKAA80H';
 
 type ActivityAutoProps = {
   type: 'activity-auto';
-  query: string; // ex: "bucuresti", "rome", "santorini"
+  query: string;
 };
 
 type ActivityManualProps = {
   type: 'activity-manual';
   query: string;
-  locale?: string; // ex: "ro-RO", "en-US"
-  numberOfItems?: number; // default 3
-  excludeUrls?: string[]; // URL-uri de activități de exclus
+  locale?: string;
+  numberOfItems?: number;
+  excludeUrls?: string[];
 };
 
 type CityProps = {
   type: 'city';
-  locationId: string; // ex: "111" pentru București
+  locationId: string;
   locale?: string;
 };
 
 type AvailabilityProps = {
   type: 'availability';
-  activityUrl: string; // URL-ul complet al activității GYG
+  tourId: string;
   locale?: string;
+  currency?: string;
+  variant?: 'horizontal' | 'vertical';
 };
 
 type GYGWidgetProps = (
@@ -70,11 +72,9 @@ export function GYGWidget(props: GYGWidgetProps) {
     return () => io.disconnect();
   }, [consent, visible]);
 
-  // După render-ul div-ului GYG, re-inițializează scriptul
+  // Re-inițializează scriptul GYG pentru widget-uri adăugate dinamic
   useEffect(() => {
     if (!visible) return;
-    // Scriptul GYG (din GYGScript.tsx) scanează DOM-ul la load.
-    // Pentru widget-uri adăugate dinamic, triggeruim manual.
     const w = window as any;
     if (w.GYG && typeof w.GYG.Widget === 'function') {
       w.GYG.Widget();
@@ -86,15 +86,15 @@ export function GYGWidget(props: GYGWidgetProps) {
   return (
     <section
       className={`gyg-widget ${props.className ?? ''}`}
-      aria-label={props.title ?? 'Experiențe GetYourGuide'}
+      aria-label={props.title ?? 'GetYourGuide'}
     >
       {props.title && <h2 className="gyg-widget-title">{props.title}</h2>}
       {consent === 'all' ? (
-        <div ref={containerRef} style={{minHeight: 200}}>
+        <div ref={containerRef} style={{minHeight: props.type === 'availability' ? 100 : 200}}>
           {widgetDiv}
         </div>
       ) : (
-        <div className="widget-consent-gate" style={{minHeight: 200}}>
+        <div className="widget-consent-gate" style={{minHeight: 100}}>
           <p>
             Acest widget folosește cookies de la GetYourGuide.
             Activează-le pentru a vedea experiențele disponibile.
@@ -160,12 +160,25 @@ function renderWidgetDiv(props: GYGWidgetProps) {
     case 'availability':
       return (
         <div
-          data-gyg-href="https://widget.getyourguide.com/default/activitiy.frame"
+          data-gyg-href="https://widget.getyourguide.com/default/availability.frame"
+          data-gyg-tour-id={props.tourId}
           data-gyg-locale-code={props.locale ?? 'ro-RO'}
-          data-gyg-widget="activity"
+          data-gyg-currency={props.currency ?? 'EUR'}
+          data-gyg-widget="availability"
+          data-gyg-variant={props.variant ?? 'horizontal'}
           data-gyg-partner-id={GYG_PARTNER_ID}
-          data-gyg-activity-url={props.activityUrl}
-        />
+        >
+          <span>
+            Powered by{' '}
+            <a
+              target="_blank"
+              rel="sponsored nofollow"
+              href="https://www.getyourguide.com/"
+            >
+              GetYourGuide
+            </a>
+          </span>
+        </div>
       );
   }
 }

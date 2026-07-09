@@ -1,4 +1,4 @@
-// velite.config.ts — adaugă cta[] + widgetHeight la articole
+// velite.config.ts — cu suport GYG widget în articole (gygQuery + gygLocale)
 import {defineConfig, s} from 'velite';
 
 export default defineConfig({
@@ -24,11 +24,13 @@ export default defineConfig({
         dateModified: s.string().optional(),
         featured: s.boolean().default(false),
         answer: s.string().optional(),
-        widget: s.string().optional(), // scriptSrc motor de căutare
-        widgetHeight: s.number().optional(), // înălțime rezervată (px)
+        widget: s.string().optional(),
+        widgetHeight: s.number().optional(),
+        gygQuery: s.string().optional(),
+        gygLocale: s.string().optional(),
         cta: s
           .array(s.object({label: s.string(), href: s.string()}))
-          .optional(), // butoane de afiliere
+          .optional(),
         faq: s
           .array(s.object({question: s.string(), answer: s.string()}))
           .optional(),

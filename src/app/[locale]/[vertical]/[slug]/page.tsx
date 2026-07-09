@@ -13,6 +13,7 @@ import {JsonLd} from '@/components/JsonLd';
 import {articleSchema} from '@/lib/schema';
 import {AnswerBox} from '@/components/AnswerBox';
 import {SearchWidget} from '@/components/SearchWidget';
+import {GYGWidget} from '@/components/GYGWidget';
 import {verticalLabel} from '@/config/verticals';
 
 type Props = {
@@ -51,6 +52,8 @@ export default function ArticlePage({params}: Props) {
   const a = findArticle(locale, vertical, slug);
   if (!a) notFound();
 
+  const l = locale === 'en' ? 'en' : 'ro';
+
   return (
     <main className="article" style={{maxWidth: 760, margin: '0 auto'}}>
       <Breadcrumbs
@@ -78,6 +81,18 @@ export default function ArticlePage({params}: Props) {
 
       <div dangerouslySetInnerHTML={{__html: a.body}} />
 
+      {/* Widget GYG — carduri de experiențe (din frontmatter gygQuery) */}
+      {a.gygQuery && (
+        <GYGWidget
+          type="activity-manual"
+          query={a.gygQuery}
+          locale={a.gygLocale ?? (locale === 'en' ? 'en-US' : 'ro-RO')}
+          numberOfItems={3}
+          title={l === 'en' ? 'Book experiences' : 'Rezervă experiențe'}
+        />
+      )}
+
+      {/* Widget TP — motor de căutare (din frontmatter widget) */}
       {a.widget && (
         <SearchWidget
           title={locale === 'en' ? 'Search & compare' : 'Caută și compară'}

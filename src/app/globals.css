@@ -310,13 +310,22 @@ button.primary:hover,
   .verticals-grid { grid-template-columns: 1fr; }
 }
 
-/* GetYourGuide widget spacing */
+/* ============================================================
+   GYG WIDGET — adaugă la sfârșitul globals.css
+   ============================================================ */
 .gyg-widget {
   margin-block: 2rem;
 }
 .gyg-widget-title {
   font-family: var(--font-display);
   font-size: 1.4rem;
+  font-weight: 600;
   margin-bottom: 1rem;
   color: var(--ink);
+}
+/* Override-uri pentru iframe-urile GYG (widget-urile lor vin cu stil propriu,
+   dar spațierea și border-radius se pot ajusta) */
+.gyg-widget iframe {
+  border-radius: var(--radius);
+  max-width: 100%;
 }

@@ -111,7 +111,7 @@ export const VERTICALS: Vertical[] = [
       en: 'Guided tours, day trips, and local experiences — find things to do in any city.'
     },
     image: '/verticals/experiente.webp',
-    widget: '',           // NU folosim SearchWidget (TP) aici
+    widget: '',
     widgetHeight: 200,
     cta: [
       {
@@ -119,7 +119,7 @@ export const VERTICALS: Vertical[] = [
         href: 'https://www.getyourguide.com/?partner_id=EKAA80H&utm_medium=online_publisher'
       }
     ]
-  },
+  }
 ];
 
 export const VERTICAL_SLUGS: string[] = VERTICALS.map((v) => v.slug);

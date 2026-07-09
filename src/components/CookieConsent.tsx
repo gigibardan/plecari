@@ -15,7 +15,9 @@ export function CookieConsent() {
     <div className="cookie-consent" role="dialog" aria-label={t('title')}>
       <p className="cookie-consent-text">
         {t('message')}{' '}
-        <Link href="/legal/cookies">{t('learnMore')}</Link>
+        <Link href="/legal/cookies" prefetch={false}>
+          {t('learnMore')}
+        </Link>
       </p>
       <div className="cookie-consent-actions">
         <button type="button" onClick={() => setConsent('essential')}>

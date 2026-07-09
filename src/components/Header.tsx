@@ -1,13 +1,13 @@
 // src/components/Header.tsx
 'use client';
 
-import {useState} from 'react';
-import {Link, usePathname} from '@/i18n/navigation';
-import {VERTICALS} from '@/config/verticals';
-import {LanguageSwitcher} from './LanguageSwitcher';
+import { useState } from 'react';
+import { Link, usePathname } from '@/i18n/navigation';
+import { VERTICALS } from '@/config/verticals';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import Image from 'next/image';
 
-export function Header({locale}: {locale: string}) {
+export function Header({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const l = locale === 'en' ? 'en' : 'ro';
@@ -16,10 +16,7 @@ export function Header({locale}: {locale: string}) {
     <header className="site-header">
       <div className="site-header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)} prefetch={false}>
-          <svg className="brand-mark" viewBox="0 0 24 24" aria-hidden>
-            <path d="M22 2 11 13" />
-            <path d="M22 2 15 22 11 13 2 9 22 2Z" />
-          </svg>
+          <img className="brand-mark" src="/logo-pin.svg" alt="Plecări" />
           <span className="brand-name">Plecări</span>
         </Link>
 

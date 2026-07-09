@@ -31,7 +31,17 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {default: SITE_NAME, template: `%s · ${SITE_NAME}`},
-  robots: INDEXABLE ? undefined : {index: false, follow: false}
+  robots: INDEXABLE ? undefined : {index: false, follow: false},
+  icons: {
+    icon: [
+      {url: '/favicon.ico'},
+      {url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png'}
+    ],
+    apple: {url: '/apple-touch-icon.png', sizes: '180x180'},
+    other: [
+      {rel: 'icon', url: '/favicon.svg', type: 'image/svg+xml'}
+    ]
+  }
 };
 
 // Blocul adăugat pentru culoarea temei pe mobil

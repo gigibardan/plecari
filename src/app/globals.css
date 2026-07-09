@@ -115,13 +115,12 @@ button.primary:hover,
   flex-shrink: 0;
 }
 .brand-mark {
-  width: 26px; height: 26px;
-  fill: none;
-  stroke: var(--clay);
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  transform: rotate(2deg);
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  
 }
 .brand-name {
   font-family: var(--font-display);

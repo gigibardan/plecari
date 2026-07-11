@@ -1,24 +1,24 @@
 // src/app/[locale]/[vertical]/[slug]/page.tsx — PAGINA DE ARTICOL
-import {use} from 'react';
-import type {Metadata} from 'next';
-import {notFound} from 'next/navigation';
-import {setRequestLocale} from 'next-intl/server';
-import {articles} from '@/lib/content';
-import {getAlternates} from '@/lib/metadata';
-import {Breadcrumbs} from '@/components/Breadcrumbs';
-import {FAQ} from '@/components/FAQ';
-import {AffiliateDisclosure} from '@/components/AffiliateDisclosure';
-import {AffiliateButton} from '@/components/AffiliateButton';
-import {JsonLd} from '@/components/JsonLd';
-import {articleSchema} from '@/lib/schema';
-import {AnswerBox} from '@/components/AnswerBox';
-import {SearchWidget} from '@/components/SearchWidget';
-import {GYGWidget} from '@/components/GYGWidget';
-import {ArticleBody} from '@/components/ArticleBody';
-import {verticalLabel} from '@/config/verticals';
+import { use } from 'react';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
+import { articles } from '@/lib/content';
+import { getAlternates } from '@/lib/metadata';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { FAQ } from '@/components/FAQ';
+import { AffiliateDisclosure } from '@/components/AffiliateDisclosure';
+import { AffiliateButton } from '@/components/AffiliateButton';
+import { JsonLd } from '@/components/JsonLd';
+import { AnswerBox } from '@/components/AnswerBox';
+import { SearchWidget } from '@/components/SearchWidget';
+import { GYGWidget } from '@/components/GYGWidget';
+import { ArticleBody } from '@/components/ArticleBody';
+import { verticalLabel } from '@/config/verticals';
+import { articleSchema, productOfferSchema, touristTripSchema } from '@/lib/schema';
 
 type Props = {
-  params: Promise<{locale: string; vertical: string; slug: string}>;
+  params: Promise<{ locale: string; vertical: string; slug: string }>;
 };
 
 export function generateStaticParams() {
@@ -35,8 +35,8 @@ function findArticle(locale: string, vertical: string, slug: string) {
   );
 }
 
-export async function generateMetadata({params}: Props): Promise<Metadata> {
-  const {locale, vertical, slug} = await params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, vertical, slug } = await params;
   const a = findArticle(locale, vertical, slug);
   if (!a) return {};
   return {
@@ -46,8 +46,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   };
 }
 
-export default function ArticlePage({params}: Props) {
-  const {locale, vertical, slug} = use(params);
+export default function ArticlePage({ params }: Props) {
+  const { locale, vertical, slug } = use(params);
   setRequestLocale(locale);
 
   const a = findArticle(locale, vertical, slug);
@@ -57,13 +57,13 @@ export default function ArticlePage({params}: Props) {
   const gygLocaleCode = a.gygLocale ?? (l === 'en' ? 'en-US' : 'ro-RO');
 
   return (
-    <main className="article" style={{maxWidth: 760, margin: '0 auto'}}>
+    <main className="article" style={{ maxWidth: 760, margin: '0 auto' }}>
       <Breadcrumbs
         locale={locale}
         items={[
-          {name: 'Acasă', path: '/'},
-          {name: verticalLabel(vertical, locale), path: `/${vertical}`},
-          {name: a.title, path: `/${vertical}/${slug}`}
+          { name: 'Acasă', path: '/' },
+          { name: verticalLabel(vertical, locale), path: `/${vertical}` },
+          { name: a.title, path: `/${vertical}/${slug}` }
         ]}
       />
 
@@ -76,6 +76,29 @@ export default function ArticlePage({params}: Props) {
           dateModified: a.dateModified
         })}
       />
+      {/* ── NOU: INJECTARE DINAMICĂ SEO OFERTE (DIN FRONTMATTER) ── */}
+      {a.seoOffer && a.seoOffer.type === 'TouristTrip' && (
+        <JsonLd
+          data={touristTripSchema({
+            name: a.seoOffer.name || a.title,
+            description: a.seoOffer.description || a.description,
+            providerName: a.seoOffer.provider,
+            url: a.seoOffer.url || (a.cta && a.cta.length > 0 ? a.cta[0].href : '')
+          })}
+        />
+      )}
+
+      {a.seoOffer && a.seoOffer.type === 'Product' && (
+        <JsonLd
+          data={productOfferSchema({
+            name: a.seoOffer.name || a.title,
+            description: a.seoOffer.description || a.description,
+            price: a.seoOffer.price,
+            currency: a.seoOffer.currency,
+            url: a.seoOffer.url || (a.cta && a.cta.length > 0 ? a.cta[0].href : '')
+          })}
+        />
+      )}
 
       <h1>{a.title}</h1>
 

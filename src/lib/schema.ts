@@ -66,3 +66,66 @@ export function breadcrumbSchema(items: {name: string; path: string}[]) {
     }))
   };
 }
+
+// ── NOU: SCHEME PENTRU AFILIERE ȘI MONETIZARE ──
+
+export function productOfferSchema(opts: {
+  name: string;
+  description: string;
+  price?: string; // ex: '399.00'
+  currency?: string; // ex: 'EUR'
+  url: string; // Linkul tău de afiliat
+  image?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: opts.name,
+    description: opts.description,
+    ...(opts.image ? {image: opts.image} : {}),
+    ...(opts.price && opts.currency ? {
+      offers: {
+        '@type': 'Offer',
+        price: opts.price,
+        priceCurrency: opts.currency,
+        url: opts.url,
+        availability: 'https://schema.org/InStock'
+      }
+    } : {})
+  };
+}
+
+export function touristTripSchema(opts: {
+  name: string;
+  description: string;
+  itinerary?: string[]; // ex: ['Barcelona', 'Marsilia', 'Genova']
+  providerName?: string; // ex: 'MSC Cruises' sau 'CruiseDirect'
+  url: string; // Linkul de afiliat
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    name: opts.name,
+    description: opts.description,
+    ...(opts.providerName ? {
+      provider: {
+        '@type': 'Organization',
+        name: opts.providerName
+      }
+    } : {}),
+    ...(opts.itinerary && opts.itinerary.length > 0 ? {
+      itinerary: {
+        '@type': 'ItemList',
+        itemListElement: opts.itinerary.map((stop, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: stop
+        }))
+      }
+    } : {}),
+    offers: {
+      '@type': 'Offer',
+      url: opts.url
+    }
+  };
+}

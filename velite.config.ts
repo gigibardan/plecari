@@ -1,5 +1,5 @@
 // velite.config.ts — complet cu gygQuery, gygLocale, gygLocationId, gygTours și cdLinkId
-import {defineConfig, s} from 'velite';
+import { defineConfig, s } from 'velite';
 
 export default defineConfig({
   root: 'content',
@@ -42,11 +42,23 @@ export default defineConfig({
           )
           .optional(),
         cdLinkId: s.string().optional(), // NOU: Adăugat pentru widget-ul CruiseDirect
+        
+        seoOffer: s
+          .object({
+            type: s.enum(['Product', 'TouristTrip']),
+            name: s.string().optional(),
+            description: s.string().optional(),
+            provider: s.string().optional(),
+            price: s.string().optional(),
+            currency: s.string().optional(),
+            url: s.string().optional()
+          })
+          .optional(),
         cta: s
-          .array(s.object({label: s.string(), href: s.string()}))
+          .array(s.object({ label: s.string(), href: s.string() }))
           .optional(),
         faq: s
-          .array(s.object({question: s.string(), answer: s.string()}))
+          .array(s.object({ question: s.string(), answer: s.string() }))
           .optional(),
         body: s.markdown()
       })

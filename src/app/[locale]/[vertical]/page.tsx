@@ -1,4 +1,4 @@
-// src/app/[locale]/[vertical]/page.tsx — hub de verticală (hero + motor + articole + GYG)
+// src/app/[locale]/[vertical]/page.tsx — hub cu CruiseSearchHero pe croaziere
 import {use} from 'react';
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
@@ -12,6 +12,7 @@ import {Breadcrumbs} from '@/components/Breadcrumbs';
 import {SearchWidget} from '@/components/SearchWidget';
 import {AffiliateButton} from '@/components/AffiliateButton';
 import {GYGWidget} from '@/components/GYGWidget';
+import {CruiseSearchHero} from '@/components/CruiseSearchHero';
 export const dynamic = 'force-static';
 export const revalidate = false;
 
@@ -53,7 +54,7 @@ export default function VerticalHub({params}: Props) {
 
   return (
     <>
-      {/* HERO de verticală (foto duotone) */}
+      {/* HERO de verticală */}
       <section className="hub-hero">
         <div
           className="hub-hero-photo"
@@ -77,8 +78,13 @@ export default function VerticalHub({params}: Props) {
           ]}
         />
 
-        {/* MOTOR: widget unde există, butoane unde nu */}
-        {hasEngine && (
+        {/* MOTOR CROAZIERE — CruiseSearchHero */}
+        {vertical === 'croaziere' && (
+          <CruiseSearchHero locale={locale} />
+        )}
+
+        {/* MOTOR: widget TP unde există, butoane unde nu */}
+        {hasEngine && vertical !== 'croaziere' && (
           <div className="hub-engine">
             {v.widget && (
               <SearchWidget
@@ -99,7 +105,18 @@ export default function VerticalHub({params}: Props) {
           </div>
         )}
 
-        {/* WIDGET GYG — pe experiențe, city-breaks, croaziere */}
+        {/* CTA-uri croaziere SUB motorul vizual */}
+        {vertical === 'croaziere' && v.cta.length > 0 && (
+          <div className="cta-group">
+            {v.cta.map((c, i) => (
+              <AffiliateButton key={i} href={c.href}>
+                {c.label}
+              </AffiliateButton>
+            ))}
+          </div>
+        )}
+
+        {/* WIDGET GYG — pe experiențe și city-breaks */}
         {vertical === 'experiente' && (
           <GYGWidget
             type="activity-manual"

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="200" cy="200" r="190"/>
+    </clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F5E56"/>
+      <stop offset="100%" stop-color="#2B2018"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#D4A574"/>
+      <stop offset="100%" stop-color="#C4956A"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FBF6EE"/>
+      <stop offset="100%" stop-color="#EDE5D8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#bg)"/>
+
+  <!-- Subtle compass rose decoration (travel element) -->
+  <g opacity="0.08" transform="translate(200,200)">
+    <line x1="0" y1="-170" x2="0" y2="170" stroke="#FBF6EE" stroke-width="1"/>
+    <line x1="-170" y1="0" x2="170" y2="0" stroke="#FBF6EE" stroke-width="1"/>
+    <line x1="-120" y1="-120" x2="120" y2="120" stroke="#FBF6EE" stroke-width="0.7"/>
+    <line x1="120" y1="-120" x2="-120" y2="120" stroke="#FBF6EE" stroke-width="0.7"/>
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#FBF6EE" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#FBF6EE" stroke-width="0.5"/>
+    <!-- N arrow -->
+    <polygon points="0,-155 -6,-140 6,-140" fill="#E0A22B" opacity="0.6"/>
+  </g>
+
+  <g clip-path="url(#circle)">
+    <!-- Body / Shoulders -->
+    <ellipse cx="200" cy="440" rx="160" ry="120" fill="url(#shirt)"/>
+    <!-- Collar detail -->
+    <path d="M160,360 L200,390 L240,360" fill="none" stroke="#C4956A" stroke-width="2" opacity="0.3"/>
+
+    <!-- Neck -->
+    <rect x="178" y="295" width="44" height="60" rx="20" fill="url(#skin)"/>
+
+    <!-- Head -->
+    <ellipse cx="200" cy="240" rx="72" ry="82" fill="url(#skin)"/>
+
+    <!-- Hair -->
+    <path d="M128,220 C128,165 155,130 200,130 C245,130 272,165 272,220 C272,210 265,175 250,160 C238,148 220,140 200,140 C180,140 162,148 150,160 C135,175 128,210 128,220Z" fill="#3D2B1A"/>
+    <!-- Hair side left -->
+    <path d="M128,220 C126,240 128,255 132,260 C134,250 133,235 128,220Z" fill="#3D2B1A"/>
+    <!-- Hair side right -->
+    <path d="M272,220 C274,240 272,255 268,260 C266,250 267,235 272,220Z" fill="#3D2B1A"/>
+
+    <!-- Eyebrows -->
+    <path d="M160,218 Q172,212 184,216" stroke="#3D2B1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M216,216 Q228,212 240,218" stroke="#3D2B1A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Eyes -->
+    <ellipse cx="172" cy="232" rx="10" ry="7" fill="white"/>
+    <ellipse cx="228" cy="232" rx="10" ry="7" fill="white"/>
+    <circle cx="174" cy="232" r="5" fill="#2B2018"/>
+    <circle cx="230" cy="232" r="5" fill="#2B2018"/>
+    <circle cx="175.5" cy="230.5" r="1.5" fill="white"/>
+    <circle cx="231.5" cy="230.5" r="1.5" fill="white"/>
+
+    <!-- Nose -->
+    <path d="M196,240 Q200,260 204,240" stroke="#B8875A" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Smile -->
+    <path d="M178,270 Q200,288 222,270" stroke="#A0785A" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Subtle stubble dots -->
+    <g fill="#3D2B1A" opacity="0.1">
+      <circle cx="175" cy="280" r="0.8"/>
+      <circle cx="185" cy="285" r="0.8"/>
+      <circle cx="195" cy="287" r="0.8"/>
+      <circle cx="205" cy="287" r="0.8"/>
+      <circle cx="215" cy="285" r="0.8"/>
+      <circle cx="225" cy="280" r="0.8"/>
+    </g>
+
+    <!-- Ears -->
+    <ellipse cx="128" cy="240" rx="12" ry="18" fill="url(#skin)"/>
+    <ellipse cx="272" cy="240" rx="12" ry="18" fill="url(#skin)"/>
+  </g>
+
+  <!-- Accent ring -->
+  <circle cx="200" cy="200" r="190" fill="none" stroke="#E0A22B" stroke-width="3" opacity="0.4"/>
+</svg>

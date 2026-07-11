@@ -34,6 +34,11 @@ export function Footer({locale}: {locale: string}) {
           <h3>Info</h3>
           <ul>
             <li>
+              <Link href="/legal/despre" prefetch={false}>
+                {l === 'en' ? 'About' : 'Despre'}
+              </Link>
+            </li>
+            <li>
               <Link href="/legal/confidentialitate" prefetch={false}>
                 {l === 'en' ? 'Privacy' : 'Confidențialitate'}
               </Link>

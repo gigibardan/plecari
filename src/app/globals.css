@@ -361,3 +361,173 @@ button.primary:hover,
   margin-bottom: 0.75rem;
   color: var(--ink-muted, #6b5e50);
 }
+/* ============================================================
+   CRUISE SEARCH HERO — adaugă la sfârșitul globals.css
+   ============================================================ */
+.cruise-search-hero {
+  position: relative;
+  border-radius: var(--radius, 12px);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+}
+.cruise-search-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    url('/verticals/croaziere.webp') center/cover no-repeat;
+  z-index: 0;
+}
+.cruise-search-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 94, 86, 0.85) 0%,
+    rgba(43, 32, 24, 0.75) 100%
+  );
+  z-index: 1;
+}
+.cruise-search-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cruise-search-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #FBF6EE;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+.cruise-search-sub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(251, 246, 238, 0.8);
+  margin: 0 0 1.5rem;
+}
+
+/* Formularul */
+.cruise-search-form {
+  display: flex;
+  gap: 0;
+  background: #fff;
+  border-radius: 50px;
+  padding: 5px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 640px;
+  align-items: stretch;
+}
+.cruise-search-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 1rem;
+  min-width: 0;
+}
+.cruise-search-field:first-child {
+  border-right: 1px solid #e8e0d6;
+}
+.cruise-search-label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8b7e72;
+  margin-bottom: 2px;
+  text-align: left;
+}
+.cruise-search-select {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink, #2B2018);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' fill='none' stroke='%238b7e72' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  padding-right: 16px;
+}
+.cruise-search-button {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FBF6EE;
+  background: var(--terracotta, #C15540);
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+.cruise-search-button:hover {
+  background: #a8432f;
+}
+
+/* Quick links companii */
+.cruise-search-lines {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.cruise-search-lines-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(251, 246, 238, 0.6);
+}
+.cruise-search-line-chip {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #FBF6EE;
+  background: rgba(251, 246, 238, 0.15);
+  border: 1px solid rgba(251, 246, 238, 0.25);
+  border-radius: 20px;
+  padding: 0.3rem 0.75rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.cruise-search-line-chip:hover {
+  background: rgba(251, 246, 238, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .cruise-search-form {
+    flex-direction: column;
+    border-radius: 16px;
+    gap: 0;
+  }
+  .cruise-search-field:first-child {
+    border-right: none;
+    border-bottom: 1px solid #e8e0d6;
+  }
+  .cruise-search-button {
+    border-radius: 12px;
+    justify-content: center;
+    margin: 4px;
+  }
+}

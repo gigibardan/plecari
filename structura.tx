@@ -10,7 +10,17 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── asigurare-viza-schengen.ro.mdx
 |  |  ├── bagaj-mana-dimensiuni-reguli-2026.ro.mdx
 |  |  ├── bagaj-pierdut-companie-aeriana-drepturi.ro.mdx
+|  |  ├── bilete-vatican-colosseum-epuizate-last-minute.ro.mdx
 |  |  ├── card-european-vs-asigurare-calatorie.ro.mdx
+|  |  ├── cat-costa-o-croaziera-buget-real.ro.mdx
+|  |  ├── ce-sa-faci-in-atena.ro.mdx
+|  |  ├── ce-sa-faci-in-barcelona.ro.mdx
+|  |  ├── ce-sa-faci-in-bucuresti.ro.mdx
+|  |  ├── ce-sa-faci-in-budapesta.ro.mdx
+|  |  ├── ce-sa-faci-in-istanbul.ro.mdx
+|  |  ├── ce-sa-faci-in-paris.ro.mdx
+|  |  ├── ce-sa-faci-in-praga.ro.mdx
+|  |  ├── ce-sa-faci-in-roma.ro.mdx
 |  |  ├── cel-mai-bun-esim-per-destinatie.ro.mdx
 |  |  ├── cum-gasesti-bilete-avion-ieftine.ro.mdx
 |  |  ├── cum-gasesti-cazare-ieftina.ro.mdx
@@ -26,6 +36,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── inchiriere-masina-grecia-2026.ro.mdx
 |  |  ├── is-romania-expensive.en.mdx
 |  |  ├── istanbul-city-break-ghid.ro.mdx
+|  |  ├── msc-vs-costa-vs-norwegian.ro.mdx
 |  |  ├── prima-croaziera-ghid-incepatori.ro.mdx
 |  |  ├── saily-esim-comparatie.ro.mdx
 |  |  ├── taxe-ascunse-inchiriere-auto.ro.mdx
@@ -44,6 +55,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 ├── docs
 |  └── PLECARI-README.md
 ├── eslint.config.mjs
+├── GHID-TOUR-IDS.md
 ├── messages
 |  ├── en.json
 |  └── ro.json
@@ -61,6 +73,12 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  ├── file.svg
 |  ├── globe.svg
 |  ├── hero.webp
+|  ├── images
+|  |  └── croaziere
+|  |     ├── cruise-interior.webp
+|  |     ├── cruise-ship-mediterranean.webp
+|  |     ├── cruise-sunset.webp
+|  |     └── dubrovnik-port.webp
 |  ├── logo-pin.svg
 |  ├── logo.png
 |  ├── next.svg
@@ -79,6 +97,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  ├── window.svg
 |  └── _headers
 ├── README.md
+├── REGISTRU-WIDGETURI-AFILIATE.md
 ├── src
 |  ├── app
 |  |  ├── globals.css
@@ -97,9 +116,11 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── AffiliateButton.tsx
 |  |  ├── AffiliateDisclosure.tsx
 |  |  ├── AnswerBox.tsx
+|  |  ├── ArticleBody.tsx
 |  |  ├── Breadcrumbs.tsx
 |  |  ├── CompareTable.tsx
 |  |  ├── CookieConsent.tsx
+|  |  ├── CruiseSearchHero.tsx
 |  |  ├── FAQ.tsx
 |  |  ├── Footer.tsx
 |  |  ├── GYGScript.tsx
@@ -120,12 +141,13 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |     ├── content.ts
 |     ├── metadata.ts
 |     └── schema.ts
+├── structura.tx
 ├── structura.txt
 ├── tsconfig.json
 ├── velite.config.ts
 └── wrangler.jsonc
 
-directory: 2908 file: 18897
+directory: 2910 file: 18917
 
 ignored: directory (165)
 

@@ -1,4 +1,4 @@
-// src/app/[locale]/page.tsx — homepage v2 (premium, SVG icons, 6 articole)
+// src/app/[locale]/page.tsx — homepage cu Kiwi în loc de Aviasales
 import {use} from 'react';
 import type {Metadata} from 'next';
 import {setRequestLocale, getTranslations} from 'next-intl/server';
@@ -10,11 +10,10 @@ import {articles} from '@/lib/content';
 import {SearchWidget} from '@/components/SearchWidget';
 import React from 'react';
 
-
+// Kiwi Search Form — compact, culorile Plecări
 const HERO_WIDGET_SRC =
-  'https://tpwgt.com/content?currency=ron&trs=547266&shmarker=747505&show_hotels=true&powered_by=true&locale=ro&searchUrl=www.aviasales.ro%2Fsearch&primary_override=%23C15540&color_button=%231F5E56&color_icons=%231F5E56&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=10&plain=true&promo_id=7879&campaign_id=100';
+  'https://tpwgt.com/content?currency=eur&trs=547266&shmarker=747505&locale=ro&default_origin=BUH&stops=any&show_hotels=false&powered_by=true&border_radius=10&plain=true&color_button=%231F5E56&color_button_text=%23FFFFFF&promo_id=3414&campaign_id=111';
 
-// Culoarea accentului per verticală (folosită pe badge-ul articolului)
 const VERTICAL_ACCENT: Record<string, string> = {
   zboruri: '#1F5E56',
   cazari: '#C15540',
@@ -26,7 +25,6 @@ const VERTICAL_ACCENT: Record<string, string> = {
   experiente: '#B8860B',
 };
 
-// SVG-uri line-art per verticală (stroke, nu fill)
 const ICONS: Record<string, React.ReactElement> = {
   zboruri: (
     <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -110,7 +108,6 @@ export default function HomePage({params}: Props) {
   const t = useTranslations('HomePage');
   const l = locale === 'en' ? 'en' : 'ro';
 
-  // Ultimele 6 articole (cele mai recent publicate pe locale curent)
   const recentArticles = articles
     .filter((a) => a.locale === locale)
     .sort((a, b) => b.datePublished.localeCompare(a.datePublished))
@@ -129,7 +126,7 @@ export default function HomePage({params}: Props) {
           <p className="hero-sub">{t('subtitle')}</p>
           <div className="hero-search">
             <SearchWidget
-              title={l === 'en' ? 'Search flights, stays & more' : 'Caută zboruri, cazări și mai mult'}
+              title={l === 'en' ? 'Search flights' : 'Caută zboruri'}
               scriptSrc={HERO_WIDGET_SRC}
               minHeight={200}
             />

@@ -1,4 +1,4 @@
-// src/config/verticals.ts — actualizat: croaziere cu CruiseDirect
+// src/config/verticals.ts — Kiwi pe zboruri + CruiseDirect pe croaziere
 export type Vertical = {
   slug: string;
   featured: boolean;
@@ -11,8 +11,10 @@ export type Vertical = {
   cta: {label: string; href: string}[];
 };
 
-const AVIASALES =
-  'https://tpwgt.com/content?currency=ron&trs=547266&shmarker=747505&show_hotels=true&powered_by=true&locale=ro&searchUrl=www.aviasales.ro%2Fsearch&primary_override=%23C15540&color_button=%231F5E56&color_icons=%231F5E56&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=10&plain=true&promo_id=7879&campaign_id=100';
+// Kiwi Search Results — motor complet cu primele 3 rezultate
+const KIWI_SEARCH =
+  'https://tpwgt.com/content?currency=eur&trs=547266&shmarker=747505&powered_by=true&locale=ro&from_name=bucharest_ro&show_header=true&limit=3&primary_color=C15540&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=4478';
+
 const AIRALO =
   'https://tpwgt.com/content?trs=547266&shmarker=747505&locale=en&powered_by=true&color_button=%23C15540&color_focused=%23f2685f&secondary=%23FFFFFF&dark=%232B2018&light=%23FFFFFF&special=%231F5E56&border_radius=10&plain=true&no_labels=&promo_id=8588&campaign_id=541';
 
@@ -24,8 +26,8 @@ export const VERTICALS: Vertical[] = [
     desc: {ro: 'Compară și găsește bilete de avion la prețuri bune.', en: 'Compare and find flight tickets at good prices.'},
     intro: {ro: 'Compară zboruri și găsește bilete la prețuri bune, dintr-un singur loc.', en: 'Compare flights and find good fares, all in one place.'},
     image: '/verticals/zboruri.webp',
-    widget: AVIASALES,
-    widgetHeight: 200,
+    widget: KIWI_SEARCH,
+    widgetHeight: 400,
     cta: [
       {label: 'Compensație zbor întârziat — verifică acum', href: 'https://compensair.tpo.mx/wi3KeRBP'},
       {label: 'Verifică despăgubirea cu AirHelp', href: 'https://airhelp.tpo.mx/Etx51IpP'}

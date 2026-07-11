@@ -1,4 +1,3 @@
-// src/app/[locale]/[vertical]/page.tsx — hub cu CruiseSearchHero pe croaziere
 import {use} from 'react';
 import type {Metadata} from 'next';
 import {notFound} from 'next/navigation';
@@ -13,6 +12,8 @@ import {SearchWidget} from '@/components/SearchWidget';
 import {AffiliateButton} from '@/components/AffiliateButton';
 import {GYGWidget} from '@/components/GYGWidget';
 import {CruiseSearchHero} from '@/components/CruiseSearchHero';
+import CruiseDirectWidget from '@/components/CruiseDirectWidget';
+
 export const dynamic = 'force-static';
 export const revalidate = false;
 
@@ -78,9 +79,14 @@ export default function VerticalHub({params}: Props) {
           ]}
         />
 
-        {/* MOTOR CROAZIERE — CruiseSearchHero */}
+        {/* MOTOR CROAZIERE — CruiseSearchHero + CruiseDirect Widget */}
         {vertical === 'croaziere' && (
-          <CruiseSearchHero locale={locale} />
+          <div className="flex flex-col gap-8 mb-8">
+            <CruiseSearchHero locale={locale} />
+            <div className="hub-engine">
+              <CruiseDirectWidget size="300x250" linkId="15534471" />
+            </div>
+          </div>
         )}
 
         {/* MOTOR: widget TP unde există, butoane unde nu */}

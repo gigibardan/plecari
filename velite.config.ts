@@ -1,4 +1,4 @@
-// velite.config.ts — complet cu gygQuery, gygLocale, gygLocationId, gygTours
+// velite.config.ts — complet cu gygQuery, gygLocale, gygLocationId, gygTours și cdLinkId
 import {defineConfig, s} from 'velite';
 
 export default defineConfig({
@@ -41,6 +41,7 @@ export default defineConfig({
             })
           )
           .optional(),
+        cdLinkId: s.string().optional(), // NOU: Adăugat pentru widget-ul CruiseDirect
         cta: s
           .array(s.object({label: s.string(), href: s.string()}))
           .optional(),

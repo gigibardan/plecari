@@ -90,11 +90,12 @@ export default function ArticlePage({params}: Props) {
         />
       )}
 
-      {/* ── CONȚINUT + AVAILABILITY WIDGETS INLINE ── */}
+      {/* ── CONȚINUT + AVAILABILITY WIDGETS INLINE + CRUISE DIRECT ── */}
       <ArticleBody
         html={a.body}
         tours={a.gygTours}
         locale={l}
+        cdLinkId={a.cdLinkId}
       />
 
       {/* ── ACTIVITY WIDGET GYG (jos, carduri experiențe) ── */}

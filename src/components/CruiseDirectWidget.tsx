@@ -49,6 +49,8 @@ interface CruiseDirectWidgetProps {
   publisherId?: string;
   programId?: string;
   locale?: "ro" | "en";
+  linkId?: string; // NOU: Adăugat pentru TypeScript
+  size?: string;   // NOU: Adăugat pentru TypeScript
 }
 
 export default function CruiseDirectWidget({
@@ -57,6 +59,8 @@ export default function CruiseDirectWidget({
   publisherId = "101821346",
   programId = "7299361",
   locale = "ro",
+  linkId = "15534471", // NOU: Setăm default-ul pe care îl aveai înainte hardcodat
+  size, // NOU: Inclus ca să nu dea eroare de TypeScript în paginile unde e apelat
 }: CruiseDirectWidgetProps) {
   const {consent} = useConsent();
   const [destination, setDestination] = useState("");
@@ -84,7 +88,8 @@ export default function CruiseDirectWidget({
     return base; // fallback: homepage CruiseDirect
   }
 
-  const trackingPixel = `https://www.ftjcfx.com/image-${publisherId}-15534471`;
+  // NOU: Pixelul folosește acum linkId-ul dinamic
+  const trackingPixel = `https://www.ftjcfx.com/image-${publisherId}-${linkId}`;
 
   const handleSearch = (e: FormEvent) => {
     e.preventDefault();

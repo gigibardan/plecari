@@ -1,4 +1,4 @@
-// src/config/verticals.ts
+// src/config/verticals.ts — actualizat: croaziere cu CruiseDirect
 export type Vertical = {
   slug: string;
   featured: boolean;
@@ -57,12 +57,18 @@ export const VERTICALS: Vertical[] = [
     slug: 'croaziere',
     featured: false,
     label: {ro: 'Croaziere', en: 'Cruises'},
-    desc: {ro: 'Ghiduri și oferte de croaziere.', en: 'Cruise guides and deals.'},
-    intro: {ro: 'Ghiduri și oferte de croaziere — de la prima rezervare la cabina potrivită.', en: 'Cruise guides and deals — from first booking to the right cabin.'},
+    desc: {ro: 'Ghiduri, oferte și comparații de croaziere.', en: 'Cruise guides, deals, and comparisons.'},
+    intro: {
+      ro: 'Tot ce trebuie să știi despre croaziere — de la prima rezervare la alegerea cabinei potrivite.',
+      en: 'Everything you need to know about cruises — from your first booking to picking the right cabin.'
+    },
     image: '/verticals/croaziere.webp',
     widget: '',
     widgetHeight: 200,
-    cta: [{label: 'Caută oferte de croaziere pe SEARADAR', href: 'https://searadar.tpo.mx/kOIP44zS'}]
+    cta: [
+      {label: 'Caută oferte de croaziere pe CruiseDirect', href: 'https://www.anrdoezrs.net/click-101821346-7299361'},
+      {label: 'Oferte last-minute croaziere', href: 'https://www.tkqlhce.com/click-101821346-17037666'}
+    ]
   },
   {
     slug: 'esim-roaming',

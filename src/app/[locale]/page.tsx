@@ -550,18 +550,30 @@ export default function HomePage({ params }: Props) {
       {/* ═══════════════════════════════════════════
           10. PARTENERI — bandă de încredere
           ═══════════════════════════════════════════ */}
-      <section className="hp-partners" aria-label={l === 'en' ? 'Our partners' : 'Partenerii noștri'}>
+          <section className="hp-partners" aria-label={l === 'en' ? 'Our partners' : 'Partenerii noștri'}>
         <div className="hp-partners-inner">
           <p className="partners-label">
             {l === 'en' ? 'Trusted partners' : 'Parteneri de încredere'}
           </p>
           <div className="partners-track">
-            <span className="partner-logo">CruiseDirect</span>
-            <span className="partner-logo">GetYourGuide</span>
-            <span className="partner-logo">Airalo</span>
-            <span className="partner-logo">Saily</span>
-            <span className="partner-logo">EKTA</span>
-            <span className="partner-logo">Kiwi.com</span>
+            <a href="https://www.anrdoezrs.net/click-101821346-7299361" target="_blank" rel="noopener noreferrer" className="partner-link">
+              <img src="/partners/cruisedirect.webp" alt="CruiseDirect" width="120" height="40" loading="lazy" />
+            </a>
+            <a href="https://www.getyourguide.com/?partner_id=EKAA80H" target="_blank" rel="noopener noreferrer" className="partner-link">
+              <img src="/partners/getyourguide.webp" alt="GetYourGuide" width="120" height="40" loading="lazy" />
+            </a>
+            <a href="https://airalo.tpo.mx/mYekFAo3" target="_blank" rel="noopener noreferrer" className="partner-link">
+              <img src="/partners/airalo.webp" alt="Airalo" width="120" height="40" loading="lazy" />
+            </a>
+            <a href="https://saily.tpo.mx/3mxe5Ao3" target="_blank" rel="noopener noreferrer" className="partner-link">
+              <img src="/partners/saily.webp" alt="Saily" width="120" height="40" loading="lazy" />
+            </a>
+            <a href="https://ektatraveling.tpo.mx/uU7jZ5jK" target="_blank" rel="noopener noreferrer" className="partner-link">
+              <img src="/partners/ekta.webp" alt="EKTA Travel Insurance" width="120" height="40" loading="lazy" />
+            </a>
+            <a href="https://aviasales.tpo.mx/k7yrWro3?marker=547266" target="_blank" rel="noopener noreferrer" className="partner-link">
+              <img src="/partners/kiwi.webp" alt="Kiwi.com" width="120" height="40" loading="lazy" />
+            </a>
           </div>
         </div>
       </section>

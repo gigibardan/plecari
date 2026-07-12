@@ -1,15 +1,15 @@
 // src/app/[locale]/page.tsx — homepage v3 (spectaculos + responsive)
-import {use} from 'react';
-import type {Metadata} from 'next';
-import {setRequestLocale, getTranslations} from 'next-intl/server';
-import {useTranslations} from 'next-intl';
-import {Link} from '@/i18n/navigation';
-import {getAlternates} from '@/lib/metadata';
-import {VERTICALS} from '@/config/verticals';
-import {articles} from '@/lib/content';
-import {SearchWidget} from '@/components/SearchWidget';
-import {ScrollReveal} from '@/components/ScrollReveal';
-import {TrustBar} from '@/components/TrustBar';
+import { use } from 'react';
+import type { Metadata } from 'next';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
+import { getAlternates } from '@/lib/metadata';
+import { VERTICALS } from '@/config/verticals';
+import { articles } from '@/lib/content';
+import { SearchWidget } from '@/components/SearchWidget';
+import { ScrollReveal } from '@/components/ScrollReveal';
+import { TrustBar } from '@/components/TrustBar';
 import React from 'react';
 
 const HERO_WIDGET_SRC =
@@ -17,14 +17,14 @@ const HERO_WIDGET_SRC =
 
 /* ── Destinații populare ── */
 const DESTINATIONS = [
-  {city: 'Roma', slug: 'experiente/ce-sa-faci-in-roma', color: '#C15540', initial: 'R'},
-  {city: 'Istanbul', slug: 'experiente/ce-sa-faci-in-istanbul', color: '#1F5E56', initial: 'I'},
-  {city: 'Barcelona', slug: 'experiente/ce-sa-faci-in-barcelona', color: '#8B2252', initial: 'B'},
-  {city: 'Paris', slug: 'experiente/ce-sa-faci-in-paris', color: '#2B2018', initial: 'P'},
-  {city: 'Atena', slug: 'experiente/ce-sa-faci-in-atena', color: '#1F5E56', initial: 'A'},
-  {city: 'Budapesta', slug: 'experiente/ce-sa-faci-in-budapesta', color: '#8B6914', initial: 'B'},
-  {city: 'Praga', slug: 'experiente/ce-sa-faci-in-praga', color: '#5B2D8E', initial: 'P'},
-  {city: 'Viena', slug: 'experiente/ce-sa-faci-in-viena', color: '#1A5C28', initial: 'V'},
+  { city: 'Roma', slug: 'experiente/ce-sa-faci-in-roma', color: '#C15540', initial: 'R' },
+  { city: 'Istanbul', slug: 'experiente/ce-sa-faci-in-istanbul', color: '#1F5E56', initial: 'I' },
+  { city: 'Barcelona', slug: 'experiente/ce-sa-faci-in-barcelona', color: '#8B2252', initial: 'B' },
+  { city: 'Paris', slug: 'experiente/ce-sa-faci-in-paris', color: '#2B2018', initial: 'P' },
+  { city: 'Atena', slug: 'experiente/ce-sa-faci-in-atena', color: '#1F5E56', initial: 'A' },
+  { city: 'Budapesta', slug: 'experiente/ce-sa-faci-in-budapesta', color: '#8B6914', initial: 'B' },
+  { city: 'Praga', slug: 'experiente/ce-sa-faci-in-praga', color: '#5B2D8E', initial: 'P' },
+  { city: 'Viena', slug: 'experiente/ce-sa-faci-in-viena', color: '#1A5C28', initial: 'V' },
 ];
 
 /* ── Accent per verticală ── */
@@ -105,11 +105,11 @@ const ICONS: Record<string, React.ReactElement> = {
   ),
 };
 
-type Props = {params: Promise<{locale: string}>};
+type Props = { params: Promise<{ locale: string }> };
 
-export async function generateMetadata({params}: Props): Promise<Metadata> {
-  const {locale} = await params;
-  const t = await getTranslations({locale, namespace: 'HomePage'});
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'HomePage' });
   return {
     title: t('title'),
     description: t('subtitle'),
@@ -117,8 +117,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   };
 }
 
-export default function HomePage({params}: Props) {
-  const {locale} = use(params);
+export default function HomePage({ params }: Props) {
+  const { locale } = use(params);
   setRequestLocale(locale);
   const t = useTranslations('HomePage');
   const l = locale === 'en' ? 'en' : 'ro';
@@ -153,7 +153,7 @@ export default function HomePage({params}: Props) {
               <span
                 key={i}
                 className="hero-word"
-                style={{'--word-i': i} as React.CSSProperties}
+                style={{ '--word-i': i } as React.CSSProperties}
               >
                 {word}{' '}
               </span>
@@ -317,9 +317,9 @@ export default function HomePage({params}: Props) {
               <span className="article-featured-tag">
                 {l === 'en'
                   ? (VERTICALS.find((v) => v.slug === featured.vertical)
-                      ?.label.en ?? featured.vertical)
+                    ?.label.en ?? featured.vertical)
                   : (VERTICALS.find((v) => v.slug === featured.vertical)
-                      ?.label.ro ?? featured.vertical)}
+                    ?.label.ro ?? featured.vertical)}
               </span>
               <h3 className="article-featured-title">{featured.title}</h3>
               <p className="article-featured-desc">{featured.description}</p>
@@ -348,9 +348,9 @@ export default function HomePage({params}: Props) {
                   <span className="article-card-tag">
                     {l === 'en'
                       ? (VERTICALS.find((v) => v.slug === a.vertical)?.label
-                          .en ?? a.vertical)
+                        .en ?? a.vertical)
                       : (VERTICALS.find((v) => v.slug === a.vertical)?.label
-                          .ro ?? a.vertical)}
+                        .ro ?? a.vertical)}
                   </span>
                   <h3 className="article-card-title">{a.title}</h3>
                   <p className="article-card-desc">{a.description}</p>
@@ -370,7 +370,7 @@ export default function HomePage({params}: Props) {
       <ScrollReveal>
         <section className="hp-why">
           <div className="hp-why-inner">
-            <div className="hp-section-head" style={{textAlign: 'center'}}>
+            <div className="hp-section-head" style={{ textAlign: 'center' }}>
               <span className="hp-label">
                 {l === 'en' ? 'Why us' : 'De ce noi'}
               </span>
@@ -445,12 +445,12 @@ export default function HomePage({params}: Props) {
         </section>
       </ScrollReveal>
 
-          {/* ═══════════════════════════════════════════
+      {/* ═══════════════════════════════════════════
           8. INSPIRAȚIE — carduri vizuale cu imagini
           ═══════════════════════════════════════════ */}
       <ScrollReveal>
         <section className="hp-section hp-inspiration">
-          <div className="hp-section-head" style={{textAlign: 'center'}}>
+          <div className="hp-section-head" style={{ textAlign: 'center' }}>
             <span className="hp-label">
               {l === 'en' ? 'Inspiration' : 'Inspirație'}
             </span>
@@ -465,7 +465,7 @@ export default function HomePage({params}: Props) {
               href="/croaziere/ghid-croaziere-mediterana"
               className="inspo-card inspo-card--wide"
               prefetch={false}
-              style={{backgroundImage: "url('https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80')"}}
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1548574505-5e239809ee19?w=600&q=80')" }}
             >
               <span className="inspo-label">
                 {l === 'en' ? 'Cruises' : 'Croaziere'}
@@ -478,7 +478,7 @@ export default function HomePage({params}: Props) {
               href="/experiente/ce-sa-faci-in-istanbul"
               className="inspo-card"
               prefetch={false}
-              style={{backgroundImage: "url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&q=80')"}}
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&q=80')" }}
             >
               <span className="inspo-label">City break</span>
               <span className="inspo-title">Istanbul</span>
@@ -487,7 +487,7 @@ export default function HomePage({params}: Props) {
               href="/experiente/ce-sa-faci-in-roma"
               className="inspo-card"
               prefetch={false}
-              style={{backgroundImage: "url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=80')"}}
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&q=80')" }}
             >
               <span className="inspo-label">City break</span>
               <span className="inspo-title">Roma</span>
@@ -496,7 +496,7 @@ export default function HomePage({params}: Props) {
               href="/experiente/ce-sa-faci-in-barcelona"
               className="inspo-card"
               prefetch={false}
-              style={{backgroundImage: "url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=400&q=80')"}}
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=400&q=80')" }}
             >
               <span className="inspo-label">City break</span>
               <span className="inspo-title">Barcelona</span>
@@ -505,7 +505,7 @@ export default function HomePage({params}: Props) {
               href="/experiente/ce-sa-faci-in-paris"
               className="inspo-card inspo-card--wide"
               prefetch={false}
-              style={{backgroundImage: "url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80')"}}
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80')" }}
             >
               <span className="inspo-label">City break</span>
               <span className="inspo-title">Paris</span>
@@ -513,17 +513,58 @@ export default function HomePage({params}: Props) {
           </div>
         </section>
       </ScrollReveal>
+      {/* ═══════════════════════════════════════════
+          9. PREGĂTIT DE PLECARE — CTA final
+          ═══════════════════════════════════════════ */}
+      <section className="hp-ready">
+        <div className="hp-ready-inner">
+          <h2>
+            {l === 'en' ? 'Ready to go?' : 'Pregătit de plecare?'}
+          </h2>
+          <p>
+            {l === 'en'
+              ? 'Pick a starting point — we handle the rest.'
+              : 'Alege un punct de plecare — noi ne ocupăm de rest.'}
+          </p>
+          <div className="ready-actions">
+            <Link href="/zboruri" className="ready-btn" prefetch={false}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17l5-2 8-8 5-4-4 5-8 8-2 5z" /><path d="M11 11l4 4" /></svg>
+              {l === 'en' ? 'Flights' : 'Zboruri'}
+            </Link>
+            <Link href="/croaziere" className="ready-btn" prefetch={false}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17h18" /><path d="M6 17l-1 3h14l-1-3" /><path d="M12 5v8M8 11h8" /></svg>
+              {l === 'en' ? 'Cruises' : 'Croaziere'}
+            </Link>
+            <Link href="/experiente" className="ready-btn" prefetch={false}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.5 4.5H18l-3.5 3 1.5 4.5L12 12l-4 3 1.5-4.5L6 7.5h4.5z" /></svg>
+              {l === 'en' ? 'Experiences' : 'Experiențe'}
+            </Link>
+            <Link href="/asigurari" className="ready-btn" prefetch={false}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L4 7v6c0 5 3.5 9.7 8 11 4.5-1.3 8-6 8-11V7l-8-4z" /><path d="M9 12l2 2 4-4" /></svg>
+              {l === 'en' ? 'Insurance' : 'Asigurări'}
+            </Link>
+          </div>
+        </div>
+      </section>
 
-      {/* ── Element decorativ subtil (busolă stilizată) ── */}
-      <div className="hp-deco" aria-hidden="true">
-        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" opacity="0.04">
-          <circle cx="60" cy="60" r="55" stroke="var(--ink)" strokeWidth="0.5" />
-          <circle cx="60" cy="60" r="35" stroke="var(--ink)" strokeWidth="0.5" />
-          <line x1="60" y1="5" x2="60" y2="115" stroke="var(--ink)" strokeWidth="0.5" />
-          <line x1="5" y1="60" x2="115" y2="60" stroke="var(--ink)" strokeWidth="0.5" />
-          <polygon points="60,8 56,20 64,20" fill="var(--clay)" opacity="0.5" />
-        </svg>
-      </div>
+      {/* ═══════════════════════════════════════════
+          10. PARTENERI — bandă de încredere
+          ═══════════════════════════════════════════ */}
+      <section className="hp-partners" aria-label={l === 'en' ? 'Our partners' : 'Partenerii noștri'}>
+        <div className="hp-partners-inner">
+          <p className="partners-label">
+            {l === 'en' ? 'Trusted partners' : 'Parteneri de încredere'}
+          </p>
+          <div className="partners-track">
+            <span className="partner-logo">CruiseDirect</span>
+            <span className="partner-logo">GetYourGuide</span>
+            <span className="partner-logo">Airalo</span>
+            <span className="partner-logo">Saily</span>
+            <span className="partner-logo">EKTA</span>
+            <span className="partner-logo">Kiwi.com</span>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

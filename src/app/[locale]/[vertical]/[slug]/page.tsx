@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import { articles } from '@/lib/content';
-import { getAlternates } from '@/lib/metadata';
+import { getArticleAlternates } from '@/lib/metadata';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { FAQ } from '@/components/FAQ';
 import { AffiliateDisclosure } from '@/components/AffiliateDisclosure';
@@ -39,10 +39,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, vertical, slug } = await params;
   const a = findArticle(locale, vertical, slug);
   if (!a) return {};
+
+  // Găsim toate localele în care există acest articol (același vertical + slug)
+  const availableLocales = articles
+    .filter((b) => b.vertical === vertical && b.slug === slug)
+    .map((b) => b.locale);
+
   return {
     title: a.title,
     description: a.description,
-    alternates: getAlternates(locale, `/${vertical}/${slug}`)
+    alternates: getArticleAlternates(locale, vertical, slug, availableLocales)
   };
 }
 
@@ -76,7 +82,6 @@ export default function ArticlePage({ params }: Props) {
           dateModified: a.dateModified
         })}
       />
-      {/* ── NOU: INJECTARE DINAMICĂ SEO OFERTE (DIN FRONTMATTER) ── */}
       {a.seoOffer && a.seoOffer.type === 'TouristTrip' && (
         <JsonLd
           data={touristTripSchema({
@@ -104,7 +109,6 @@ export default function ArticlePage({ params }: Props) {
 
       {a.answer && <AnswerBox>{a.answer}</AnswerBox>}
 
-      {/* ── CITY WIDGET GYG (sus, după answer box) ── */}
       {a.gygLocationId && (
         <GYGWidget
           type="city"
@@ -113,7 +117,6 @@ export default function ArticlePage({ params }: Props) {
         />
       )}
 
-      {/* ── CONȚINUT + AVAILABILITY WIDGETS INLINE + CRUISE DIRECT ── */}
       <ArticleBody
         html={a.body}
         tours={a.gygTours}
@@ -121,7 +124,6 @@ export default function ArticlePage({ params }: Props) {
         cdLinkId={a.cdLinkId}
       />
 
-      {/* ── ACTIVITY WIDGET GYG (jos, carduri experiențe) ── */}
       {a.gygQuery && (
         <GYGWidget
           type="activity-manual"
@@ -132,7 +134,6 @@ export default function ArticlePage({ params }: Props) {
         />
       )}
 
-      {/* ── Widget TP — motor de căutare zboruri/altele ── */}
       {a.widget && (
         <SearchWidget
           title={l === 'en' ? 'Search flights' : 'Caută zboruri'}

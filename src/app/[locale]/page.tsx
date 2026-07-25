@@ -24,7 +24,7 @@ const DESTINATIONS = [
   { city: 'Atena', slug: 'experiente/ce-sa-faci-in-atena', color: '#1F5E56', initial: 'A' },
   { city: 'Budapesta', slug: 'experiente/ce-sa-faci-in-budapesta', color: '#8B6914', initial: 'B' },
   { city: 'Praga', slug: 'experiente/ce-sa-faci-in-praga', color: '#5B2D8E', initial: 'P' },
-  { city: 'Viena', slug: 'experiente/ce-sa-faci-in-viena', color: '#1A5C28', initial: 'V' },
+  { city: 'Viena', slug: 'city-breaks/ce-sa-faci-in-viena', color: '#1A5C28', initial: 'V' },
 ];
 
 /* ── Accent per verticală ── */

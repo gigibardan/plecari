@@ -35,7 +35,7 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: {default: SITE_NAME, template: `%s · ${SITE_NAME}`},
+  title: {default: SITE_NAME, template: '%s'},
   robots: INDEXABLE ? undefined : {index: false, follow: false},
   icons: {
     icon: [

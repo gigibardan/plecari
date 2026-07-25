@@ -1,48 +1,75 @@
-import {use} from 'react';
-import type {Metadata} from 'next';
-import {notFound} from 'next/navigation';
-import {setRequestLocale} from 'next-intl/server';
-import {routing} from '@/i18n/routing';
-import {articles} from '@/lib/content';
-import {getAlternates} from '@/lib/metadata';
-import {Link} from '@/i18n/navigation';
-import {VERTICAL_SLUGS, getVertical} from '@/config/verticals';
-import {Breadcrumbs} from '@/components/Breadcrumbs';
-import {SearchWidget} from '@/components/SearchWidget';
-import {AffiliateButton} from '@/components/AffiliateButton';
-import {GYGWidget} from '@/components/GYGWidget';
-import {CruiseSearchHero} from '@/components/CruiseSearchHero';
+import { use } from 'react';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
+import { articles } from '@/lib/content';
+import { getAlternates } from '@/lib/metadata';
+import { Link } from '@/i18n/navigation';
+import { VERTICAL_SLUGS, getVertical } from '@/config/verticals';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { SearchWidget } from '@/components/SearchWidget';
+import { AffiliateButton } from '@/components/AffiliateButton';
+import { GYGWidget } from '@/components/GYGWidget';
+import { CruiseSearchHero } from '@/components/CruiseSearchHero';
 import CruiseDirectWidget from '@/components/CruiseDirectWidget';
 
 export const dynamic = 'force-static';
 export const revalidate = false;
 
-type Props = {params: Promise<{locale: string; vertical: string}>};
+type Props = { params: Promise<{ locale: string; vertical: string }> };
 
 export function generateStaticParams() {
-  const out: {locale: string; vertical: string}[] = [];
+  const out: { locale: string; vertical: string }[] = [];
   for (const locale of routing.locales) {
     for (const vertical of VERTICAL_SLUGS) {
-      out.push({locale, vertical});
+      out.push({ locale, vertical });
     }
   }
   return out;
 }
 
-export async function generateMetadata({params}: Props): Promise<Metadata> {
-  const {locale, vertical} = await params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, vertical } = await params;
   const v = getVertical(vertical);
   if (!v) return {};
   const l = locale === 'en' ? 'en' : 'ro';
+
+  const ogImage = `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://plecari.com'}/verticals/${vertical}.webp`;
+
   return {
     title: v.label[l],
     description: v.intro[l],
-    alternates: getAlternates(locale, `/${vertical}`)
+    alternates: getAlternates(locale, `/${vertical}`),
+
+    openGraph: {
+      title: v.label[l],
+      description: v.intro[l],
+      url: `https://plecari.com/${locale}/${vertical}`,
+      siteName: 'Plecări',
+      type: 'website',
+      locale: locale === 'en' ? 'en_US' : 'ro_RO',
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: v.label[l]
+        }
+      ]
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: v.label[l],
+      description: v.intro[l],
+      images: [ogImage]
+    }
   };
 }
 
-export default function VerticalHub({params}: Props) {
-  const {locale, vertical} = use(params);
+export default function VerticalHub({ params }: Props) {
+  const { locale, vertical } = use(params);
   const v = getVertical(vertical);
   if (!v) notFound();
   setRequestLocale(locale);
@@ -59,7 +86,7 @@ export default function VerticalHub({params}: Props) {
       <section className="hub-hero">
         <div
           className="hub-hero-photo"
-          style={{backgroundImage: `url(${v.image})`}}
+          style={{ backgroundImage: `url(${v.image})` }}
         />
         <div className="hub-hero-tint" />
         <div className="hub-hero-veil" />
@@ -74,8 +101,8 @@ export default function VerticalHub({params}: Props) {
         <Breadcrumbs
           locale={locale}
           items={[
-            {name: 'Acasă', path: '/'},
-            {name: v.label[l], path: `/${vertical}`}
+            { name: 'Acasă', path: '/' },
+            { name: v.label[l], path: `/${vertical}` }
           ]}
         />
 

@@ -12,6 +12,9 @@ import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
 import {GYGScript} from '@/components/GYGScript';
 import {GoogleAnalytics} from '@next/third-parties/google';
+import { JsonLd } from '@/components/JsonLd';
+import { websiteSchema, organizationSchema } from '@/lib/schema';
+
 import '../globals.css';
 
 const fontDisplay = Fraunces({
@@ -67,6 +70,7 @@ export default async function LocaleLayout({
       className={`${fontDisplay.variable} ${fontBody.variable}`}
     >
       <body>
+        <JsonLd data={[websiteSchema(), organizationSchema()]} />
         <NextIntlClientProvider>
           <ConsentProvider>
             <Header locale={locale} />

@@ -1,4 +1,4 @@
-// src/app/[locale]/[vertical]/[slug]/page.tsx — PAGINA DE ARTICOL
+// src/app/[locale]/[vertical]/[slug]/page.tsx — cu OpenGraph images adăugate
 import { use } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -15,6 +15,7 @@ import { SearchWidget } from '@/components/SearchWidget';
 import { GYGWidget } from '@/components/GYGWidget';
 import { ArticleBody } from '@/components/ArticleBody';
 import { verticalLabel } from '@/config/verticals';
+import { SITE_URL } from '@/config/site';
 import { articleSchema, productOfferSchema, touristTripSchema } from '@/lib/schema';
 
 type Props = {
@@ -35,20 +36,56 @@ function findArticle(locale: string, vertical: string, slug: string) {
   );
 }
 
+// Imaginea OG: dacă articolul are imagine proprie în frontmatter o folosim,
+// altfel fallback la imaginea verticală (toate există în /public/verticals/)
+function getOgImage(vertical: string, articleImage?: string): string {
+  if (articleImage) return articleImage;
+  return `${SITE_URL}/verticals/${vertical}.webp`;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, vertical, slug } = await params;
   const a = findArticle(locale, vertical, slug);
   if (!a) return {};
 
-  // Găsim toate localele în care există acest articol (același vertical + slug)
   const availableLocales = articles
     .filter((b) => b.vertical === vertical && b.slug === slug)
     .map((b) => b.locale);
 
+  const ogImage = getOgImage(vertical);
+
   return {
     title: a.title,
     description: a.description,
-    alternates: getArticleAlternates(locale, vertical, slug, availableLocales)
+    alternates: getArticleAlternates(locale, vertical, slug, availableLocales),
+
+    // ── OpenGraph ──────────────────────────────────────────────
+    openGraph: {
+      title: a.title,
+      description: a.description,
+      url: `${SITE_URL}/${locale}/${vertical}/${slug}`,
+      siteName: 'Plecări',
+      type: 'article',
+      publishedTime: a.datePublished,
+      modifiedTime: a.dateModified ?? a.datePublished,
+      locale: locale === 'en' ? 'en_US' : 'ro_RO',
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: a.title
+        }
+      ]
+    },
+
+    // ── Twitter / X card ───────────────────────────────────────
+    twitter: {
+      card: 'summary_large_image',
+      title: a.title,
+      description: a.description,
+      images: [ogImage]
+    }
   };
 }
 
@@ -79,9 +116,11 @@ export default function ArticlePage({ params }: Props) {
           description: a.description,
           urlPath: `/${locale}/${vertical}/${slug}`,
           datePublished: a.datePublished,
-          dateModified: a.dateModified
+          dateModified: a.dateModified,
+          image: getOgImage(vertical)
         })}
       />
+
       {a.seoOffer && a.seoOffer.type === 'TouristTrip' && (
         <JsonLd
           data={touristTripSchema({

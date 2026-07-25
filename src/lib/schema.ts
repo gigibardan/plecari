@@ -146,3 +146,21 @@ export function touristTripSchema(opts: {
     }
   };
 }
+
+export function websiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE_NAME,
+    url: SITE_URL,
+    inLanguage: ['ro', 'en'],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/ro/zboruri?q={search_term_string}`
+      },
+      'query-input': 'required name=search_term_string'
+    }
+  };
+}

@@ -14,7 +14,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── asigurare-viza-schengen.ro.mdx
 |  |  ├── bagaj-mana-dimensiuni-reguli-2026.ro.mdx
 |  |  ├── bagaj-pierdut-companie-aeriana-drepturi.ro.mdx
-|  |  ├── best-beaches-europe-2026-en.mdx
+|  |  ├── best-beaches-europe-2026.en.mdx
 |  |  ├── best-esim-europe-2026.en.mdx
 |  |  ├── best-greek-islands-2026.en.mdx
 |  |  ├── bilete-vatican-colosseum-epuizate-last-minute.ro.mdx
@@ -56,7 +56,6 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── cum-platesti-strainatate-fara-comisioane.ro.mdx
 |  |  ├── destinatii-ieftine-europa-2026.ro.mdx
 |  |  ├── digital-nomad-europa-2026.ro.mdx
-|  |  ├── digital-nomad-europe-2026-en.mdx
 |  |  ├── digital-nomad-europe-2026.en.mdx
 |  |  ├── drepturi-pasager-zbor-intarziat-anulat.ro.mdx
 |  |  ├── dubrovnik-city-break-guide.en.mdx
@@ -104,7 +103,6 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── portugal-holiday-guide-2026.en.mdx
 |  |  ├── prima-croaziera-ghid-incepatori.ro.mdx
 |  |  ├── prima-croaziera-mediterana.ro.mdx
-|  |  ├── road-trip-croatia-en.mdx
 |  |  ├── road-trip-croatia-split-dubrovnik.ro.mdx
 |  |  ├── road-trip-transilvania.ro.mdx
 |  |  ├── romania-road-trip-transylvania.en.mdx
@@ -261,6 +259,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── LanguageSwitcher.tsx
 |  |  ├── ScrollReveal.tsx
 |  |  ├── SearchWidget.tsx
+|  |  ├── TranslationPathSetter.tsx
 |  |  └── TrustBar.tsx
 |  ├── config
 |  |  ├── site.ts
@@ -273,7 +272,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |     ├── consent.tsx
 |     ├── content.ts
 |     ├── metadata.ts
-|     └── schema.ts
+|     ├── schema.ts
+|     └── translation-context.tsx
 ├── structura.txt
 ├── tsconfig.json
 ├── velite.config.ts

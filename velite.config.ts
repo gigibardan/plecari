@@ -42,6 +42,7 @@ export default defineConfig({
           )
           .optional(),
         cdLinkId: s.string().optional(), // NOU: Adăugat pentru widget-ul CruiseDirect
+        translationOf: s.string().optional(), // slug-ul RO corespondent; se pune DOAR în articolele EN
         
         seoOffer: s
           .object({

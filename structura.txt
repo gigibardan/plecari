@@ -23,6 +23,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── cabin-baggage-rules-2026.en.mdx
 |  |  ├── calatorii-solo-europa-2026.ro.mdx
 |  |  ├── car-rental-documents.en.mdx
+|  |  ├── car-rental-without-credit-card.en.mdx
 |  |  ├── card-european-vs-asigurare-calatorie.en.mdx
 |  |  ├── card-european-vs-asigurare-calatorie.ro.mdx
 |  |  ├── cat-costa-o-croaziera-buget-real.ro.mdx
@@ -56,6 +57,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── destinatii-ieftine-europa-2026.ro.mdx
 |  |  ├── digital-nomad-europa-2026.ro.mdx
 |  |  ├── digital-nomad-europe-2026-en.mdx
+|  |  ├── digital-nomad-europe-2026.en.mdx
 |  |  ├── drepturi-pasager-zbor-intarziat-anulat.ro.mdx
 |  |  ├── dubrovnik-city-break-guide.en.mdx
 |  |  ├── emergencies-abroad-guide.en.mdx
@@ -63,12 +65,11 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── esim-pentru-copii-ghid-parinti.ro.mdx
 |  |  ├── esim-vs-roaming.en.mdx
 |  |  ├── esim-vs-roaming.ro.mdx
+|  |  ├── europe-holiday-with-kids-2026.en.mdx
 |  |  ├── european-food-guide-2026.en.mdx
 |  |  ├── first-cruise-guide-beginners.en.mdx
-|  |  ├── first-cruise-guide.en.mdx
 |  |  ├── first-mediterranean-cruise-guide.en.mdx
 |  |  ├── flight-cancelled-delayed-eu261-compensation.en.mdx
-|  |  ├── flight-delay-passenger-rights.en.mdx
 |  |  ├── formula-1-europa-2026-grand-prix.ro.mdx
 |  |  ├── fraude-rezervari-online-vacanta.ro.mdx
 |  |  ├── geopolitica-rute-turistice-2026.ro.mdx
@@ -80,7 +81,6 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── grecia-2026-ghid-vacanta.ro.mdx
 |  |  ├── greece-2026-holiday-guide.en.mdx
 |  |  ├── greek-islands-cruise-2026.en.mdx
-|  |  ├── greek-islands-cruise-guide.en.mdx
 |  |  ├── how-to-find-cheap-accommodation.en.mdx
 |  |  ├── how-to-install-esim.en.mdx
 |  |  ├── how-to-plan-european-holiday-2026.en.mdx
@@ -92,6 +92,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── israel-2026-ghid-calatorie.ro.mdx
 |  |  ├── istanbul-city-break-ghid.ro.mdx
 |  |  ├── istanbul-city-break-guide.en.mdx
+|  |  ├── layover-vs-direct-flight.en.mdx
 |  |  ├── lost-luggage-airline-rights.en.mdx
 |  |  ├── msc-vs-costa-vs-norwegian.en.mdx
 |  |  ├── msc-vs-costa-vs-norwegian.ro.mdx
@@ -99,6 +100,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── overtourism-europe-2026-tourist-taxes.en.mdx
 |  |  ├── pasaport-viza-documente-calatorie-2026.ro.mdx
 |  |  ├── pay-abroad-no-fees.en.mdx
+|  |  ├── popular-flights-from-bucharest.en.mdx
+|  |  ├── portugal-holiday-guide-2026.en.mdx
 |  |  ├── prima-croaziera-ghid-incepatori.ro.mdx
 |  |  ├── prima-croaziera-mediterana.ro.mdx
 |  |  ├── road-trip-croatia-en.mdx
@@ -110,6 +113,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── saily-esim-comparatie.ro.mdx
 |  |  ├── saily-esim-review.en.mdx
 |  |  ├── scam-uri-inselatorii-vacanta-2026.ro.mdx
+|  |  ├── ski-travel-insurance.en.mdx
 |  |  ├── solo-travel-europe-2026.en.mdx
 |  |  ├── supraturism-europa-2026-taxe-limite.ro.mdx
 |  |  ├── supraturism-europa-2026.ro.mdx
@@ -130,8 +134,10 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── top-insule-grecesti-2026.ro.mdx
 |  |  ├── transfer-aeroport-ghid.ro.mdx
 |  |  ├── transylvania-day-trips-bucharest.en.mdx
+|  |  ├── travel-insurance-children.en.mdx
 |  |  ├── travel-insurance-europe-guide.en.mdx
 |  |  ├── travel-scams-europe-2026.en.mdx
+|  |  ├── trip-cancellation-insurance.en.mdx
 |  |  ├── trucuri-calatorie-ieftina-2026.ro.mdx
 |  |  ├── trucuri-calatorie-ieftina-europa.ro.mdx
 |  |  ├── turism-sportiv-meci-fotbal-europa.ro.mdx
@@ -349,7 +355,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
    ├── zbor-anulat-intarziat-drepturi-compensatii.ro.mdx
    └── zboruri-populare-din-bucuresti.ro.mdx
 
-directory: 2913 file: 19116
+directory: 2913 file: 19122
 
 ignored: directory (165)
 

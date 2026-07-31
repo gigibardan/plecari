@@ -17,6 +17,9 @@ import { ArticleBody } from '@/components/ArticleBody';
 import { verticalLabel } from '@/config/verticals';
 import { SITE_URL } from '@/config/site';
 import { articleSchema, productOfferSchema, touristTripSchema } from '@/lib/schema';
+import { TranslationPathSetter } from '@/components/TranslationPathSetter';
+import { getTranslationPath } from '@/lib/metadata';
+
 
 type Props = {
   params: Promise<{ locale: string; vertical: string; slug: string }>;
@@ -101,6 +104,7 @@ export default function ArticlePage({ params }: Props) {
 
   return (
     <main className="article" style={{ maxWidth: 760, margin: '0 auto' }}>
+      <TranslationPathSetter path={getTranslationPath(locale, vertical, slug)} />
       <Breadcrumbs
         locale={locale}
         items={[

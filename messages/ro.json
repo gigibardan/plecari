@@ -12,5 +12,15 @@
     "learnMore": "Află mai multe",
     "accept": "Accept",
     "reject": "Doar esențiale"
+  },
+   "search": {
+    "title": "Găsește ghidul potrivit",
+    "subtitle": "ghiduri despre zboruri, cazări, croaziere, eSIM și mai mult",
+    "placeholder": "Caută: eSIM, Roma, croazieră...",
+    "btn": "Caută",
+    "all": "Toate",
+    "reset": "× Resetează",
+    "noResults": "Niciun ghid găsit",
+    "noResultsSub": "Încearcă alte cuvinte cheie sau elimină filtrele."
   }
 }

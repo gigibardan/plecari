@@ -1,8 +1,8 @@
 // src/app/sitemap.ts
-import type {MetadataRoute} from 'next';
-import {SITE_URL, LOCALES, DEFAULT_LOCALE, INDEXABLE} from '@/config/site';
-import {VERTICAL_SLUGS} from '@/config/verticals';
-import {articles, pages} from '@/lib/content';
+import type { MetadataRoute } from 'next';
+import { SITE_URL, LOCALES, DEFAULT_LOCALE, INDEXABLE } from '@/config/site';
+import { VERTICAL_SLUGS } from '@/config/verticals';
+import { articles, pages } from '@/lib/content';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   if (!INDEXABLE) return [];
@@ -17,6 +17,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       languages: {
         ...Object.fromEntries(LOCALES.map((l) => [l, `${SITE_URL}/${l}`])),
         'x-default': `${SITE_URL}/${DEFAULT_LOCALE}`,
+      }
+    }
+  });
+
+  // Pagina de search
+  entries.push({
+    url: `${SITE_URL}/ro/search`,
+    lastModified: new Date(),
+    alternates: {
+      languages: {
+        ro: `${SITE_URL}/ro/search`,
+        en: `${SITE_URL}/en/search`,
+        'x-default': `${SITE_URL}/ro/search`,
       }
     }
   });

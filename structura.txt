@@ -5,6 +5,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  ├── articles
 |  |  ├── acte-necesare-inchiriere-masina.ro.mdx
 |  |  ├── ai-turism-imagini-false-2026.ro.mdx
+|  |  ├── airport-transfer-guide.en.mdx
+|  |  ├── amalfi-coast-complete-guide-2026.en.mdx
 |  |  ├── antalya-all-inclusive-guide-2026.en.mdx
 |  |  ├── asigurare-anulare-calatorie.ro.mdx
 |  |  ├── asigurare-calatorie-copii.ro.mdx
@@ -20,6 +22,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── bilete-vatican-colosseum-epuizate-last-minute.ro.mdx
 |  |  ├── bucharest-city-break-guide.en.mdx
 |  |  ├── budget-travel-tips-europe-2026.en.mdx
+|  |  ├── bulgaria-holiday-guide-2026.en.mdx
 |  |  ├── cabin-baggage-rules-2026.en.mdx
 |  |  ├── calatorii-solo-europa-2026.ro.mdx
 |  |  ├── car-rental-documents.en.mdx
@@ -41,10 +44,14 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── cel-mai-bun-esim-per-destinatie.ro.mdx
 |  |  ├── cele-mai-bune-aplicatii-calatorie-2026.ro.mdx
 |  |  ├── cele-mai-frumoase-plaje-europa-zbor-bucuresti.ro.mdx
+|  |  ├── cheapest-destinations-from-bucharest.en.mdx
 |  |  ├── cheapest-european-destinations-2026.en.mdx
+|  |  ├── cinque-terre-complete-guide-2026.en.mdx
+|  |  ├── cinque-terre-ghid-complet-2026.ro.mdx
 |  |  ├── city-break-dubrovnik-2026.ro.mdx
 |  |  ├── city-break-londra-bucuresti-2026.ro.mdx
 |  |  ├── clima-extrema-vacante-europa-2026.ro.mdx
+|  |  ├── coasta-amalfi-ghid-complet-2026.ro.mdx
 |  |  ├── croatia-road-trip-split-dubrovnik-2026.en.mdx
 |  |  ├── croaziera-insulele-grecesti-2026.ro.mdx
 |  |  ├── cruise-cost-real-budget.en.mdx
@@ -59,17 +66,23 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── digital-nomad-europe-2026.en.mdx
 |  |  ├── drepturi-pasager-zbor-intarziat-anulat.ro.mdx
 |  |  ├── dubrovnik-city-break-guide.en.mdx
+|  |  ├── egypt-holiday-guide-2026.en.mdx
 |  |  ├── emergencies-abroad-guide.en.mdx
 |  |  ├── escapade-weekend-romania-2026.ro.mdx
+|  |  ├── esim-for-kids-parents-guide.en.mdx
 |  |  ├── esim-pentru-copii-ghid-parinti.ro.mdx
 |  |  ├── esim-vs-roaming.en.mdx
 |  |  ├── esim-vs-roaming.ro.mdx
 |  |  ├── europe-holiday-with-kids-2026.en.mdx
 |  |  ├── european-food-guide-2026.en.mdx
+|  |  ├── extreme-weather-europe-holidays-2026.en.mdx
 |  |  ├── first-cruise-guide-beginners.en.mdx
 |  |  ├── first-mediterranean-cruise-guide.en.mdx
 |  |  ├── flight-cancelled-delayed-eu261-compensation.en.mdx
+|  |  ├── florence-complete-guide-2026.en.mdx
+|  |  ├── florenta-ghid-complet-2026.ro.mdx
 |  |  ├── formula-1-europa-2026-grand-prix.ro.mdx
+|  |  ├── formula-1-europe-grand-prix-2026.en.mdx
 |  |  ├── fraude-rezervari-online-vacanta.ro.mdx
 |  |  ├── geopolitica-rute-turistice-2026.ro.mdx
 |  |  ├── ghid-asigurare-calatorie-2026.ro.mdx
@@ -80,6 +93,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── grecia-2026-ghid-vacanta.ro.mdx
 |  |  ├── greece-2026-holiday-guide.en.mdx
 |  |  ├── greek-islands-cruise-2026.en.mdx
+|  |  ├── hidden-holiday-fees-2026.en.mdx
 |  |  ├── how-to-find-cheap-accommodation.en.mdx
 |  |  ├── how-to-install-esim.en.mdx
 |  |  ├── how-to-plan-european-holiday-2026.en.mdx
@@ -91,10 +105,17 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── israel-2026-ghid-calatorie.ro.mdx
 |  |  ├── istanbul-city-break-ghid.ro.mdx
 |  |  ├── istanbul-city-break-guide.en.mdx
+|  |  ├── lacul-como-ghid-complet-2026.ro.mdx
+|  |  ├── lake-como-complete-guide-2026.en.mdx
 |  |  ├── layover-vs-direct-flight.en.mdx
+|  |  ├── london-city-break-from-bucharest.en.mdx
 |  |  ├── lost-luggage-airline-rights.en.mdx
+|  |  ├── milan-complete-guide-2026.en.mdx
+|  |  ├── milano-ghid-complet-2026.ro.mdx
 |  |  ├── msc-vs-costa-vs-norwegian.en.mdx
 |  |  ├── msc-vs-costa-vs-norwegian.ro.mdx
+|  |  ├── naples-complete-guide-2026.en.mdx
+|  |  ├── napoli-ghid-complet-2026.ro.mdx
 |  |  ├── online-booking-fraud.en.mdx
 |  |  ├── overtourism-europe-2026-tourist-taxes.en.mdx
 |  |  ├── pasaport-viza-documente-calatorie-2026.ro.mdx
@@ -111,6 +132,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── saily-esim-comparatie.ro.mdx
 |  |  ├── saily-esim-review.en.mdx
 |  |  ├── scam-uri-inselatorii-vacanta-2026.ro.mdx
+|  |  ├── sicilia-ghid-complet-2026.ro.mdx
+|  |  ├── sicily-complete-guide-2026.en.mdx
 |  |  ├── ski-travel-insurance.en.mdx
 |  |  ├── solo-travel-europe-2026.en.mdx
 |  |  ├── supraturism-europa-2026-taxe-limite.ro.mdx
@@ -130,16 +153,19 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── things-to-do-vienna.en.mdx
 |  |  ├── top-destinatii-ieftine-din-bucuresti.ro.mdx
 |  |  ├── top-insule-grecesti-2026.ro.mdx
+|  |  ├── toscana-rurala-ghid-complet-2026.ro.mdx
 |  |  ├── transfer-aeroport-ghid.ro.mdx
 |  |  ├── transylvania-day-trips-bucharest.en.mdx
 |  |  ├── travel-insurance-children.en.mdx
 |  |  ├── travel-insurance-europe-guide.en.mdx
+|  |  ├── travel-insurance-guide-2026.en.mdx
 |  |  ├── travel-scams-europe-2026.en.mdx
 |  |  ├── trip-cancellation-insurance.en.mdx
 |  |  ├── trucuri-calatorie-ieftina-2026.ro.mdx
 |  |  ├── trucuri-calatorie-ieftina-europa.ro.mdx
 |  |  ├── turism-sportiv-meci-fotbal-europa.ro.mdx
 |  |  ├── turkey-2026-safety-guide.en.mdx
+|  |  ├── tuscany-rural-complete-guide-2026.en.mdx
 |  |  ├── ucraina-2026-ghid-calatorie.ro.mdx
 |  |  ├── urgente-in-strainatate-ghid-2026.ro.mdx
 |  |  ├── vacanta-antalya-2026-ghid-complet.ro.mdx
@@ -148,6 +174,10 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── vacanta-egipt-2026-ghid-complet.ro.mdx
 |  |  ├── vacanta-portugalia-2026-lisabona-porto-algarve.ro.mdx
 |  |  ├── vacanta-turcia-2026-siguranta.ro.mdx
+|  |  ├── vatican-colosseum-tickets-sold-out.en.mdx
+|  |  ├── venetia-ghid-complet-2026.ro.mdx
+|  |  ├── venice-complete-guide-2026.en.mdx
+|  |  ├── weekend-getaways-romania-2026.en.mdx
 |  |  ├── zbor-anulat-intarziat-drepturi-compensatii.ro.mdx
 |  |  ├── zbor-cu-escala-vs-direct.ro.mdx
 |  |  └── zboruri-populare-din-bucuresti.ro.mdx
@@ -277,85 +307,9 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 ├── structura.txt
 ├── tsconfig.json
 ├── velite.config.ts
-├── wrangler.jsonc
-└── _backup_links_20260715_004512
-   ├── acte-necesare-inchiriere-masina.ro.mdx
-   ├── ai-turism-imagini-false-2026.ro.mdx
-   ├── asigurare-calatorie-copii.ro.mdx
-   ├── asigurare-calatorie-ghid.ro.mdx
-   ├── asigurare-schi-munte.ro.mdx
-   ├── asigurare-viza-schengen.ro.mdx
-   ├── bagaj-mana-dimensiuni-reguli-2026.ro.mdx
-   ├── bagaj-pierdut-companie-aeriana-drepturi.ro.mdx
-   ├── best-esim-europe-2026.en.mdx
-   ├── bilete-vatican-colosseum-epuizate-last-minute.ro.mdx
-   ├── bucharest-city-break-guide.en.mdx
-   ├── card-european-vs-asigurare-calatorie.ro.mdx
-   ├── cat-costa-o-croaziera-buget-real.ro.mdx
-   ├── ce-sa-faci-in-atena.ro.mdx
-   ├── ce-sa-faci-in-barcelona.ro.mdx
-   ├── ce-sa-faci-in-bucuresti.ro.mdx
-   ├── ce-sa-faci-in-budapesta.ro.mdx
-   ├── ce-sa-faci-in-istanbul.ro.mdx
-   ├── ce-sa-faci-in-paris.ro.mdx
-   ├── ce-sa-faci-in-praga.ro.mdx
-   ├── ce-sa-faci-in-roma.ro.mdx
-   ├── ce-sa-faci-in-viena.ro.mdx
-   ├── cel-mai-bun-esim-per-destinatie.ro.mdx
-   ├── cele-mai-bune-aplicatii-calatorie-2026.ro.mdx
-   ├── cele-mai-frumoase-plaje-europa-zbor-bucuresti.ro.mdx
-   ├── cheapest-european-destinations-2026.en.mdx
-   ├── city-break-dubrovnik-2026.ro.mdx
-   ├── clima-extrema-vacante-europa-2026.ro.mdx
-   ├── cum-gasesti-bilete-avion-ieftine.ro.mdx
-   ├── cum-gasesti-cazare-ieftina.ro.mdx
-   ├── cum-instalezi-esim.ro.mdx
-   ├── cum-planifici-vacanta-ghid-pas-cu-pas.ro.mdx
-   ├── cum-platesti-strainatate-fara-comisioane.ro.mdx
-   ├── drepturi-pasager-zbor-intarziat-anulat.ro.mdx
-   ├── dubrovnik-city-break-guide.en.mdx
-   ├── escapade-weekend-romania-2026.ro.mdx
-   ├── esim-vs-roaming.en.mdx
-   ├── esim-vs-roaming.ro.mdx
-   ├── first-cruise-guide.en.mdx
-   ├── first-mediterranean-cruise-guide.en.mdx
-   ├── formula-1-europa-2026-grand-prix.ro.mdx
-   ├── fraude-rezervari-online-vacanta.ro.mdx
-   ├── geopolitica-rute-turistice-2026.ro.mdx
-   ├── ghid-asigurare-calatorie-2026.ro.mdx
-   ├── ghid-croaziere-mediterana.ro.mdx
-   ├── grecia-2026-ghid-vacanta.ro.mdx
-   ├── greek-islands-cruise-guide.en.mdx
-   ├── inchiriere-masina-grecia-2026.ro.mdx
-   ├── is-romania-expensive.en.mdx
-   ├── israel-2026-ghid-calatorie.ro.mdx
-   ├── istanbul-city-break-ghid.ro.mdx
-   ├── msc-vs-costa-vs-norwegian.ro.mdx
-   ├── prima-croaziera-ghid-incepatori.ro.mdx
-   ├── road-trip-croatia-split-dubrovnik.ro.mdx
-   ├── romania-road-trip-transylvania.en.mdx
-   ├── rusia-2026-ghid-calatorie-romani.ro.mdx
-   ├── saily-esim-comparatie.ro.mdx
-   ├── scam-uri-inselatorii-vacanta-2026.ro.mdx
-   ├── supraturism-europa-2026-taxe-limite.ro.mdx
-   ├── taxe-ascunse-inchiriere-auto.ro.mdx
-   ├── taxe-ascunse-vacanta-2026.ro.mdx
-   ├── top-destinatii-ieftine-din-bucuresti.ro.mdx
-   ├── top-insule-grecesti-2026.ro.mdx
-   ├── transfer-aeroport-ghid.ro.mdx
-   ├── transylvania-day-trips-bucharest.en.mdx
-   ├── travel-insurance-europe-guide.en.mdx
-   ├── trucuri-calatorie-ieftina-europa.ro.mdx
-   ├── turism-sportiv-meci-fotbal-europa.ro.mdx
-   ├── ucraina-2026-ghid-calatorie.ro.mdx
-   ├── vacanta-antalya-2026-ghid-complet.ro.mdx
-   ├── vacanta-bulgaria-2026-ghid-complet.ro.mdx
-   ├── vacanta-cu-copiii-europa-2026.ro.mdx
-   ├── vacanta-turcia-2026-siguranta.ro.mdx
-   ├── zbor-anulat-intarziat-drepturi-compensatii.ro.mdx
-   └── zboruri-populare-din-bucuresti.ro.mdx
+└── wrangler.jsonc
 
-directory: 2913 file: 19122
+directory: 2912 file: 19077
 
 ignored: directory (165)
 

@@ -1,4 +1,10 @@
-// src/app/[locale]/[vertical]/[slug]/page.tsx — cu OpenGraph images adăugate
+// src/app/[locale]/[vertical]/[slug]/page.tsx
+// MODIFICĂRI față de versiunea anterioară:
+// 1. Import RelatedArticles, ReadingProgress, BackToTop
+// 2. <ReadingProgress /> adăugat în <main> (sus, înainte de breadcrumb)
+// 3. <RelatedArticles /> adăugat după FAQ/AffiliateDisclosure
+// 4. <BackToTop /> adăugat la finalul <main>
+
 import { use } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -14,12 +20,14 @@ import { AnswerBox } from '@/components/AnswerBox';
 import { SearchWidget } from '@/components/SearchWidget';
 import { GYGWidget } from '@/components/GYGWidget';
 import { ArticleBody } from '@/components/ArticleBody';
+import { RelatedArticles } from '@/components/RelatedArticles';
+import { ReadingProgress } from '@/components/ReadingProgress';
+import { BackToTop } from '@/components/BackToTop';
 import { verticalLabel } from '@/config/verticals';
 import { SITE_URL } from '@/config/site';
 import { articleSchema, productOfferSchema, touristTripSchema } from '@/lib/schema';
 import { TranslationPathSetter } from '@/components/TranslationPathSetter';
 import { getTranslationPath } from '@/lib/metadata';
-
 
 type Props = {
   params: Promise<{ locale: string; vertical: string; slug: string }>;
@@ -39,8 +47,6 @@ function findArticle(locale: string, vertical: string, slug: string) {
   );
 }
 
-// Imaginea OG: dacă articolul are imagine proprie în frontmatter o folosim,
-// altfel fallback la imaginea verticală (toate există în /public/verticals/)
 function getOgImage(vertical: string, articleImage?: string): string {
   if (articleImage) return articleImage;
   return `${SITE_URL}/verticals/${vertical}.webp`;
@@ -61,8 +67,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: a.title,
     description: a.description,
     alternates: getArticleAlternates(locale, vertical, slug, availableLocales),
-
-    // ── OpenGraph ──────────────────────────────────────────────
     openGraph: {
       title: a.title,
       description: a.description,
@@ -72,17 +76,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: a.datePublished,
       modifiedTime: a.dateModified ?? a.datePublished,
       locale: locale === 'en' ? 'en_US' : 'ro_RO',
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: a.title
-        }
-      ]
+      images: [{ url: ogImage, width: 1200, height: 630, alt: a.title }]
     },
-
-    // ── Twitter / X card ───────────────────────────────────────
     twitter: {
       card: 'summary_large_image',
       title: a.title,
@@ -104,6 +99,10 @@ export default function ArticlePage({ params }: Props) {
 
   return (
     <main className="article" style={{ maxWidth: 760, margin: '0 auto' }}>
+
+      {/* ── Bara de progres citire ── */}
+      <ReadingProgress />
+
       <TranslationPathSetter path={getTranslationPath(locale, vertical, slug)} />
       <Breadcrumbs
         locale={locale}
@@ -179,9 +178,9 @@ export default function ArticlePage({ params }: Props) {
 
       {a.widget && (
         <SearchWidget
-          title={l === 'en' ? 'Search flights' : 'Caută zboruri'}
+          title={l === 'en' ? 'Search & compare' : 'Caută și compară'}
           scriptSrc={a.widget}
-          minHeight={a.widgetHeight ?? 80}
+          minHeight={a.widgetHeight ?? 200}
         />
       )}
 
@@ -200,6 +199,17 @@ export default function ArticlePage({ params }: Props) {
       )}
 
       <AffiliateDisclosure />
+
+      {/* ── Articole înrudite ── */}
+      <RelatedArticles
+        locale={locale}
+        vertical={vertical}
+        currentSlug={slug}
+      />
+
+      {/* ── Buton back to top ── */}
+      <BackToTop />
+
     </main>
   );
 }

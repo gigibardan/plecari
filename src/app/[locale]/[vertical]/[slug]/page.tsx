@@ -98,118 +98,115 @@ export default function ArticlePage({ params }: Props) {
   const gygLocaleCode = a.gygLocale ?? (l === 'en' ? 'en-US' : 'ro-RO');
 
   return (
-    <main className="article" style={{ maxWidth: 760, margin: '0 auto' }}>
-
-      {/* ── Bara de progres citire ── */}
+    <>
       <ReadingProgress />
 
-      <TranslationPathSetter path={getTranslationPath(locale, vertical, slug)} />
-      <Breadcrumbs
-        locale={locale}
-        items={[
-          { name: 'Acasă', path: '/' },
-          { name: verticalLabel(vertical, locale), path: `/${vertical}` },
-          { name: a.title, path: `/${vertical}/${slug}` }
-        ]}
-      />
+      <main className="article" style={{ maxWidth: 760, margin: '0 auto' }}>
+        <TranslationPathSetter path={getTranslationPath(locale, vertical, slug)} />
+        <Breadcrumbs
+          locale={locale}
+          items={[
+            { name: 'Acasă', path: '/' },
+            { name: verticalLabel(vertical, locale), path: `/${vertical}` },
+            { name: a.title, path: `/${vertical}/${slug}` }
+          ]}
+        />
 
-      <JsonLd
-        data={articleSchema({
-          title: a.title,
-          description: a.description,
-          urlPath: `/${locale}/${vertical}/${slug}`,
-          datePublished: a.datePublished,
-          dateModified: a.dateModified,
-          image: getOgImage(vertical)
-        })}
-      />
-
-      {a.seoOffer && a.seoOffer.type === 'TouristTrip' && (
         <JsonLd
-          data={touristTripSchema({
-            name: a.seoOffer.name || a.title,
-            description: a.seoOffer.description || a.description,
-            providerName: a.seoOffer.provider,
-            url: a.seoOffer.url || (a.cta && a.cta.length > 0 ? a.cta[0].href : '')
+          data={articleSchema({
+            title: a.title,
+            description: a.description,
+            urlPath: `/${locale}/${vertical}/${slug}`,
+            datePublished: a.datePublished,
+            dateModified: a.dateModified,
+            image: getOgImage(vertical)
           })}
         />
-      )}
 
-      {a.seoOffer && a.seoOffer.type === 'Product' && (
-        <JsonLd
-          data={productOfferSchema({
-            name: a.seoOffer.name || a.title,
-            description: a.seoOffer.description || a.description,
-            price: a.seoOffer.price,
-            currency: a.seoOffer.currency,
-            url: a.seoOffer.url || (a.cta && a.cta.length > 0 ? a.cta[0].href : '')
-          })}
+        {a.seoOffer && a.seoOffer.type === 'TouristTrip' && (
+          <JsonLd
+            data={touristTripSchema({
+              name: a.seoOffer.name || a.title,
+              description: a.seoOffer.description || a.description,
+              providerName: a.seoOffer.provider,
+              url: a.seoOffer.url || (a.cta && a.cta.length > 0 ? a.cta[0].href : '')
+            })}
+          />
+        )}
+
+        {a.seoOffer && a.seoOffer.type === 'Product' && (
+          <JsonLd
+            data={productOfferSchema({
+              name: a.seoOffer.name || a.title,
+              description: a.seoOffer.description || a.description,
+              price: a.seoOffer.price,
+              currency: a.seoOffer.currency,
+              url: a.seoOffer.url || (a.cta && a.cta.length > 0 ? a.cta[0].href : '')
+            })}
+          />
+        )}
+
+        <h1>{a.title}</h1>
+
+        {a.answer && <AnswerBox>{a.answer}</AnswerBox>}
+
+        {a.gygLocationId && (
+          <GYGWidget
+            type="city"
+            locationId={a.gygLocationId}
+            locale={gygLocaleCode}
+          />
+        )}
+
+        <ArticleBody
+          html={a.body}
+          tours={a.gygTours}
+          locale={l}
+          cdLinkId={a.cdLinkId}
         />
-      )}
 
-      <h1>{a.title}</h1>
+        {a.gygQuery && (
+          <GYGWidget
+            type="activity-manual"
+            query={a.gygQuery}
+            locale={gygLocaleCode}
+            numberOfItems={3}
+            title={l === 'en' ? 'Book experiences' : 'Rezervă experiențe'}
+          />
+        )}
 
-      {a.answer && <AnswerBox>{a.answer}</AnswerBox>}
+        {a.widget && (
+          <SearchWidget
+            title={l === 'en' ? 'Search & compare' : 'Caută și compară'}
+            scriptSrc={a.widget}
+            minHeight={a.widgetHeight ?? 200}
+          />
+        )}
 
-      {a.gygLocationId && (
-        <GYGWidget
-          type="city"
-          locationId={a.gygLocationId}
-          locale={gygLocaleCode}
+        {a.cta && a.cta.length > 0 && (
+          <div className="cta-group">
+            {a.cta.map((c, i) => (
+              <AffiliateButton key={i} href={c.href}>
+                {c.label}
+              </AffiliateButton>
+            ))}
+          </div>
+        )}
+
+        {a.faq && a.faq.length > 0 && (
+          <FAQ heading="Întrebări frecvente" items={a.faq} />
+        )}
+
+        <AffiliateDisclosure />
+
+        <RelatedArticles
+          locale={locale}
+          vertical={vertical}
+          currentSlug={slug}
         />
-      )}
+      </main>
 
-      <ArticleBody
-        html={a.body}
-        tours={a.gygTours}
-        locale={l}
-        cdLinkId={a.cdLinkId}
-      />
-
-      {a.gygQuery && (
-        <GYGWidget
-          type="activity-manual"
-          query={a.gygQuery}
-          locale={gygLocaleCode}
-          numberOfItems={3}
-          title={l === 'en' ? 'Book experiences' : 'Rezervă experiențe'}
-        />
-      )}
-
-      {a.widget && (
-        <SearchWidget
-          title={l === 'en' ? 'Search & compare' : 'Caută și compară'}
-          scriptSrc={a.widget}
-          minHeight={a.widgetHeight ?? 200}
-        />
-      )}
-
-      {a.cta && a.cta.length > 0 && (
-        <div className="cta-group">
-          {a.cta.map((c, i) => (
-            <AffiliateButton key={i} href={c.href}>
-              {c.label}
-            </AffiliateButton>
-          ))}
-        </div>
-      )}
-
-      {a.faq && a.faq.length > 0 && (
-        <FAQ heading="Întrebări frecvente" items={a.faq} />
-      )}
-
-      <AffiliateDisclosure />
-
-      {/* ── Articole înrudite ── */}
-      <RelatedArticles
-        locale={locale}
-        vertical={vertical}
-        currentSlug={slug}
-      />
-
-      {/* ── Buton back to top ── */}
       <BackToTop />
-
-    </main>
+    </>
   );
 }

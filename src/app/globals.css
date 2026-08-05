@@ -101,7 +101,7 @@ button.primary:hover,
   background: color-mix(in srgb, var(--cream) 82%, transparent);
   backdrop-filter: blur(12px) saturate(1.1);
   border-bottom: 1px solid var(--line);
-  transform: translateZ(0); 
+  
 }
 .site-header-inner {
   max-width: var(--wrap);

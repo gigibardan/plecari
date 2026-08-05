@@ -2,19 +2,20 @@
   "name": "plecari",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "velite && next dev",
-    "build": "velite && next build",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
-  },
+ "scripts": {
+  "dev": "velite && next dev",
+  "build": "velite && next build",
+  "start": "next start",
+  "lint": "next lint",
+  "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+  "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+  "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+  "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
+  "build:pages": "velite && npx opennextjs-cloudflare build && node scripts/prepare-pages.js"
+},
   "dependencies": {
     "@next/third-parties": "^16.2.10",
-    "@opennextjs/cloudflare": "latest",
+    "@opennextjs/cloudflare": "^1.19.9",
     "@tabler/icons-webfont": "^3.46.0",
     "next": "16.2.6",
     "next-intl": "^4.13.1",
@@ -34,4 +35,5 @@
     "velite": "^0.4.0",
     "wrangler": "^4.107.0"
   }
+  
 }

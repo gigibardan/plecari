@@ -2,7 +2,7 @@
 
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { articles } from '@/lib/content';
+import { articlesLight } from '@/lib/content';
 import { getAlternates } from '@/lib/metadata';
 import { SITE_URL } from '@/config/site';
 import { SearchClient } from '@/components/SearchClient';
@@ -51,7 +51,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
   const page = Math.max(1, parseInt(p, 10) || 1);
 
   // ── Filtrare ────────────────────────────────────────────────────────────────
-  const pool = articles.filter((a) => a.locale === locale);
+  const pool = articlesLight.filter((a) => a.locale === locale);
 
   const filtered = pool.filter((a) => {
     const matchV = v === 'all' || a.vertical === v;
@@ -78,6 +78,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
   const pageItems = sorted.slice((safePage - 1) * PER_PAGE, safePage * PER_PAGE);
 
   // ── Serializare (fără body) ───────────────────────────────────────────────────
+  // ── Serializare (fără body — wordCount e deja calculat în articlesLight)
   const serialized = pageItems.map((a) => ({
     title: a.title,
     description: a.description,
@@ -86,8 +87,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
     locale: a.locale,
     datePublished: a.datePublished ?? '',
     dateModified: a.dateModified ?? a.datePublished ?? '',
-    // Estimare wordCount din body HTML (caractere / 5 ≈ cuvinte)
-    wordCount: a.body ? Math.round(a.body.replace(/<[^>]+>/g, '').length / 5) : undefined,
+    wordCount: a.wordCount,
   }));
 
   // ── JSON-LD ItemList ─────────────────────────────────────────────────────────
@@ -108,7 +108,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
     <main className="search-page">
       <JsonLd data={itemListSchema} />
       <div className="search-page-inner">
-        
+
         <SearchClient
           locale={locale}
           initialQ={q}

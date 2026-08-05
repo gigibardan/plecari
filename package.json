@@ -11,7 +11,7 @@
   "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
   "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
   "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
-  "build:pages": "velite && npx opennextjs-cloudflare build && node scripts/prepare-pages.js"
+  
 },
   "dependencies": {
     "@next/third-parties": "^16.2.10",

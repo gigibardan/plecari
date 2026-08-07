@@ -1,0 +1,29 @@
+Contact: mailto:security@plecari.com
+Contact: https://plecari.com/ro/contact
+
+Expires: 2027-08-06T00:00:00.000Z
+
+Preferred-Languages: ro, en
+
+Canonical: https://plecari.com/.well-known/security.txt
+
+Policy: https://plecari.com/ro/legal/security-policy
+
+Acknowledgments: https://plecari.com/ro/legal/security-acknowledgments
+
+# Plecări Security Policy
+#
+# If you discover a security vulnerability on plecari.com,
+# please report it responsibly to security@plecari.com.
+#
+# We commit to:
+# - Acknowledging receipt within 48 hours
+# - Investigating and responding within 14 days
+# - Not pursuing legal action against researchers
+#   who act in good faith
+#
+# In scope: plecari.com and all subdomains
+# Out of scope: third-party affiliate platforms linked from the site
+#
+# We do not currently offer a bug bounty program.
+# Responsible disclosure is appreciated and credited.

@@ -2,17 +2,16 @@
   "name": "plecari",
   "version": "0.1.0",
   "private": true,
- "scripts": {
-  "dev": "velite && next dev",
-  "build": "velite && next build",
-  "start": "next start",
-  "lint": "next lint",
-  "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-  "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-  "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-  "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
-  
-},
+  "scripts": {
+    "dev": "velite && next dev",
+    "build": "velite && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
+  },
   "dependencies": {
     "@next/third-parties": "^16.2.10",
     "@opennextjs/cloudflare": "^1.19.9",
@@ -34,6 +33,9 @@
     "typescript": "^5.7.4",
     "velite": "^0.4.0",
     "wrangler": "^4.107.0"
+  },
+  "scripts": {
+    "build:llms": "node scripts/generate-llms-full.js",
+    "build": "npx velite && node scripts/generate-llms-full.js && npx opennextjs-cloudflare build"
   }
-  
 }

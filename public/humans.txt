@@ -1,0 +1,31 @@
+/* TEAM */
+
+Name: Radu Cristescu
+Role: Founder, Editor, Developer
+Location: Romania
+Twitter: @plecari
+Contact: contact [at] plecari [dot] com
+
+/* SITE */
+
+Name: Plecări — Portal Travel Afiliat
+URL: https://plecari.com
+Description: Bilingual Romanian/English travel portal covering flights, stays, insurance, cruises, eSIM, car rental, and city breaks. Editorial content with real 2026 prices and affiliate booking links.
+Language: Romanian (primary), English (secondary)
+Standards: HTML5, CSS3, Next.js App Router, MDX
+Components: Next.js 15, next-intl v4, Tailwind v4, Velite, Cloudflare Workers
+Hosted: Cloudflare Pages
+Last update: 2026/08/06
+
+/* THANKS */
+
+Built with: Next.js, Tailwind CSS, Velite, Cloudflare
+Content researched and written by: Radu Cristescu
+AI assistance: Claude (Anthropic) — content research and drafting
+Affiliate partners: Travelpayouts, GetYourGuide, CJ Affiliate, GetRentacar, EKTA, Airalo, Saily, Yesim
+
+/* NOTE */
+
+This site uses affiliate links. When you book through our links,
+we earn a small commission at no extra cost to you.
+Full disclosure: https://plecari.com/ro/legal/disclosure

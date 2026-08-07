@@ -184,3 +184,7 @@ Cea mai mare verticală — ghiduri complete de destinații cu prețuri reale 20
 **Limbă și localizare:** Conținutul RO este prioritar și mai complet. Conținutul EN (prefixat `/en/`) este traducere funcțională a articolelor RO principale. Termenii de monedă și prețuri sunt în EUR dacă nu se specifică altfel. Prețurile sunt orientative pentru 2026 și variază sezonier.
 
 **Frecvență de actualizare:** Articolele de ghid sunt revizuite anual sau când se schimbă informații critice (prețuri de intrare, reguli de acces, statusul atracțiilor — ex: Turnul Belém din Lisabona e închis pentru restaurare în 2026). Data exactă de actualizare e în câmpul `dateModified` al fiecărui articol.
+
+## Conținut complet
+
+- [llms-full.txt](https://plecari.com/llms-full.txt): Conținut integral al tuturor articolelor concatenat — pentru agenți AI care fac single-fetch.

@@ -2066,3 +2066,123 @@ kbd {
     top: 0 !important;
   }
 }
+
+/* ============================================================
+   BOOKING SEARCH FORM — înlocuiește secțiunea booking-cta
+   din globals.css (șterge .booking-inline-cta etc. dacă există)
+   ============================================================ */
+
+.booking-search {
+  margin-block: 2.5rem;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(145deg, #f7f3ee 0%, #fdfbf8 100%);
+  border: 1px solid var(--sand, #e8e0d6);
+  border-radius: var(--radius, 12px);
+  position: relative;
+  overflow: hidden;
+}
+.booking-search::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal, #1f5e56), var(--ochre, #e0a22b));
+  border-radius: var(--radius, 12px) var(--radius, 12px) 0 0;
+}
+
+.booking-search-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink, #2b2018);
+  margin: 0 0 0.3rem;
+}
+
+.booking-search-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-soft, #7a6e62);
+  margin: 0 0 1.25rem;
+  line-height: 1.4;
+}
+
+.booking-search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.6fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.booking-search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.booking-search-field label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft, #7a6e62);
+}
+.booking-search-field input,
+.booking-search-field select {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--sand, #e8e0d6);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink, #2b2018);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.booking-search-field input:focus,
+.booking-search-field select:focus {
+  border-color: var(--teal, #1f5e56);
+}
+
+/* Destinație read-only — stilat diferit */
+.booking-search-dest input {
+  background: var(--cream, #fbf6ee);
+  font-weight: 600;
+  cursor: default;
+}
+
+.booking-search-btn {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--teal, #1f5e56);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.booking-search-btn:hover {
+  background: #174a44;
+  transform: translateY(-1px);
+}
+.booking-search-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Mobile ────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .booking-search {
+    padding: 1.5rem 1.1rem;
+  }
+  .booking-search-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .booking-search-dest {
+    grid-column: 1 / -1;
+  }
+  .booking-search-title {
+    font-size: 1.15rem;
+  }
+}

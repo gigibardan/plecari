@@ -1,6 +1,7 @@
+// src/components/ArticleBody.tsx
 'use client';
 
-import {GYGWidget} from '@/components/GYGWidget';
+import { GYGWidget } from '@/components/GYGWidget';
 import CruiseDirectWidget from '@/components/CruiseDirectWidget';
 
 export type InlineTour = {
@@ -16,18 +17,17 @@ type Props = {
   html: string;
   tours?: InlineTour[];
   locale: string;
-  cdLinkId?: string; // NOU: Prop pentru ID-ul de link CruiseDirect
+  cdLinkId?: string;
 };
 
-export function ArticleBody({html, tours, locale, cdLinkId}: Props) {
+export function ArticleBody({ html, tours, locale, cdLinkId }: Props) {
   const defaultLocale = locale === 'en' ? 'en-US' : 'ro-RO';
 
-  // Dacă nu avem secțiuni de divizat, dar avem widget CD, îl afișăm sus
   if (!tours || tours.length === 0) {
     return (
       <>
         {cdLinkId && <CruiseDirectWidget size="300x250" linkId={cdLinkId} />}
-        <div dangerouslySetInnerHTML={{__html: html}} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </>
     );
   }
@@ -36,9 +36,8 @@ export function ArticleBody({html, tours, locale, cdLinkId}: Props) {
 
   return (
     <>
-      {/* Widget-ul CD sus, conform registrului pentru articole croaziere */}
       {cdLinkId && <CruiseDirectWidget size="300x250" linkId={cdLinkId} />}
-      
+
       {sections.map((section, i) => {
         const matchedTour = section.headingText
           ? tours.find((t) =>
@@ -50,7 +49,7 @@ export function ArticleBody({html, tours, locale, cdLinkId}: Props) {
 
         return (
           <div key={i}>
-            <div dangerouslySetInnerHTML={{__html: section.html}} />
+            <div dangerouslySetInnerHTML={{ __html: section.html }} />
             {matchedTour && (
               <GYGWidget
                 type="availability"

@@ -28,7 +28,7 @@ import { SITE_URL } from '@/config/site';
 import { articleSchema, productOfferSchema, touristTripSchema } from '@/lib/schema';
 import { TranslationPathSetter } from '@/components/TranslationPathSetter';
 import { getTranslationPath } from '@/lib/metadata';
-
+import { BookingSearch } from '@/components/BookingSearch';
 type Props = {
   params: Promise<{ locale: string; vertical: string; slug: string }>;
 };
@@ -181,6 +181,9 @@ export default function ArticlePage({ params }: Props) {
             scriptSrc={a.widget}
             minHeight={a.widgetHeight ?? 200}
           />
+        )}
+        {a.bookingCity && (
+          <BookingSearch city={a.bookingCity} locale={l} />
         )}
 
         {a.cta && a.cta.length > 0 && (

@@ -53,7 +53,7 @@ export function TrustBar({locale}: {locale: string}) {
     <section className="hp-trust">
       <div className="hp-trust-inner">
         <div className="trust-item">
-          <AnimatedNumber target={100} suffix="+" />
+          <AnimatedNumber target={300} suffix="+" />
           <span className="trust-label">
             {l === 'en' ? 'travel guides' : 'ghiduri de călătorie'}
           </span>

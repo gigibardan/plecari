@@ -335,7 +335,7 @@ Refactor: `seo?: {title: LocaleText; description: LocaleText}`.
 **Trigger:** primul caz în care titlul SEO trebuie să difere de labelul afișat.
 
 ### 12.8. `/go/[partner]` — click tracking Worker
-Anticipat: la 100+ linkuri de afiliere, tracking centralizat.
+Anticipat: la 200+ linkuri de afiliere, tracking centralizat.
 Cloudflare Worker `/go/discovercars?ref=article-x` log-uiește click + redirect.
 Elimină dependența de dashboard-uri externe pentru analytics.
 **Trigger:** când vrei „ce articole convertesc" fără să deschizi 5 dashboard-uri.

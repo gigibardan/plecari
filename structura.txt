@@ -6,6 +6,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── acte-necesare-inchiriere-masina.ro.mdx
 |  |  ├── ai-turism-imagini-false-2026.ro.mdx
 |  |  ├── airport-transfer-guide.en.mdx
+|  |  ├── alba-iulia-complete-guide.en.mdx
+|  |  ├── alba-iulia-ghid-complet.ro.mdx
 |  |  ├── amalfi-coast-complete-guide-2026.en.mdx
 |  |  ├── antalya-all-inclusive-guide-2026.en.mdx
 |  |  ├── asigurare-anulare-calatorie.ro.mdx
@@ -16,12 +18,20 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── asigurare-viza-schengen.ro.mdx
 |  |  ├── bagaj-mana-dimensiuni-reguli-2026.ro.mdx
 |  |  ├── bagaj-pierdut-companie-aeriana-drepturi.ro.mdx
+|  |  ├── belgrad-ghid-complet.ro.mdx
+|  |  ├── belgrade-complete-guide.en.mdx
 |  |  ├── best-beaches-europe-2026.en.mdx
 |  |  ├── best-esim-europe-2026.en.mdx
 |  |  ├── best-greek-islands-2026.en.mdx
 |  |  ├── bilete-vatican-colosseum-epuizate-last-minute.ro.mdx
+|  |  ├── brasov-complete-guide.en.mdx
+|  |  ├── brasov-ghid-complet.ro.mdx
+|  |  ├── bratislava-complete-guide.en.mdx
+|  |  ├── bratislava-ghid-complet.ro.mdx
 |  |  ├── bucharest-city-break-guide.en.mdx
 |  |  ├── budget-travel-tips-europe-2026.en.mdx
+|  |  ├── budva-complete-guide.en.mdx
+|  |  ├── budva-ghid-complet.ro.mdx
 |  |  ├── bulgaria-holiday-guide-2026.en.mdx
 |  |  ├── cabin-baggage-rules-2026.en.mdx
 |  |  ├── calatorii-solo-europa-2026.ro.mdx
@@ -33,12 +43,25 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── ce-sa-faci-in-amsterdam.ro.mdx
 |  |  ├── ce-sa-faci-in-atena.ro.mdx
 |  |  ├── ce-sa-faci-in-barcelona.ro.mdx
+|  |  ├── ce-sa-faci-in-berlin.ro.mdx
 |  |  ├── ce-sa-faci-in-bucuresti.ro.mdx
 |  |  ├── ce-sa-faci-in-budapesta.ro.mdx
+|  |  ├── ce-sa-faci-in-cracovia.ro.mdx
+|  |  ├── ce-sa-faci-in-dresda.ro.mdx
+|  |  ├── ce-sa-faci-in-gdansk.ro.mdx
 |  |  ├── ce-sa-faci-in-istanbul.ro.mdx
+|  |  ├── ce-sa-faci-in-lisabona.ro.mdx
+|  |  ├── ce-sa-faci-in-ljubljana.ro.mdx
+|  |  ├── ce-sa-faci-in-munchen.ro.mdx
 |  |  ├── ce-sa-faci-in-paris.ro.mdx
+|  |  ├── ce-sa-faci-in-porto.ro.mdx
 |  |  ├── ce-sa-faci-in-praga.ro.mdx
 |  |  ├── ce-sa-faci-in-roma.ro.mdx
+|  |  ├── ce-sa-faci-in-sevilla.ro.mdx
+|  |  ├── ce-sa-faci-in-sofia.ro.mdx
+|  |  ├── ce-sa-faci-in-tallinn.ro.mdx
+|  |  ├── ce-sa-faci-in-valletta-malta.ro.mdx
+|  |  ├── ce-sa-faci-in-verona.ro.mdx
 |  |  ├── ce-sa-faci-in-viena.ro.mdx
 |  |  ├── cel-mai-bun-esim-per-destinatie.en.mdx
 |  |  ├── cel-mai-bun-esim-per-destinatie.ro.mdx
@@ -46,12 +69,19 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── cele-mai-frumoase-plaje-europa-zbor-bucuresti.ro.mdx
 |  |  ├── cheapest-destinations-from-bucharest.en.mdx
 |  |  ├── cheapest-european-destinations-2026.en.mdx
+|  |  ├── chisinau-complete-guide.en.mdx
+|  |  ├── chisinau-ghid-complet.ro.mdx
 |  |  ├── cinque-terre-complete-guide-2026.en.mdx
 |  |  ├── cinque-terre-ghid-complet-2026.ro.mdx
 |  |  ├── city-break-dubrovnik-2026.ro.mdx
 |  |  ├── city-break-londra-bucuresti-2026.ro.mdx
 |  |  ├── clima-extrema-vacante-europa-2026.ro.mdx
+|  |  ├── cluj-napoca-complete-guide.en.mdx
+|  |  ├── cluj-napoca-ghid-complet.ro.mdx
 |  |  ├── coasta-amalfi-ghid-complet-2026.ro.mdx
+|  |  ├── copenhaga-ghid-complet.ro.mdx
+|  |  ├── copenhagen-complete-guide.en.mdx
+|  |  ├── cracovia-ghid-complet.ro.mdx
 |  |  ├── croatia-road-trip-split-dubrovnik-2026.en.mdx
 |  |  ├── croaziera-insulele-grecesti-2026.ro.mdx
 |  |  ├── cruise-cost-real-budget.en.mdx
@@ -65,6 +95,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── digital-nomad-europa-2026.ro.mdx
 |  |  ├── digital-nomad-europe-2026.en.mdx
 |  |  ├── drepturi-pasager-zbor-intarziat-anulat.ro.mdx
+|  |  ├── drumul-romantic-germania-castele-ludwig.ro.mdx
 |  |  ├── dubrovnik-city-break-guide.en.mdx
 |  |  ├── egypt-holiday-guide-2026.en.mdx
 |  |  ├── emergencies-abroad-guide.en.mdx
@@ -84,6 +115,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── formula-1-europa-2026-grand-prix.ro.mdx
 |  |  ├── formula-1-europe-grand-prix-2026.en.mdx
 |  |  ├── fraude-rezervari-online-vacanta.ro.mdx
+|  |  ├── gdansk-complete-guide.en.mdx
+|  |  ├── gdansk-ghid-complet.ro.mdx
 |  |  ├── geopolitica-rute-turistice-2026.ro.mdx
 |  |  ├── ghid-asigurare-calatorie-2026.ro.mdx
 |  |  ├── ghid-asigurare-calatorie.en.mdx
@@ -93,10 +126,14 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── grecia-2026-ghid-vacanta.ro.mdx
 |  |  ├── greece-2026-holiday-guide.en.mdx
 |  |  ├── greek-islands-cruise-2026.en.mdx
+|  |  ├── helsinki-complete-guide.en.mdx
+|  |  ├── helsinki-ghid-complet.ro.mdx
 |  |  ├── hidden-holiday-fees-2026.en.mdx
 |  |  ├── how-to-find-cheap-accommodation.en.mdx
 |  |  ├── how-to-install-esim.en.mdx
 |  |  ├── how-to-plan-european-holiday-2026.en.mdx
+|  |  ├── iasi-complete-guide.en.mdx
+|  |  ├── iasi-ghid-complet.ro.mdx
 |  |  ├── inchiriere-masina-fara-card-de-credit.ro.mdx
 |  |  ├── inchiriere-masina-grecia-2026.en.mdx
 |  |  ├── inchiriere-masina-grecia-2026.ro.mdx
@@ -105,18 +142,40 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── israel-2026-ghid-calatorie.ro.mdx
 |  |  ├── istanbul-city-break-ghid.ro.mdx
 |  |  ├── istanbul-city-break-guide.en.mdx
+|  |  ├── karlovy-vary-complete-guide.en.mdx
+|  |  ├── karlovy-vary-ghid-complet.ro.mdx
+|  |  ├── kotor-complete-guide.en.mdx
+|  |  ├── kotor-ghid-complet.ro.mdx
+|  |  ├── krakow-complete-guide.en.mdx
 |  |  ├── lacul-como-ghid-complet-2026.ro.mdx
 |  |  ├── lake-como-complete-guide-2026.en.mdx
 |  |  ├── layover-vs-direct-flight.en.mdx
 |  |  ├── london-city-break-from-bucharest.en.mdx
 |  |  ├── lost-luggage-airline-rights.en.mdx
+|  |  ├── malaga-complete-guide-2026.en.mdx
+|  |  ├── malaga-ghid-complet-2026.ro.mdx
+|  |  ├── marseille-complete-guide-2026.en.mdx
+|  |  ├── marsilia-ghid-complet-2026.ro.mdx
 |  |  ├── milan-complete-guide-2026.en.mdx
 |  |  ├── milano-ghid-complet-2026.ro.mdx
+|  |  ├── moldova-wine-tours-guide.en.mdx
+|  |  ├── mostar-complete-guide.en.mdx
+|  |  ├── mostar-ghid-complet.ro.mdx
 |  |  ├── msc-vs-costa-vs-norwegian.en.mdx
 |  |  ├── msc-vs-costa-vs-norwegian.ro.mdx
 |  |  ├── naples-complete-guide-2026.en.mdx
 |  |  ├── napoli-ghid-complet-2026.ro.mdx
+|  |  ├── novi-sad-complete-guide.en.mdx
+|  |  ├── novi-sad-ghid-complet.ro.mdx
+|  |  ├── ohrid-complete-guide.en.mdx
+|  |  ├── ohrid-ghid-complet.ro.mdx
+|  |  ├── old-orhei-complete-guide.en.mdx
 |  |  ├── online-booking-fraud.en.mdx
+|  |  ├── oradea-complete-guide.en.mdx
+|  |  ├── oradea-ghid-complet.ro.mdx
+|  |  ├── orheiul-vechi-ghid-complet.ro.mdx
+|  |  ├── oslo-complete-guide.en.mdx
+|  |  ├── oslo-ghid-complet.ro.mdx
 |  |  ├── overtourism-europe-2026-tourist-taxes.en.mdx
 |  |  ├── pasaport-viza-documente-calatorie-2026.ro.mdx
 |  |  ├── pay-abroad-no-fees.en.mdx
@@ -124,37 +183,73 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── portugal-holiday-guide-2026.en.mdx
 |  |  ├── prima-croaziera-ghid-incepatori.ro.mdx
 |  |  ├── prima-croaziera-mediterana.ro.mdx
+|  |  ├── riga-complete-guide.en.mdx
+|  |  ├── riga-ghid-complet.ro.mdx
 |  |  ├── road-trip-croatia-split-dubrovnik.ro.mdx
 |  |  ├── road-trip-transilvania.ro.mdx
 |  |  ├── romania-road-trip-transylvania.en.mdx
 |  |  ├── romania-scumpa-ghid.ro.mdx
+|  |  ├── romantic-road-germany-castles-ludwig.en.mdx
 |  |  ├── rusia-2026-ghid-calatorie-romani.ro.mdx
 |  |  ├── saily-esim-comparatie.ro.mdx
 |  |  ├── saily-esim-review.en.mdx
+|  |  ├── sarajevo-complete-guide.en.mdx
+|  |  ├── sarajevo-ghid-complet.ro.mdx
 |  |  ├── scam-uri-inselatorii-vacanta-2026.ro.mdx
+|  |  ├── sibiu-complete-guide.en.mdx
+|  |  ├── sibiu-ghid-complet.ro.mdx
 |  |  ├── sicilia-ghid-complet-2026.ro.mdx
 |  |  ├── sicily-complete-guide-2026.en.mdx
+|  |  ├── sighisoara-complete-guide.en.mdx
+|  |  ├── sighisoara-ghid-complet.ro.mdx
+|  |  ├── sinaia-complete-guide.en.mdx
+|  |  ├── sinaia-ghid-complet.ro.mdx
 |  |  ├── ski-travel-insurance.en.mdx
+|  |  ├── skopje-complete-guide.en.mdx
+|  |  ├── skopje-ghid-complet.ro.mdx
 |  |  ├── solo-travel-europe-2026.en.mdx
+|  |  ├── stockholm-complete-guide.en.mdx
+|  |  ├── stockholm-ghid-complet.ro.mdx
 |  |  ├── supraturism-europa-2026-taxe-limite.ro.mdx
 |  |  ├── supraturism-europa-2026.ro.mdx
+|  |  ├── tallinn-complete-guide.en.mdx
+|  |  ├── tallinn-ghid-complet.ro.mdx
 |  |  ├── taxe-ascunse-inchiriere-auto.en.mdx
 |  |  ├── taxe-ascunse-inchiriere-auto.ro.mdx
 |  |  ├── taxe-ascunse-vacanta-2026.ro.mdx
 |  |  ├── things-to-do-amsterdam.en.mdx
 |  |  ├── things-to-do-athens.en.mdx
 |  |  ├── things-to-do-barcelona.en.mdx
+|  |  ├── things-to-do-berlin.en.mdx
 |  |  ├── things-to-do-bucharest.en.mdx
 |  |  ├── things-to-do-budapest.en.mdx
+|  |  ├── things-to-do-dresden.en.mdx
+|  |  ├── things-to-do-gdansk.en.mdx
 |  |  ├── things-to-do-istanbul.en.mdx
+|  |  ├── things-to-do-krakow.en.mdx
+|  |  ├── things-to-do-lisbon.en.mdx
+|  |  ├── things-to-do-ljubljana.en.mdx
+|  |  ├── things-to-do-munich.en.mdx
 |  |  ├── things-to-do-paris.en.mdx
+|  |  ├── things-to-do-porto.en.mdx
 |  |  ├── things-to-do-prague.en.mdx
 |  |  ├── things-to-do-rome.en.mdx
+|  |  ├── things-to-do-seville.en.mdx
+|  |  ├── things-to-do-sofia.en.mdx
+|  |  ├── things-to-do-tallinn.en.mdx
+|  |  ├── things-to-do-valletta-malta.en.mdx
+|  |  ├── things-to-do-verona.en.mdx
 |  |  ├── things-to-do-vienna.en.mdx
+|  |  ├── tirana-complete-guide.en.mdx
+|  |  ├── tirana-ghid-complet.ro.mdx
+|  |  ├── top-city-break-uri-din-bucuresti-2026.ro.mdx
+|  |  ├── top-city-breaks-from-bucharest-2026.en.mdx
 |  |  ├── top-destinatii-ieftine-din-bucuresti.ro.mdx
 |  |  ├── top-insule-grecesti-2026.ro.mdx
 |  |  ├── toscana-rurala-ghid-complet-2026.ro.mdx
 |  |  ├── transfer-aeroport-ghid.ro.mdx
+|  |  ├── transnistria-complete-guide.en.mdx
+|  |  ├── transnistria-ghid-complet.ro.mdx
 |  |  ├── transylvania-day-trips-bucharest.en.mdx
 |  |  ├── travel-insurance-children.en.mdx
 |  |  ├── travel-insurance-europe-guide.en.mdx
@@ -165,6 +260,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── trucuri-calatorie-ieftina-europa.ro.mdx
 |  |  ├── turism-sportiv-meci-fotbal-europa.ro.mdx
 |  |  ├── turkey-2026-safety-guide.en.mdx
+|  |  ├── tururi-vinuri-moldova.ro.mdx
 |  |  ├── tuscany-rural-complete-guide-2026.en.mdx
 |  |  ├── ucraina-2026-ghid-calatorie.ro.mdx
 |  |  ├── urgente-in-strainatate-ghid-2026.ro.mdx
@@ -174,10 +270,18 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── vacanta-egipt-2026-ghid-complet.ro.mdx
 |  |  ├── vacanta-portugalia-2026-lisabona-porto-algarve.ro.mdx
 |  |  ├── vacanta-turcia-2026-siguranta.ro.mdx
+|  |  ├── varsovia-ghid-complet.ro.mdx
 |  |  ├── vatican-colosseum-tickets-sold-out.en.mdx
 |  |  ├── venetia-ghid-complet-2026.ro.mdx
 |  |  ├── venice-complete-guide-2026.en.mdx
+|  |  ├── vilnius-complete-guide.en.mdx
+|  |  ├── vilnius-ghid-complet.ro.mdx
+|  |  ├── warsaw-complete-guide.en.mdx
 |  |  ├── weekend-getaways-romania-2026.en.mdx
+|  |  ├── wroclaw-complete-guide.en.mdx
+|  |  ├── wroclaw-ghid-complet.ro.mdx
+|  |  ├── zagreb-complete-guide.en.mdx
+|  |  ├── zagreb-ghid-complet.ro.mdx
 |  |  ├── zbor-anulat-intarziat-drepturi-compensatii.ro.mdx
 |  |  ├── zbor-cu-escala-vs-direct.ro.mdx
 |  |  └── zboruri-populare-din-bucuresti.ro.mdx
@@ -197,6 +301,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 ├── eslint.config.mjs
 ├── fix-internal-links.sh
 ├── GHID-TOUR-IDS.md
+├── llms.txt
 ├── messages
 |  ├── en.json
 |  └── ro.json
@@ -224,12 +329,14 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  ├── file.svg
 |  ├── globe.svg
 |  ├── hero.webp
+|  ├── humans.txt
 |  ├── images
 |  |  └── croaziere
 |  |     ├── cruise-interior.webp
 |  |     ├── cruise-ship-mediterranean.webp
 |  |     ├── cruise-sunset.webp
 |  |     └── dubrovnik-port.webp
+|  ├── llms-full.txt
 |  ├── logo-pin.svg
 |  ├── next.svg
 |  ├── partners
@@ -255,6 +362,9 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  └── _headers
 ├── README.md
 ├── REGISTRU-WIDGETURI-AFILIATE.md
+├── scripts
+|  ├── add-booking-city.js
+|  └── generate-llms-full.js
 ├── seo-dinamic.MD
 ├── src
 |  ├── app
@@ -267,6 +377,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |     ├── legal
 |  |     |  └── [slug]
 |  |     ├── page.tsx
+|  |     ├── search
+|  |     |  └── page.tsx
 |  |     └── [vertical]
 |  |        ├── page.tsx
 |  |        └── [slug]
@@ -275,6 +387,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── AffiliateDisclosure.tsx
 |  |  ├── AnswerBox.tsx
 |  |  ├── ArticleBody.tsx
+|  |  ├── BackToTop.tsx
+|  |  ├── BookingCTA.tsx
 |  |  ├── Breadcrumbs.tsx
 |  |  ├── CompareTable.tsx
 |  |  ├── CookieConsent.tsx
@@ -287,11 +401,15 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── Header.tsx
 |  |  ├── JsonLd.tsx
 |  |  ├── LanguageSwitcher.tsx
+|  |  ├── ReadingProgress.tsx
+|  |  ├── RelatedArticles.tsx
 |  |  ├── ScrollReveal.tsx
+|  |  ├── SearchClient.tsx
 |  |  ├── SearchWidget.tsx
 |  |  ├── TranslationPathSetter.tsx
 |  |  └── TrustBar.tsx
 |  ├── config
+|  |  ├── booking.ts
 |  |  ├── site.ts
 |  |  └── verticals.ts
 |  ├── i18n
@@ -309,9 +427,9 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 ├── velite.config.ts
 └── wrangler.jsonc
 
-directory: 2912 file: 19077
+directory: 3446 file: 23167
 
-ignored: directory (165)
+ignored: directory (239)
 
 
 [2K[1G

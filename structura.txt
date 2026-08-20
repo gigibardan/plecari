@@ -8,6 +8,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── airport-transfer-guide.en.mdx
 |  |  ├── alba-iulia-complete-guide.en.mdx
 |  |  ├── alba-iulia-ghid-complet.ro.mdx
+|  |  ├── albanian-riviera-complete-guide-2026.en.mdx
 |  |  ├── amalfi-coast-complete-guide-2026.en.mdx
 |  |  ├── antalya-all-inclusive-guide-2026.en.mdx
 |  |  ├── asigurare-anulare-calatorie.ro.mdx
@@ -20,6 +21,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── bagaj-pierdut-companie-aeriana-drepturi.ro.mdx
 |  |  ├── belgrad-ghid-complet.ro.mdx
 |  |  ├── belgrade-complete-guide.en.mdx
+|  |  ├── berat-gjirokaster-complete-guide-2026.en.mdx
+|  |  ├── berat-gjirokaster-ghid-complet-2026.ro.mdx
 |  |  ├── best-beaches-europe-2026.en.mdx
 |  |  ├── best-esim-europe-2026.en.mdx
 |  |  ├── best-greek-islands-2026.en.mdx
@@ -82,6 +85,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── copenhaga-ghid-complet.ro.mdx
 |  |  ├── copenhagen-complete-guide.en.mdx
 |  |  ├── cracovia-ghid-complet.ro.mdx
+|  |  ├── creta-ghid-complet-2026.ro.mdx
+|  |  ├── crete-complete-guide-2026.en.mdx
 |  |  ├── croatia-road-trip-split-dubrovnik-2026.en.mdx
 |  |  ├── croaziera-insulele-grecesti-2026.ro.mdx
 |  |  ├── cruise-cost-real-budget.en.mdx
@@ -152,6 +157,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── layover-vs-direct-flight.en.mdx
 |  |  ├── london-city-break-from-bucharest.en.mdx
 |  |  ├── lost-luggage-airline-rights.en.mdx
+|  |  ├── madrid-complete-guide-2026.en.mdx
+|  |  ├── madrid-ghid-complet-2026.ro.mdx
 |  |  ├── malaga-complete-guide-2026.en.mdx
 |  |  ├── malaga-ghid-complet-2026.ro.mdx
 |  |  ├── marseille-complete-guide-2026.en.mdx
@@ -185,6 +192,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── prima-croaziera-mediterana.ro.mdx
 |  |  ├── riga-complete-guide.en.mdx
 |  |  ├── riga-ghid-complet.ro.mdx
+|  |  ├── riviera-albaneza-ghid-complet-2026.ro.mdx
 |  |  ├── road-trip-croatia-split-dubrovnik.ro.mdx
 |  |  ├── road-trip-transilvania.ro.mdx
 |  |  ├── romania-road-trip-transylvania.en.mdx
@@ -193,6 +201,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── rusia-2026-ghid-calatorie-romani.ro.mdx
 |  |  ├── saily-esim-comparatie.ro.mdx
 |  |  ├── saily-esim-review.en.mdx
+|  |  ├── santorini-complete-guide-2026.en.mdx
+|  |  ├── santorini-ghid-complet-2026.ro.mdx
 |  |  ├── sarajevo-complete-guide.en.mdx
 |  |  ├── sarajevo-ghid-complet.ro.mdx
 |  |  ├── scam-uri-inselatorii-vacanta-2026.ro.mdx
@@ -208,6 +218,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── skopje-complete-guide.en.mdx
 |  |  ├── skopje-ghid-complet.ro.mdx
 |  |  ├── solo-travel-europe-2026.en.mdx
+|  |  ├── split-complete-guide-2026.en.mdx
+|  |  ├── split-ghid-complet-2026.ro.mdx
 |  |  ├── stockholm-complete-guide.en.mdx
 |  |  ├── stockholm-ghid-complet.ro.mdx
 |  |  ├── supraturism-europa-2026-taxe-limite.ro.mdx
@@ -217,6 +229,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── taxe-ascunse-inchiriere-auto.en.mdx
 |  |  ├── taxe-ascunse-inchiriere-auto.ro.mdx
 |  |  ├── taxe-ascunse-vacanta-2026.ro.mdx
+|  |  ├── thassos-complete-guide-2026.en.mdx
+|  |  ├── thassos-ghid-complet-2026.ro.mdx
 |  |  ├── things-to-do-amsterdam.en.mdx
 |  |  ├── things-to-do-athens.en.mdx
 |  |  ├── things-to-do-barcelona.en.mdx
@@ -282,6 +296,8 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── wroclaw-ghid-complet.ro.mdx
 |  |  ├── zagreb-complete-guide.en.mdx
 |  |  ├── zagreb-ghid-complet.ro.mdx
+|  |  ├── zakynthos-complete-guide-2026.en.mdx
+|  |  ├── zakynthos-ghid-complet-2026.ro.mdx
 |  |  ├── zbor-anulat-intarziat-drepturi-compensatii.ro.mdx
 |  |  ├── zbor-cu-escala-vs-direct.ro.mdx
 |  |  └── zboruri-populare-din-bucuresti.ro.mdx
@@ -363,7 +379,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 ├── README.md
 ├── REGISTRU-WIDGETURI-AFILIATE.md
 ├── scripts
-|  ├── add-booking-city.js
+|  ├── add-booking-city.cjs
 |  └── generate-llms-full.js
 ├── seo-dinamic.MD
 ├── src
@@ -388,7 +404,7 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |  |  ├── AnswerBox.tsx
 |  |  ├── ArticleBody.tsx
 |  |  ├── BackToTop.tsx
-|  |  ├── BookingCTA.tsx
+|  |  ├── BookingSearch.tsx
 |  |  ├── Breadcrumbs.tsx
 |  |  ├── CompareTable.tsx
 |  |  ├── CookieConsent.tsx
@@ -423,13 +439,14 @@ C:\Users\gheor\Desktop\Jinfo Projects\plecaricom\plecari
 |     ├── schema.ts
 |     └── translation-context.tsx
 ├── structura.txt
+├── structura.txtnpx
 ├── tsconfig.json
 ├── velite.config.ts
 └── wrangler.jsonc
 
-directory: 3446 file: 23167
+directory: 3450 file: 23184
 
-ignored: directory (239)
+ignored: directory (240)
 
 
 [2K[1G

@@ -16,167 +16,177 @@ const glob = require('glob');
 // ═══════════════════════════════════════════════════════════════
 const CITY_MAP = {
   // ── Italia ──────────────────────────────────────────────────
-  'coasta-amalfi':        { ro: 'Coasta Amalfi, Italia',     en: 'Amalfi Coast, Italy' },
-  'amalfi-coast':         { ro: 'Coasta Amalfi, Italia',     en: 'Amalfi Coast, Italy' },
-  'napoli':               { ro: 'Napoli, Italia',            en: 'Naples, Italy' },
-  'naples':               { ro: 'Napoli, Italia',            en: 'Naples, Italy' },
-  'florenta':             { ro: 'Florența, Italia',          en: 'Florence, Italy' },
-  'florence':             { ro: 'Florența, Italia',          en: 'Florence, Italy' },
-  'venetia':              { ro: 'Veneția, Italia',           en: 'Venice, Italy' },
-  'venice':               { ro: 'Veneția, Italia',           en: 'Venice, Italy' },
-  'milano':               { ro: 'Milano, Italia',            en: 'Milan, Italy' },
-  'milan':                { ro: 'Milano, Italia',            en: 'Milan, Italy' },
-  'cinque-terre':         { ro: 'Cinque Terre, Italia',      en: 'Cinque Terre, Italy' },
-  'sicilia':              { ro: 'Sicilia, Italia',           en: 'Sicily, Italy' },
-  'sicily':               { ro: 'Sicilia, Italia',           en: 'Sicily, Italy' },
-  'lacul-como':           { ro: 'Lacul Como, Italia',        en: 'Lake Como, Italy' },
-  'lake-como':            { ro: 'Lacul Como, Italia',        en: 'Lake Como, Italy' },
-  'toscana':              { ro: 'Toscana, Italia',           en: 'Tuscany, Italy' },
-  'tuscany':              { ro: 'Toscana, Italia',           en: 'Tuscany, Italy' },
-  'roma':                 { ro: 'Roma, Italia',              en: 'Rome, Italy' },
-  'rome':                 { ro: 'Roma, Italia',              en: 'Rome, Italy' },
-  'verona':               { ro: 'Verona, Italia',            en: 'Verona, Italy' },
+  'coasta-amalfi': { ro: 'Coasta Amalfi, Italia', en: 'Amalfi Coast, Italy' },
+  'amalfi-coast': { ro: 'Coasta Amalfi, Italia', en: 'Amalfi Coast, Italy' },
+  'napoli': { ro: 'Napoli, Italia', en: 'Naples, Italy' },
+  'naples': { ro: 'Napoli, Italia', en: 'Naples, Italy' },
+  'florenta': { ro: 'Florența, Italia', en: 'Florence, Italy' },
+  'florence': { ro: 'Florența, Italia', en: 'Florence, Italy' },
+  'venetia': { ro: 'Veneția, Italia', en: 'Venice, Italy' },
+  'venice': { ro: 'Veneția, Italia', en: 'Venice, Italy' },
+  'milano': { ro: 'Milano, Italia', en: 'Milan, Italy' },
+  'milan': { ro: 'Milano, Italia', en: 'Milan, Italy' },
+  'cinque-terre': { ro: 'Cinque Terre, Italia', en: 'Cinque Terre, Italy' },
+  'sicilia': { ro: 'Sicilia, Italia', en: 'Sicily, Italy' },
+  'sicily': { ro: 'Sicilia, Italia', en: 'Sicily, Italy' },
+  'lacul-como': { ro: 'Lacul Como, Italia', en: 'Lake Como, Italy' },
+  'lake-como': { ro: 'Lacul Como, Italia', en: 'Lake Como, Italy' },
+  'toscana': { ro: 'Toscana, Italia', en: 'Tuscany, Italy' },
+  'tuscany': { ro: 'Toscana, Italia', en: 'Tuscany, Italy' },
+  'roma': { ro: 'Roma, Italia', en: 'Rome, Italy' },
+  'rome': { ro: 'Roma, Italia', en: 'Rome, Italy' },
+  'verona': { ro: 'Verona, Italia', en: 'Verona, Italy' },
 
   // ── Spania ──────────────────────────────────────────────────
-  'barcelona':            { ro: 'Barcelona, Spania',         en: 'Barcelona, Spain' },
-  'sevilla':              { ro: 'Sevilla, Spania',           en: 'Seville, Spain' },
-  'seville':              { ro: 'Sevilla, Spania',           en: 'Seville, Spain' },
-  'malaga':               { ro: 'Malaga, Spania',            en: 'Malaga, Spain' },
+  'barcelona': { ro: 'Barcelona, Spania', en: 'Barcelona, Spain' },
+  'sevilla': { ro: 'Sevilla, Spania', en: 'Seville, Spain' },
+  'seville': { ro: 'Sevilla, Spania', en: 'Seville, Spain' },
+  'malaga': { ro: 'Malaga, Spania', en: 'Malaga, Spain' },
 
   // ── Portugalia ──────────────────────────────────────────────
-  'porto':                { ro: 'Porto, Portugalia',         en: 'Porto, Portugal' },
-  'lisabona':             { ro: 'Lisabona, Portugalia',      en: 'Lisbon, Portugal' },
-  'lisbon':               { ro: 'Lisabona, Portugalia',      en: 'Lisbon, Portugal' },
-  'portugalia':           { ro: 'Portugalia',                en: 'Portugal' },
-  'portugal':             { ro: 'Portugalia',                en: 'Portugal' },
+  'porto': { ro: 'Porto, Portugalia', en: 'Porto, Portugal' },
+  'lisabona': { ro: 'Lisabona, Portugalia', en: 'Lisbon, Portugal' },
+  'lisbon': { ro: 'Lisabona, Portugalia', en: 'Lisbon, Portugal' },
+  'portugalia': { ro: 'Portugalia', en: 'Portugal' },
+  'portugal': { ro: 'Portugalia', en: 'Portugal' },
 
   // ── Franța ──────────────────────────────────────────────────
-  'paris':                { ro: 'Paris, Franța',             en: 'Paris, France' },
-  'marsilia':             { ro: 'Marsilia, Franța',          en: 'Marseille, France' },
-  'marseille':            { ro: 'Marsilia, Franța',          en: 'Marseille, France' },
+  'paris': { ro: 'Paris, Franța', en: 'Paris, France' },
+  'marsilia': { ro: 'Marsilia, Franța', en: 'Marseille, France' },
+  'marseille': { ro: 'Marsilia, Franța', en: 'Marseille, France' },
 
   // ── Germania ────────────────────────────────────────────────
-  'munchen':              { ro: 'München, Germania',         en: 'Munich, Germany' },
-  'munich':               { ro: 'München, Germania',         en: 'Munich, Germany' },
-  'dresda':               { ro: 'Dresda, Germania',          en: 'Dresden, Germany' },
-  'dresden':              { ro: 'Dresda, Germania',          en: 'Dresden, Germany' },
-  'berlin':               { ro: 'Berlin, Germania',          en: 'Berlin, Germany' },
+  'munchen': { ro: 'München, Germania', en: 'Munich, Germany' },
+  'munich': { ro: 'München, Germania', en: 'Munich, Germany' },
+  'dresda': { ro: 'Dresda, Germania', en: 'Dresden, Germany' },
+  'dresden': { ro: 'Dresda, Germania', en: 'Dresden, Germany' },
+  'berlin': { ro: 'Berlin, Germania', en: 'Berlin, Germany' },
 
   // ── Austria ─────────────────────────────────────────────────
-  'viena':                { ro: 'Viena, Austria',            en: 'Vienna, Austria' },
-  'vienna':               { ro: 'Viena, Austria',            en: 'Vienna, Austria' },
+  'viena': { ro: 'Viena, Austria', en: 'Vienna, Austria' },
+  'vienna': { ro: 'Viena, Austria', en: 'Vienna, Austria' },
 
   // ── Cehia ───────────────────────────────────────────────────
-  'praga':                { ro: 'Praga, Cehia',             en: 'Prague, Czech Republic' },
-  'prague':               { ro: 'Praga, Cehia',             en: 'Prague, Czech Republic' },
-  'karlovy-vary':         { ro: 'Karlovy Vary, Cehia',      en: 'Karlovy Vary, Czech Republic' },
+  'praga': { ro: 'Praga, Cehia', en: 'Prague, Czech Republic' },
+  'prague': { ro: 'Praga, Cehia', en: 'Prague, Czech Republic' },
+  'karlovy-vary': { ro: 'Karlovy Vary, Cehia', en: 'Karlovy Vary, Czech Republic' },
 
   // ── Ungaria ─────────────────────────────────────────────────
-  'budapesta':            { ro: 'Budapesta, Ungaria',        en: 'Budapest, Hungary' },
-  'budapest':             { ro: 'Budapesta, Ungaria',        en: 'Budapest, Hungary' },
+  'budapesta': { ro: 'Budapesta, Ungaria', en: 'Budapest, Hungary' },
+  'budapest': { ro: 'Budapesta, Ungaria', en: 'Budapest, Hungary' },
 
   // ── Polonia ─────────────────────────────────────────────────
-  'wroclaw':              { ro: 'Wrocław, Polonia',          en: 'Wrocław, Poland' },
-  'cracovia':             { ro: 'Cracovia, Polonia',         en: 'Krakow, Poland' },
-  'krakow':               { ro: 'Cracovia, Polonia',         en: 'Krakow, Poland' },
-  'gdansk':               { ro: 'Gdańsk, Polonia',           en: 'Gdańsk, Poland' },
-  'varsovia':             { ro: 'Varșovia, Polonia',         en: 'Warsaw, Poland' },
-  'warsaw':               { ro: 'Varșovia, Polonia',         en: 'Warsaw, Poland' },
+  'wroclaw': { ro: 'Wrocław, Polonia', en: 'Wrocław, Poland' },
+  'cracovia': { ro: 'Cracovia, Polonia', en: 'Krakow, Poland' },
+  'krakow': { ro: 'Cracovia, Polonia', en: 'Krakow, Poland' },
+  'gdansk': { ro: 'Gdańsk, Polonia', en: 'Gdańsk, Poland' },
+  'varsovia': { ro: 'Varșovia, Polonia', en: 'Warsaw, Poland' },
+  'warsaw': { ro: 'Varșovia, Polonia', en: 'Warsaw, Poland' },
 
   // ── Slovacia ────────────────────────────────────────────────
-  'bratislava':           { ro: 'Bratislava, Slovacia',      en: 'Bratislava, Slovakia' },
+  'bratislava': { ro: 'Bratislava, Slovacia', en: 'Bratislava, Slovakia' },
 
   // ── Țările Baltice ──────────────────────────────────────────
-  'tallinn':              { ro: 'Tallinn, Estonia',          en: 'Tallinn, Estonia' },
-  'riga':                 { ro: 'Riga, Letonia',             en: 'Riga, Latvia' },
-  'vilnius':              { ro: 'Vilnius, Lituania',         en: 'Vilnius, Lithuania' },
+  'tallinn': { ro: 'Tallinn, Estonia', en: 'Tallinn, Estonia' },
+  'riga': { ro: 'Riga, Letonia', en: 'Riga, Latvia' },
+  'vilnius': { ro: 'Vilnius, Lituania', en: 'Vilnius, Lithuania' },
 
   // ── Scandinavia ─────────────────────────────────────────────
-  'oslo':                 { ro: 'Oslo, Norvegia',            en: 'Oslo, Norway' },
-  'stockholm':            { ro: 'Stockholm, Suedia',         en: 'Stockholm, Sweden' },
-  'copenhaga':            { ro: 'Copenhaga, Danemarca',      en: 'Copenhagen, Denmark' },
-  'copenhagen':           { ro: 'Copenhaga, Danemarca',      en: 'Copenhagen, Denmark' },
-  'helsinki':              { ro: 'Helsinki, Finlanda',        en: 'Helsinki, Finland' },
+  'oslo': { ro: 'Oslo, Norvegia', en: 'Oslo, Norway' },
+  'stockholm': { ro: 'Stockholm, Suedia', en: 'Stockholm, Sweden' },
+  'copenhaga': { ro: 'Copenhaga, Danemarca', en: 'Copenhagen, Denmark' },
+  'copenhagen': { ro: 'Copenhaga, Danemarca', en: 'Copenhagen, Denmark' },
+  'helsinki': { ro: 'Helsinki, Finlanda', en: 'Helsinki, Finland' },
 
   // ── Balcani / Europa de Sud-Est ─────────────────────────────
-  'tirana':               { ro: 'Tirana, Albania',           en: 'Tirana, Albania' },
-  'skopje':               { ro: 'Skopje, Macedonia de Nord', en: 'Skopje, North Macedonia' },
-  'ohrid':                { ro: 'Ohrid, Macedonia de Nord',  en: 'Ohrid, North Macedonia' },
-  'novi-sad':             { ro: 'Novi Sad, Serbia',          en: 'Novi Sad, Serbia' },
-  'belgrad':              { ro: 'Belgrad, Serbia',           en: 'Belgrade, Serbia' },
-  'belgrade':             { ro: 'Belgrad, Serbia',           en: 'Belgrade, Serbia' },
-  'mostar':               { ro: 'Mostar, Bosnia',            en: 'Mostar, Bosnia and Herzegovina' },
-  'sarajevo':             { ro: 'Sarajevo, Bosnia',          en: 'Sarajevo, Bosnia and Herzegovina' },
-  'zagreb':               { ro: 'Zagreb, Croația',           en: 'Zagreb, Croatia' },
-  'dubrovnik':            { ro: 'Dubrovnik, Croația',        en: 'Dubrovnik, Croatia' },
-  'split':                { ro: 'Split, Croația',            en: 'Split, Croatia' },
-  'kotor':                { ro: 'Kotor, Muntenegru',         en: 'Kotor, Montenegro' },
-  'budva':                { ro: 'Budva, Muntenegru',         en: 'Budva, Montenegro' },
-  'sofia':                { ro: 'Sofia, Bulgaria',           en: 'Sofia, Bulgaria' },
-  'ljubljana':            { ro: 'Ljubljana, Slovenia',       en: 'Ljubljana, Slovenia' },
+  'tirana': { ro: 'Tirana, Albania', en: 'Tirana, Albania' },
+  'skopje': { ro: 'Skopje, Macedonia de Nord', en: 'Skopje, North Macedonia' },
+  'ohrid': { ro: 'Ohrid, Macedonia de Nord', en: 'Ohrid, North Macedonia' },
+  'novi-sad': { ro: 'Novi Sad, Serbia', en: 'Novi Sad, Serbia' },
+  'belgrad': { ro: 'Belgrad, Serbia', en: 'Belgrade, Serbia' },
+  'belgrade': { ro: 'Belgrad, Serbia', en: 'Belgrade, Serbia' },
+  'mostar': { ro: 'Mostar, Bosnia', en: 'Mostar, Bosnia and Herzegovina' },
+  'sarajevo': { ro: 'Sarajevo, Bosnia', en: 'Sarajevo, Bosnia and Herzegovina' },
+  'zagreb': { ro: 'Zagreb, Croația', en: 'Zagreb, Croatia' },
+  'dubrovnik': { ro: 'Dubrovnik, Croația', en: 'Dubrovnik, Croatia' },
+  'split': { ro: 'Split, Croația', en: 'Split, Croatia' },
+  'kotor': { ro: 'Kotor, Muntenegru', en: 'Kotor, Montenegro' },
+  'budva': { ro: 'Budva, Muntenegru', en: 'Budva, Montenegro' },
+  'sofia': { ro: 'Sofia, Bulgaria', en: 'Sofia, Bulgaria' },
+  'ljubljana': { ro: 'Ljubljana, Slovenia', en: 'Ljubljana, Slovenia' },
 
   // ── Malta ───────────────────────────────────────────────────
-  'valletta':             { ro: 'Valletta, Malta',           en: 'Valletta, Malta' },
-  'malta':                { ro: 'Valletta, Malta',           en: 'Valletta, Malta' },
+  'valletta': { ro: 'Valletta, Malta', en: 'Valletta, Malta' },
+  'malta': { ro: 'Valletta, Malta', en: 'Valletta, Malta' },
 
   // ── Olanda ──────────────────────────────────────────────────
-  'amsterdam':            { ro: 'Amsterdam, Olanda',         en: 'Amsterdam, Netherlands' },
+  'amsterdam': { ro: 'Amsterdam, Olanda', en: 'Amsterdam, Netherlands' },
 
   // ── UK ──────────────────────────────────────────────────────
-  'londra':               { ro: 'Londra, Regatul Unit',      en: 'London, United Kingdom' },
-  'london':               { ro: 'Londra, Regatul Unit',      en: 'London, United Kingdom' },
+  'londra': { ro: 'Londra, Regatul Unit', en: 'London, United Kingdom' },
+  'london': { ro: 'Londra, Regatul Unit', en: 'London, United Kingdom' },
 
   // ── Grecia ──────────────────────────────────────────────────
-  'atena':                { ro: 'Atena, Grecia',             en: 'Athens, Greece' },
-  'athens':               { ro: 'Atena, Grecia',             en: 'Athens, Greece' },
-  'grecia':               { ro: 'Grecia',                    en: 'Greece' },
-  'greece':               { ro: 'Grecia',                    en: 'Greece' },
+  'atena': { ro: 'Atena, Grecia', en: 'Athens, Greece' },
+  'athens': { ro: 'Atena, Grecia', en: 'Athens, Greece' },
+  'grecia': { ro: 'Grecia', en: 'Greece' },
+  'greece': { ro: 'Grecia', en: 'Greece' },
 
   // ── Turcia ──────────────────────────────────────────────────
-  'istanbul':             { ro: 'Istanbul, Turcia',          en: 'Istanbul, Turkey' },
-  'antalya':              { ro: 'Antalya, Turcia',           en: 'Antalya, Turkey' },
+  'istanbul': { ro: 'Istanbul, Turcia', en: 'Istanbul, Turkey' },
+  'antalya': { ro: 'Antalya, Turcia', en: 'Antalya, Turkey' },
 
   // ── Moldova ─────────────────────────────────────────────────
-  'chisinau':             { ro: 'Chișinău, Moldova',         en: 'Chișinău, Moldova' },
-  'orheiul-vechi':        { ro: 'Orheiul Vechi, Moldova',    en: 'Orheiul Vechi, Moldova' },
+  'chisinau': { ro: 'Chișinău, Moldova', en: 'Chișinău, Moldova' },
+  'orheiul-vechi': { ro: 'Orheiul Vechi, Moldova', en: 'Orheiul Vechi, Moldova' },
 
   // ── România ─────────────────────────────────────────────────
-  'sibiu':                { ro: 'Sibiu, România',            en: 'Sibiu, Romania' },
-  'alba-iulia':           { ro: 'Alba Iulia, România',       en: 'Alba Iulia, Romania' },
-  'brasov':               { ro: 'Brașov, România',           en: 'Brașov, Romania' },
-  'sighisoara':           { ro: 'Sighișoara, România',       en: 'Sighișoara, Romania' },
-  'sinaia':               { ro: 'Sinaia, România',           en: 'Sinaia, Romania' },
-  'cluj-napoca':          { ro: 'Cluj-Napoca, România',      en: 'Cluj-Napoca, Romania' },
-  'cluj':                 { ro: 'Cluj-Napoca, România',      en: 'Cluj-Napoca, Romania' },
-  'iasi':                 { ro: 'Iași, România',             en: 'Iași, Romania' },
-  'oradea':               { ro: 'Oradea, România',           en: 'Oradea, Romania' },
-  'bucuresti':            { ro: 'București, România',        en: 'Bucharest, Romania' },
-  'bucharest':            { ro: 'București, România',        en: 'Bucharest, Romania' },
-  'transilvania':         { ro: 'Transilvania, România',     en: 'Transylvania, Romania' },
-  'transylvania':         { ro: 'Transilvania, România',     en: 'Transylvania, Romania' },
+  'sibiu': { ro: 'Sibiu, România', en: 'Sibiu, Romania' },
+  'alba-iulia': { ro: 'Alba Iulia, România', en: 'Alba Iulia, Romania' },
+  'brasov': { ro: 'Brașov, România', en: 'Brașov, Romania' },
+  'sighisoara': { ro: 'Sighișoara, România', en: 'Sighișoara, Romania' },
+  'sinaia': { ro: 'Sinaia, România', en: 'Sinaia, Romania' },
+  'cluj-napoca': { ro: 'Cluj-Napoca, România', en: 'Cluj-Napoca, Romania' },
+  'cluj': { ro: 'Cluj-Napoca, România', en: 'Cluj-Napoca, Romania' },
+  'iasi': { ro: 'Iași, România', en: 'Iași, Romania' },
+  'oradea': { ro: 'Oradea, România', en: 'Oradea, Romania' },
+  'bucuresti': { ro: 'București, România', en: 'Bucharest, Romania' },
+  'bucharest': { ro: 'București, România', en: 'Bucharest, Romania' },
+  'transilvania': { ro: 'Transilvania, România', en: 'Transylvania, Romania' },
+  'transylvania': { ro: 'Transilvania, România', en: 'Transylvania, Romania' },
 
   // ── Egipt ───────────────────────────────────────────────────
-  'egipt':                { ro: 'Egipt',                     en: 'Egypt' },
-  'egypt':                { ro: 'Egipt',                     en: 'Egypt' },
+  'egipt': { ro: 'Egipt', en: 'Egypt' },
+  'egypt': { ro: 'Egipt', en: 'Egypt' },
 
   // ── Bulgaria (țară) ─────────────────────────────────────────
-  'bulgaria':             { ro: 'Bulgaria',                  en: 'Bulgaria' },
+  'bulgaria': { ro: 'Bulgaria', en: 'Bulgaria' },
 
   // ── Croația (road trip) ─────────────────────────────────────
-  'croatia':              { ro: 'Croația',                   en: 'Croatia' },
+  'croatia': { ro: 'Croația', en: 'Croatia' },
 
   // ── Rute speciale ────────────────────────────────────────────
-  'drumul-romantic':      { ro: 'München, Germania',         en: 'Munich, Germany' },
-  'romantic-road':        { ro: 'München, Germania',         en: 'Munich, Germany' },
+  'drumul-romantic': { ro: 'München, Germania', en: 'Munich, Germany' },
+  'romantic-road': { ro: 'München, Germania', en: 'Munich, Germany' },
 
   // ── Turcia (ghiduri țară) ───────────────────────────────────
-  'turcia':               { ro: 'Turcia',                    en: 'Turkey' },
-  'turkey':               { ro: 'Turcia',                    en: 'Turkey' },
+  'turcia': { ro: 'Turcia', en: 'Turkey' },
+  'turkey': { ro: 'Turcia', en: 'Turkey' },
 
   // ── Moldova (vinuri + old-orhei EN slug) ────────────────────
-  'vinuri-moldova':       { ro: 'Chișinău, Moldova',         en: 'Chișinău, Moldova' },
-  'wine-tours':           { ro: 'Chișinău, Moldova',         en: 'Chișinău, Moldova' },
-  'old-orhei':            { ro: 'Orheiul Vechi, Moldova',    en: 'Orheiul Vechi, Moldova' },
+  'vinuri-moldova': { ro: 'Chișinău, Moldova', en: 'Chișinău, Moldova' },
+  'wine-tours': { ro: 'Chișinău, Moldova', en: 'Chișinău, Moldova' },
+  'old-orhei': { ro: 'Orheiul Vechi, Moldova', en: 'Orheiul Vechi, Moldova' },
+
+  'riviera-albaneza': { ro: 'Saranda, Albania', en: 'Saranda, Albania' },
+  'albanian-riviera': { ro: 'Saranda, Albania', en: 'Saranda, Albania' },
+  'split': { ro: 'Split, Croația', en: 'Split, Croatia' },
+  'thassos': { ro: 'Thassos, Grecia', en: 'Thassos, Greece' },
+  'santorini': { ro: 'Santorini, Grecia', en: 'Santorini, Greece' },
+  'zakynthos': { ro: 'Zakynthos, Grecia', en: 'Zakynthos, Greece' },
+  'creta': { ro: 'Creta, Grecia', en: 'Crete, Greece' },
+  'crete': { ro: 'Creta, Grecia', en: 'Crete, Greece' },
+  'madrid': { ro: 'Madrid, Spania', en: 'Madrid, Spain' },
 };
 
 // Verticale care NU primesc booking (nu au sens)
@@ -257,8 +267,8 @@ for (const filePath of files) {
 
   // Inserează bookingCity în frontmatter (după slug: sau după locale:)
   const insertAfter = fm.includes('cdLinkId:') ? 'cdLinkId:' :
-                      fm.includes('gygLocationId:') ? 'gygLocationId:' :
-                      'slug:';
+    fm.includes('gygLocationId:') ? 'gygLocationId:' :
+      'slug:';
 
   const insertRegex = new RegExp(`(^${insertAfter}\\s*.+$)`, 'm');
   const newFm = fm.replace(insertRegex, `$1\nbookingCity: "${bookingCity}"`);

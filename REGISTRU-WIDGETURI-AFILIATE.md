@@ -291,13 +291,121 @@ https://airalo.tpo.mx/mYekFAo3
 
 ---
 
-## 7. Booking.com — PENDING
-
-**Status:** Aplicație directă trimisă, în așteptare
-**Vertical:** Cazări
+## 7. Booking.com (prin CJ Affiliate) — ACTIV
+ 
+**CJ Publisher ID:** `101821346`
+**CJ Advertiser CID:** `5096493` (Central and Eastern Europe)
+**Deeplink ID:** `14082509` (Text Link — "use for deeplink")
+**Comision:** 4% cazări, €2 flat zboruri | **Atribuire:** Session-based (NU cookie 30 zile!)
+**Linked accounts:** CEE, Spain & Portugal, UK, France, BENELUX, DACH, MEA, Italy, Nordics
+**Dashboard:** https://members.cj.com
+**Monedă:** EUR
+ 
+### Integrare — BookingSearch (form propriu)
+ 
+Componentă: `src/components/BookingSearch.tsx`
+Config: `src/config/booking.ts`
+ 
+Form nativ (fără iframe, fără widget extern) cu:
+- Destinație (pre-completată din `bookingCity` frontmatter, read-only)
+- Check-in / Check-out (date pickers)
+- Nr. persoane (select 1–6)
+- Buton "Compară cele mai bune prețuri →"
+La submit, construiește URL CJ deeplink cu toți parametrii și deschide Booking.com într-un tab nou.
+ 
+**Nu necesită consent gate** — tracking-ul CJ e pe redirect la clic, nu pe page load.
+ 
+### URL deeplink (pattern)
+ 
+```
+https://www.tkqlhce.com/click-101821346-14082509?url=https%3A%2F%2Fwww.booking.com%2Fsearchresults.{LANG}.html%3Fss%3D{CITY}%26checkin%3D{DATE}%26checkout%3D{DATE}%26group_adults%3D{N}%26no_rooms%3D1
+```
+ 
+Unde `{LANG}` = `ro` sau `en-gb`, `{CITY}` = URL-encoded city name.
+ 
+### Cum se configurează în articole (frontmatter)
+ 
+```yaml
+bookingCity: "Roma, Italia"    # RO — doar numele + țara
+bookingCity: "Rome, Italy"     # EN — echivalent englez
+```
+ 
+Componenta extrage automat numele orașului (tot ce e înainte de virgulă) pentru titlul h2.
+ 
+Schema Velite:
+```ts
+bookingCity: s.string().optional()
+```
+ 
+### Plasare în pagină
+ 
+Randat din `page.tsx`, NU din ArticleBody. Apare ca secțiune proprie cu h2 automat:
+- RO: `🏨 Cazare în {oraș}`
+- EN: `🏨 Accommodation in {city}`
+Poziție: după ArticleBody, înainte de FAQ și CTA-urile de final.
+ 
+### Alte linkuri utile din programul CEE
+ 
+| Tip | Link ID | Click URL | EPC 3m |
+|---|---|---|---|
+| HomePage (cel mai performant) | 13323565 | `https://www.dpbolvw.net/click-101821346-13323565` | 92.89€ |
+| Romania Home Page (RO) | 14376478 | `https://www.tkqlhce.com/click-101821346-14376478` | 0.94€ |
+| Romania Deals Page (RO) | 14376480 | `https://www.dpbolvw.net/click-101821346-14376480` | 5.66€ |
+| Deeplink | 14082509 | `https://www.tkqlhce.com/click-101821346-14082509` | 9.14€ |
+| Getaway Deals 2026 | 17259343 | `https://www.dpbolvw.net/click-101821346-17259343` | 71.93€ |
+| Flights Homepage | 17053224 | `https://www.tkqlhce.com/click-101821346-17053224` | N/A |
+| Cars Homepage | 17122732 | `https://www.dpbolvw.net/click-101821346-17122732` | N/A |
+| Attractions Homepage | 17254616 | `https://www.tkqlhce.com/click-101821346-17254616` | N/A |
+ 
+### Restricții importante (din Program Terms)
+ 
+- **Session-based** — userul trebuie să rezerve în aceeași sesiune, NU are cookie 30 zile
+- **NU iframes** — politica zice explicit "No use of iframes or similar functionality"
+- **NU coupons/vouchers** — Booking.com nu oferă coduri de discount, oricine listează așa ceva e fraudulos
+- **NU PPC pe brand** — nu licita pe "Booking", "Bookings" sau variante
+- **NU domenii similare** — nu înregistra domenii cu "booking" în ele
+- **NU sub-afiliați** fără aprobare
+- **Comision DOAR pe cazări și zboruri** — alte produse Booking.com (attractions, taxis) NU generează comision
+- **App tracking NU funcționează** — dacă userul instalează aplicația Booking.com și rezervă din ea, comisionul se pierde (la fel ca la GYG)
+- **Rusia/Belarus** — publisheri din aceste țări interziși
+### Script migrare batch
+ 
+`scripts/add-booking-city.cjs` — adaugă `bookingCity` la toate articolele de destinație din `content/articles/`.
+ 
+Rulare: `node scripts/add-booking-city.cjs` apoi `npx velite`.
+ 
+Mapping: ~160 destinații acoperite automat, ~115 articole non-destinație excluse corect.
 
 ---
-
+### Articole City Breaks (per destinație) — ACTUALIZAT
+ 
+| Zonă | Widget | Partener |
+|---|---|---|
+| Sus (după answer box) | City widget | GYG |
+| Inline (după h2 obiective) | Availability (tourId) | GYG |
+| Jos (după conținut) | Activity Manual (3 carduri) | GYG |
+| Jos (sub GYG) | Specific Route (rută + preț) | Kiwi |
+| **Secțiune cazare (proprie, cu h2)** | **BookingSearch (form)** | **Booking.com** |
+| CTA butoane | Link GYG + link zbor + EKTA + Airalo | GYG + Kiwi + TP |
+ 
+### Articole Experiențe (per destinație) — ACTUALIZAT
+ 
+| Zonă | Widget | Partener |
+|---|---|---|
+| Sus (după answer box) | City widget | GYG |
+| Inline (după h2 obiective) | Availability (tourId) | GYG |
+| Jos (după conținut) | Activity Manual (3 carduri) | GYG |
+| Jos (sub GYG) | Specific Route (rută + preț) | Kiwi |
+| **Secțiune cazare (proprie, cu h2)** | **BookingSearch (form)** | **Booking.com** |
+| CTA butoane | Link GYG + link zbor | GYG + Kiwi |
+ 
+### Articole România/Destinații interne — NOU
+ 
+| Zonă | Widget | Partener |
+|---|---|---|
+| **Secțiune cazare (proprie, cu h2)** | **BookingSearch (form)** | **Booking.com** |
+| CTA butoane | Link GYG + GetRentacar | GYG + TP |
+ 
 ## Hartă: ce widget pe ce pagină
 
 ### Homepage
@@ -388,3 +496,7 @@ https://airalo.tpo.mx/mYekFAo3
 8. **Widgeturile CruiseDirect** folosesc embed HTML cu JS extern (necesită componentă nouă sau SearchWidget adaptat)
 9. **Nu combina GYG availability + Kiwi specific route pe aceeași secțiune** — plasează-le în zone diferite
 10. **CruiseDirect:** NU licita pe branduri protejate, NU te prezenta ca site oficial
+11. **Booking.com BookingSearch** se randează din `page.tsx`, NU din ArticleBody — e secțiune separată cu h2 propriu
+12. **`bookingCity`** se adaugă în frontmatter la toate articolele de destinație (script: `add-booking-city.cjs`)
+13. **Session-based tracking** — CTA-ul Booking.com trebuie plasat strategic; userul trebuie să rezerve imediat după clic
+14. **Max widgeturi per articol actualizat:** GYG city + GYG availability inline + Kiwi route + BookingSearch + CTA butoane = 5 este OK, nu depășim pragul de "prea comercial"

@@ -26,7 +26,8 @@ Plecări este operat de Radu Cristescu, cu experiență în industria croazierel
 Ghiduri despre zboruri low-cost din București și România, comparatoare, și sfaturi practice. Partener principal: Travelpayouts (marker 747505, trs 547266) — agregator care include Wizz Air, Ryanair, și toate companiile low-cost active pe rute românești.
 
 - [Zboruri ieftine din București — ghid complet](https://plecari.com/ro/zboruri/zboruri-ieftine-din-bucuresti): Toate rutele directe din OTP și BBU, companii active, sezoane de prețuri mici.
-- [Bagaj de mână — dimensiuni și reguli 2026](https://plecari.com/ro/city-breaks/bagaj-mana-dimensiuni-reguli-2026): Dimensiuni acceptate per companie aeriană, ce se poate lua în cabină, taxe pentru bagaj de cală.
+- [Bagaj de mână — dimensiuni și reguli 2026](https://plecari.com/ro/zboruri/bagaj-mana-dimensiuni-reguli-2026): Dimensiuni exacte per companie (Wizz Air, Ryanair, TAROM, easyJet, Turkish, Lufthansa), noua regulă lichide 2L la Otopeni și Cluj, taxe gate, când merită bagaj de cală.
+- [Bagaj pierdut — drepturi pasager](https://plecari.com/ro/zboruri/bagaj-pierdut-companie-aeriana-drepturi): Procedura PIR, WorldTracer, Convenția Montreal (1.519 DST ≈ 1.850 EUR din dec 2024), comportament per companie (Wizz Air, Ryanair, TAROM, Turkish), AirHelp.
 - [Cele mai populare zboruri din București](https://plecari.com/en/city-breaks/popular-flights-from-bucharest): EN — top destinații cu zbor direct din București cu frecvențe și prețuri orientative.
 
 ---
@@ -37,6 +38,9 @@ Conținut despre cazări în România și Europa, comparatoare, și ghiduri de t
 
 - [Vacanță Bulgaria 2026 — ghid complet](https://plecari.com/ro/cazari/vacanta-bulgaria-2026-ghid-complet): Stațiuni bulgărești, prețuri, transport din România, ce să știi despre noua zonă euro Bulgaria.
 - [Antalya all-inclusive 2026](https://plecari.com/ro/cazari/vacanta-antalya-2026-ghid-complet): Ghid complet pentru vacanță all-inclusive în Antalya — hoteluri, prețuri, sfaturi de rezervare.
+- [Cele mai bune cazări în Brașov 2027](https://plecari.com/ro/cazari/cele-mai-bune-cazari-brasov-2027): Top hoteluri Centrul Vechi (Kronwell 4.7/5, Radisson Blu cu piscină pe acoperiș, QOSMO 4.8/5, Bella Muzica, Casa Chitic, Aro Palace, Belfort), resort-uri Poiana Brașov (Alpin Resort 840 RON/noapte, Teleferic Grand), pensiuni Bran/Râșnov, calendar prețuri, sfaturi rezervare.
+- [Booking.com vs Airbnb vs Travelminit — pe care o alegi în 2026](https://plecari.com/ro/cazari/booking-vs-airbnb-vs-travelminit): Comisioane reale (Airbnb taxă serviciu 14% oaspete, Booking 15-18% proprietar), programul Genius 3 niveluri (10-20%), Travelminit acceptă card de vacanță, noile reguli SITUR din mai 2026, când alegi ce platformă.
+- [Top pensiuni cu ciubuc în România 2026](https://plecari.com/ro/cazari/cazari-cu-ciubuc-romania-top-pensiuni): Ghid regional pensiuni autentice — Bucovina (34-77 EUR/noapte), Maramureș (280-350 RON), Apuseni (180-320 RON), Delta Dunării (577+ RON), sate săsești Transilvania, cum găsești pensiunile bune, strategii de preț, Travelminit last-minute.
 
 ---
 
@@ -159,10 +163,10 @@ Cea mai mare verticală — ghiduri complete de destinații cu prețuri reale 20
 - [Ghid pentru urgențe în străinătate 2026](https://plecari.com/ro/asigurari/urgente-in-strainatate-ghid-2026): Ce faci dacă ți se fură pașaportul, dacă ai nevoie de spital, dacă ți se anulează zborul — pași concreți.
 - [Scam-uri și înșelătorii de vacanță 2026](https://plecari.com/ro/city-breaks/scam-uri-inselatorii-vacanta-2026): Cele mai frecvente scheme turistice în Europa — cum le recunoști și cum le eviți.
 - [Trucuri pentru călătorii ieftine în Europa](https://plecari.com/ro/city-breaks/trucuri-calatorie-ieftina-2026): Sfaturi practice verificate pentru reducerea costurilor fără compromisuri de calitate.
-- [Reguli bagaj de mână 2026](https://plecari.com/ro/city-breaks/bagaj-mana-dimensiuni-reguli-2026): Dimensiuni acceptate per companie aeriană low-cost, ce e interzis, cum eviți taxele extra.
+- [Reguli bagaj de mână 2026](https://plecari.com/ro/zboruri/bagaj-mana-dimensiuni-reguli-2026): Dimensiuni acceptate per companie aeriană low-cost, ce e interzis, cum eviți taxele extra.
 - [Aplicații esențiale de călătorie 2026](https://plecari.com/ro/city-breaks/cele-mai-bune-aplicatii-calatorie-2026): Top aplicații pentru zboruri, cazare, navigare offline, traducere, transport local.
 - [Supraturism în Europa 2026 — taxe și limite](https://plecari.com/ro/city-breaks/supraturism-europa-2026-taxe-limite): Taxe de acces introduse în Veneția, Dubrovnik, Barcelona, Amsterdam — cât costă și ce restricții există.
-- [Bagaj pierdut — drepturi pasager](https://plecari.com/ro/city-breaks/bagaj-pierdut-companie-aeriana-drepturi): Ce compensație ai dreptul să ceri când compania aeriană pierde sau întârzie bagajul.
+- [Bagaj pierdut — drepturi pasager](https://plecari.com/ro/zboruri/bagaj-pierdut-companie-aeriana-drepturi): Ce compensație ai dreptul să ceri când compania aeriană pierde sau întârzie bagajul.
 
 ---
 

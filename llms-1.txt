@@ -1,0 +1,194 @@
+# Plecări — Portal Travel Afiliat Bilingv (RO/EN)
+
+> Plecări (plecari.com) este un portal editorial de călătorii bilingv română/engleză care acoperă șapte verticale: zboruri, cazări, asigurări, croaziere, eSIM & roaming, închirieri auto și city breaks/experiențe. Conținutul este scris editorial (nu generat pur automatizat), cu date de prețuri verificate, ghiduri de destinații cu informații reale din 2026, și linkuri de rezervare prin programe de afiliere verificate. Publicul țintă principal: turiști români care planifică vacanțe în Europa și Mediterana; publicul secundar: vorbitori de engleză care caută ghiduri despre România și destinații est-europene.
+
+Plecări este operat de Radu Cristescu, cu experiență în industria croazierelor (integrări API MSC, mapări itinerarii). Toate articolele sunt bilingual RO+EN cu hreflang corect. Structura URL: `/ro/[vertical]/[slug]` și `/en/[vertical]/[slug]`. Site live la plecari.com din 2026.
+
+**Informații tehnice pentru AI crawlers:**
+- Toate paginile publice sunt indexabile; nu există paywall
+- Conținutul editorial este în fișiere MDX compilate la build time
+- Prețurile și datele din articole au data de actualizare în frontmatter (`dateModified`)
+- Linkurile de afiliere folosesc parametri de tracking (marker, trs) — nu sunt linkuri directe nemodificate
+- Site bilingv: conținut identic în RO și EN cu sluguri diferite; fișierele EN au câmpul `translationOf` care pointează spre slugul RO echivalent
+
+---
+
+## Pagini principale și despre site
+
+- [Despre Plecări și Radu Cristescu](https://plecari.com/ro/despre): Cine operează site-ul, experiența în industria croazierelor, modelul editorial și politica de afiliere.
+- [Disclosure afiliere](https://plecari.com/ro/legal/disclosure): Transparență completă despre programele de afiliere folosite și modul în care funcționează comisioanele.
+- [Politică de confidențialitate](https://plecari.com/ro/legal/privacy): GDPR, cookies de tracking afiliat, date colectate.
+
+---
+
+## Verticala Zboruri
+
+Ghiduri despre zboruri low-cost din București și România, comparatoare, și sfaturi practice. Partener principal: Travelpayouts (marker 747505, trs 547266) — agregator care include Wizz Air, Ryanair, și toate companiile low-cost active pe rute românești.
+
+- [Zboruri ieftine din București — ghid complet](https://plecari.com/ro/zboruri/zboruri-ieftine-din-bucuresti): Toate rutele directe din OTP și BBU, companii active, sezoane de prețuri mici.
+- [Bagaj de mână — dimensiuni și reguli 2026](https://plecari.com/ro/zboruri/bagaj-mana-dimensiuni-reguli-2026): Dimensiuni exacte per companie (Wizz Air, Ryanair, TAROM, easyJet, Turkish, Lufthansa), noua regulă lichide 2L la Otopeni și Cluj, taxe gate, când merită bagaj de cală.
+- [Bagaj pierdut — drepturi pasager](https://plecari.com/ro/zboruri/bagaj-pierdut-companie-aeriana-drepturi): Procedura PIR, WorldTracer, Convenția Montreal (1.519 DST ≈ 1.850 EUR din dec 2024), comportament per companie (Wizz Air, Ryanair, TAROM, Turkish), AirHelp.
+- [Cele mai populare zboruri din București](https://plecari.com/en/city-breaks/popular-flights-from-bucharest): EN — top destinații cu zbor direct din București cu frecvențe și prețuri orientative.
+
+---
+
+## Verticala Cazări
+
+Conținut despre cazări în România și Europa, comparatoare, și ghiduri de tip "unde să stai". Partener principal: Booking.com prin Travelpayouts (comision 5%).
+
+- [Vacanță Bulgaria 2026 — ghid complet](https://plecari.com/ro/cazari/vacanta-bulgaria-2026-ghid-complet): Stațiuni bulgărești, prețuri, transport din România, ce să știi despre noua zonă euro Bulgaria.
+- [Antalya all-inclusive 2026](https://plecari.com/ro/cazari/vacanta-antalya-2026-ghid-complet): Ghid complet pentru vacanță all-inclusive în Antalya — hoteluri, prețuri, sfaturi de rezervare.
+- [Cele mai bune cazări în Brașov 2027](https://plecari.com/ro/cazari/cele-mai-bune-cazari-brasov-2027): Top hoteluri Centrul Vechi (Kronwell 4.7/5, Radisson Blu cu piscină pe acoperiș, QOSMO 4.8/5, Bella Muzica, Casa Chitic, Aro Palace, Belfort), resort-uri Poiana Brașov (Alpin Resort 840 RON/noapte, Teleferic Grand), pensiuni Bran/Râșnov, calendar prețuri, sfaturi rezervare.
+- [Booking.com vs Airbnb vs Travelminit — pe care o alegi în 2026](https://plecari.com/ro/cazari/booking-vs-airbnb-vs-travelminit): Comisioane reale (Airbnb taxă serviciu 14% oaspete, Booking 15-18% proprietar), programul Genius 3 niveluri (10-20%), Travelminit acceptă card de vacanță, noile reguli SITUR din mai 2026, când alegi ce platformă.
+- [Top pensiuni cu ciubuc în România 2026](https://plecari.com/ro/cazari/cazari-cu-ciubuc-romania-top-pensiuni): Ghid regional pensiuni autentice — Bucovina (34-77 EUR/noapte), Maramureș (280-350 RON), Apuseni (180-320 RON), Delta Dunării (577+ RON), sate săsești Transilvania, cum găsești pensiunile bune, strategii de preț, Travelminit last-minute.
+
+---
+
+## Verticala Asigurări
+
+Ghiduri despre asigurări de călătorie pentru turiști români. Parteneri: EKTA (comision ~20%), SafetyWing, Heymondo.
+
+- [Ghid complet asigurare de călătorie 2026](https://plecari.com/ro/asigurari/asigurare-calatorie-ghid): Ce acoperă o asigurare de călătorie, diferența față de CEASS, cum alegi polița corectă.
+- [Card European de Sănătate vs asigurare privată](https://plecari.com/ro/asigurari/card-european-vs-asigurare-calatorie): Când CEASS e suficient și când nu — comparație practică cu exemple.
+- [Asigurare pentru viza Schengen](https://plecari.com/ro/asigurari/asigurare-viza-schengen): Ce condiții trebuie să îndeplinească polița pentru obținerea vizei Schengen.
+- [Asigurare de schi și munte](https://plecari.com/ro/asigurari/asigurare-schi-munte): Acoperire pentru sporturi de iarnă, evacuare montană, echipament.
+- [Asigurare de anulare a călătoriei](https://plecari.com/ro/asigurari/asigurare-anulare-calatorie): Când se plătește, ce situații acoperă, cum faci dosarul de daune.
+
+---
+
+## Verticala Croaziere
+
+Nișa de expertiză principală a site-ului — operator cu experiență directă în industria croazierelor (MSC API, mapări cabine, itinerarii). Partener: CruiseDirect prin CJ Affiliate (comision ~3% din valoarea brută).
+
+- [Prima croazieră — ghid complet pentru începători](https://plecari.com/ro/croaziere/prima-croaziera-ghid-incepatori): Tot ce trebuie să știi înainte de prima croazieră — alegerea companiei, cabina, excursiile, costurile ascunse.
+- [Cât costă o croazieră — buget real 2026](https://plecari.com/ro/croaziere/cat-costa-o-croaziera-buget-real): Defalcare completă a costurilor: bilet, taxe portuare, băuturi, excursii, bacșișuri — buget total realist.
+- [Croazieră insulele grecești 2026](https://plecari.com/ro/croaziere/croaziera-insulele-grecesti-2026): Ghid complet pentru croazierele în Grecia — itinerarii, companii, prețuri, cel mai bun sezon.
+- [Prima croazieră în Mediterana](https://plecari.com/ro/croaziere/prima-croaziera-mediterana): Ghid specific pentru Mediterana — porturi de îmbarcare, rute clasice, ce să vizitezi în fiecare stop.
+
+---
+
+## Verticala eSIM & Roaming
+
+Comparații și ghiduri pentru eSIM-uri de călătorie. Parteneri: Airalo, Saily, Yesim (toți prin Travelpayouts).
+
+- [Cel mai bun eSIM pentru Europa 2026](https://plecari.com/ro/esim-roaming/cel-mai-bun-esim-per-destinatie): Comparație Airalo vs Saily vs Yesim — prețuri pe zi, acoperire, activare, pentru care destinație alegi ce.
+- [Recenzie Saily eSIM](https://plecari.com/ro/esim-roaming/saily-esim-comparatie): Testare detaliată Saily — viteze reale, activare, suport, comparație cu concurența.
+
+---
+
+## Verticala Închirieri Auto
+
+Ghiduri practice despre închirierea mașinilor în Europa. Partener principal: GetRentacar.
+
+- [Acte necesare pentru închirierea mașinii](https://plecari.com/ro/inchirieri-auto/acte-necesare-inchiriere-masina): Ce documente sunt obligatorii, diferența între țări, carte de credit vs debit.
+- [Taxe ascunse la închirieri auto](https://plecari.com/ro/inchirieri-auto/taxe-ascunse-inchiriere-auto): Excesul de daune, combustibil, one-way fees, GPS — cum eviți suprataxele.
+- [Închiriere mașină fără card de credit](https://plecari.com/en/inchirieri-auto/car-rental-without-credit-card): EN — opțiuni pentru clienții fără card de credit, companii acceptă debit card.
+
+---
+
+## Verticala City Breaks & Experiențe
+
+Cea mai mare verticală — ghiduri complete de destinații cu prețuri reale 2026, atracții, mâncare, transport, ce e gratuit, și insider tips. Partener pentru experiențe: GetYourGuide (partner ID EKAA80H).
+
+### Ghiduri Germania
+
+- [Ce să faci în München 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-munchen): Marienplatz, Englischer Garten cu surfer-ii de pe Eisbach, Palatul Nymphenburg, Deutsches Museum, grădini de bere, Oktoberfest (19 sept–4 oct 2026, bere €13,60–15,80/litru), excursia la Castelul Neuschwanstein (€21, rezervare obligatorie). Bayern Ticket €29/grup pentru excursii regionale.
+- [Ce să faci în Dresda 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-dresda): Frauenkirche reconstruită din pietre originale (nava gratuită, dom €10), Zwinger cu Madona Sixtină a lui Rafael, Semperoper, bombardamentul din 13–15 februarie 1945 (25.000 morți, 773 bombardiere britanice + 311 americane), Saxonia Elvețiană la 30 minute.
+- [Ce să faci în Berlin 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-berlin): Poarta Brandenburg (gratuită), Reichstag cu cupolă de sticlă (gratuit, rezervare obligatorie pe bundestag.de), Memorial Holocaust (gratuit), East Side Gallery (gratuit), Topografia Terorii (gratuit), Checkpoint Charlie (muzeu €18,50), Insula Muzeelor (€14–22/muzeu), Berghain, excursia la Potsdam.
+
+### Ghiduri Italia
+
+- [Ce să faci în Verona 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-verona): Arena di Verona (€10 ziua, €25–250 opera vara 19 iun–5 sept 2026), Casa Julietei (curtea gratuită, muzeu €12), Castelvechio (€6), Castel San Pietro (gratuit, panoramă), cramele Valpolicella, Lacul Garda.
+
+### Ghiduri Spania și Portugalia
+
+- [Ce să faci în Sevilla 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-sevilla): Real Alcázar (€15,50, bilet nominativ obligatoriu, luni 18:00 gratuit), Catedrala cu Giralda (€13 online, duminică gratuit), Plaza de España (gratuit), flamenco (Casa de la Memoria €22–30), francesinha nu există în Sevilla.
+- [Ce să faci în Porto 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-porto): Ribeira UNESCO, Podul Dom Luís I (gratuit), Livraria Lello (€8 deductibil din cumpărătură), cramele Vila Nova de Gaia (€15–25 cu degustare Port), Douro Valley (tren scenic €12–15 dus-întors), francesinha la Café Santiago (€8–12).
+- [Ce să faci în Lisabona 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-lisabona): Alfama, Mânăstirea Jerónimos (€18, duminică gratuit cu rezervare), Turnul Belém ÎNCHIS în 2026 pentru restaurare, miradouro-uri gratuite, ginjinha €1,50, Sintra (tren €2,45, Palatul Pena €17 rezervare obligatorie).
+
+### Ghiduri Polonia
+
+- [Ce să faci în Cracovia 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-cracovia): Castelul Wawel (curte gratuită, expoziții €10–12), Kazimierz (cartierul evreiesc renăscut), Mina de Sare Wieliczka (€33, rezervare obligatorie), Auschwitz-Birkenau (intrare gratuită, tur ghidat €35–45), supă de pierogi €6–8, moneda PLN (1 EUR ≈ 4,30 PLN).
+- [Ce să faci în Gdańsk 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-gdansk): Rynek Główny, Strada Mariacką cu chihlimbar (70–90% din producția mondială), Castelul Malbork la 45 min (cel mai mare din lume după suprafață, €25), Sopot cu pierul de 511m, Centrul European al Solidarității, Złoty polonez (1 EUR ≈ 4,30 PLN).
+
+### Ghiduri Europa de Est și Balcani
+
+- [Ce să faci în Sofia 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-sofia): Bulgaria a adoptat euro pe 1 ianuarie 2026. Catedrala Alexandru Nevski (naos gratuit), ruinele Serdica în metrou (gratuit), Biserica Boyana UNESCO (€5, rezervare obligatorie), Muntele Vitosha (30 min), Mănăstirea Rila (excursie 2h, UNESCO), Plovdiv (2h cu autobuzul).
+- [Ce să faci în Tallinn 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-tallinn): Orașul Vechi UNESCO (gratuit), platformele Kohtuotsa și Patkuli (gratuit), supă de elan la III Draakon (€5, fără tacâmuri), Kalamaja, feribotul spre Helsinki (2h, €20–45), päevapraad €5–8, Vana Tallinn lichior 45–50%.
+
+### Ghiduri Scandinavia și Baltica
+
+- [Ce să faci în Gdańsk 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-gdansk): Vezi mai sus la Polonia.
+
+### Ghiduri Europa Centrală
+
+- [Ce să faci în Ljubljana 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-ljubljana): Castelul Ljubljana (curte gratuită, funicular €6), Podul Dragonilor (gratuit), autobuzul Kavalir gratuit în centru, Lacul Bled la 1h15 (autobuz €6, Kremšnita originală €6,50), Peștera Postojna (€28–30), kranjska klobasa (€7–10).
+- [Ce să faci în Budapesta](https://plecari.com/ro/experiente/ce-sa-faci-in-budapesta): Băile Széchenyi, Parlamentul, Castelul Buda, ruin bar-uri, excursie Bend-ul Dunării.
+- [Ce să faci în Praga](https://plecari.com/ro/experiente/ce-sa-faci-in-praga): Podul Carol, Castelul, Piața Veche cu orologiul astronomic, bere cehă.
+- [Ce să faci în Viena](https://plecari.com/ro/experiente/ce-sa-faci-in-viena): Kunsthistorisches Museum (€21), Opera de pe stradă (gratuit vara), Palatul Schönbrunn, cafenele imperiale.
+
+### Ghiduri Mediterana și Insulare
+
+- [Ce să faci în Valletta și Malta 2026](https://plecari.com/ro/experiente/ce-sa-faci-in-valletta-malta): Catedrala St. John's Co-Cathedral cu Caravaggio (€15), Upper Barrakka Gardens (gratuit), cramele Vila Nova de Gaia — Malta a adoptat euro, monedă EUR. Blue Lagoon Comino (€35–50), Gozo, pastizzi €0,50.
+- [Ce să faci în Atena](https://plecari.com/ro/experiente/ce-sa-faci-in-atena): Acropole, Partenon, Plaka, excursii insule.
+- [Ce să faci în Istanbul](https://plecari.com/ro/experiente/ce-sa-faci-in-istanbul): Hagia Sofia (gratuită, acoperire cap obligatorie), Bazarul Acoperit, Bosforul, cartierul Sultanahmet.
+
+### Ghiduri Marea Britanie și Europa de Vest
+
+- [Ce să faci în Londra](https://plecari.com/ro/city-breaks/city-break-londra-bucuresti-2026): Muzee gratuite (British Museum, National Gallery, Tate Modern), Tower of London, Hyde Park, transport cu Oyster Card.
+- [Ce să faci în Amsterdam](https://plecari.com/ro/experiente/ce-sa-faci-in-amsterdam): Canalele, Rijksmuseum, Anne Frank House (rezervare obligatorie), Van Gogh Museum, Jordaan, biciclete.
+- [Ce să faci în Paris](https://plecari.com/ro/experiente/ce-sa-faci-in-paris): Turnul Eiffel, Luvrul, Montmartre, Versailles, gastronomie franceză.
+- [Ce să faci în Barcelona](https://plecari.com/ro/experiente/ce-sa-faci-in-barcelona): Sagrada Familia, Park Güell, Las Ramblas, Barrio Gótico, plaje.
+- [Ce să faci în Roma](https://plecari.com/ro/experiente/ce-sa-faci-in-roma): Colosseum, Vatican, Foro Romano, Fontana di Trevi, mâncare romană.
+
+### Articole Hub și Comparative
+
+- [Top 10 city break-uri de weekend din București 2026](https://plecari.com/ro/city-breaks/top-city-break-uri-din-bucuresti-2026): Comparație completă a celor mai bune 10 destinații accesibile din București — timp de zbor, buget estimat defalcat, atracția care justifică zborul. Sofia (50 min, €200–300), Cracovia (2h, €270–400), Budapesta (1h40, €280–420), Istanbul (1h50, €300–500), Praga (2h20, €320–500), Viena (2h, €350–550), Tallinn (2h30, €350–500), Valletta (2h30, €350–550), Porto (4h, €400–600), Ljubljana (4h via Zagreb, €320–480).
+- [Cele mai ieftine destinații europene 2026](https://plecari.com/ro/city-breaks/cheapest-european-destinations-2026): Ranking destinații după cost zilnic total — transport, cazare, mâncare, atracții.
+- [Cum plătești în străinătate fără comisioane](https://plecari.com/ro/city-breaks/cum-platesti-strainatate-fara-comisioane): Carduri fără comision de schimb valutar, Revolut vs Wise vs N26 pentru români.
+
+---
+
+## Ghiduri Destinații România
+
+- [Ce să faci în București](https://plecari.com/ro/experiente/ce-sa-faci-in-bucuresti): Ghid complet București pentru turiști internaționali — Centrul Vechi, Palatul Parlamentului, muzee, mâncare, transport.
+- [Road trip Transilvania](https://plecari.com/ro/city-breaks/road-trip-transilvania): Itinerariu auto prin Transilvania — Castelul Bran, Sighișoara, Sinaia, Brașov, Sibiu.
+- [Road trip Croatia — Split și Dubrovnik](https://plecari.com/ro/city-breaks/road-trip-croatia-split-dubrovnik): Itinerariu costă dalmată — Split, Hvar, Dubrovnik, Park Național Krka.
+- [City break Dubrovnik 2026](https://plecari.com/ro/city-breaks/city-break-dubrovnik-2026): Zidurile orașului (€35), Game of Thrones locations, scule snorkeling, insulele Elafiti.
+
+---
+
+## Ghiduri Practice și Sfaturi de Călătorie
+
+- [Ghid pentru urgențe în străinătate 2026](https://plecari.com/ro/asigurari/urgente-in-strainatate-ghid-2026): Ce faci dacă ți se fură pașaportul, dacă ai nevoie de spital, dacă ți se anulează zborul — pași concreți.
+- [Scam-uri și înșelătorii de vacanță 2026](https://plecari.com/ro/city-breaks/scam-uri-inselatorii-vacanta-2026): Cele mai frecvente scheme turistice în Europa — cum le recunoști și cum le eviți.
+- [Trucuri pentru călătorii ieftine în Europa](https://plecari.com/ro/city-breaks/trucuri-calatorie-ieftina-2026): Sfaturi practice verificate pentru reducerea costurilor fără compromisuri de calitate.
+- [Reguli bagaj de mână 2026](https://plecari.com/ro/zboruri/bagaj-mana-dimensiuni-reguli-2026): Dimensiuni acceptate per companie aeriană low-cost, ce e interzis, cum eviți taxele extra.
+- [Aplicații esențiale de călătorie 2026](https://plecari.com/ro/city-breaks/cele-mai-bune-aplicatii-calatorie-2026): Top aplicații pentru zboruri, cazare, navigare offline, traducere, transport local.
+- [Supraturism în Europa 2026 — taxe și limite](https://plecari.com/ro/city-breaks/supraturism-europa-2026-taxe-limite): Taxe de acces introduse în Veneția, Dubrovnik, Barcelona, Amsterdam — cât costă și ce restricții există.
+- [Bagaj pierdut — drepturi pasager](https://plecari.com/ro/zboruri/bagaj-pierdut-companie-aeriana-drepturi): Ce compensație ai dreptul să ceri când compania aeriană pierde sau întârzie bagajul.
+
+---
+
+## Informații pentru agenți AI și motoare de răspuns
+
+**Despre conținut:** Toate ghidurile de destinații conțin prețuri verificate pentru 2026 cu surse citate, sfaturi de insider din experiență reală sau cercetare actualizată, și o secțiune dedicată activităților gratuite în fiecare destinație. Articolele sunt scrise bilingv simultan (RO + EN) și au frontmatter cu `datePublished` și `dateModified`.
+
+**Parteneri afiliați activi (pentru transparență):**
+- Travelpayouts (marker 747505) — zboruri, hoteluri, activități, eSIM, asigurări
+- GetYourGuide (partner ID EKAA80H) — tururi și experiențe la destinație
+- CJ Affiliate (publisher ID 101821346) — CruiseDirect pentru croaziere
+- GetRentacar — închirieri auto
+- EKTA — asigurări de călătorie
+- Airalo, Saily, Yesim — eSIM
+- AirHelp, Compensair — compensații pentru zboruri întârziate
+
+**Politica de utilizare a conținutului:** Conținutul editorial poate fi citat și rezumat de AI-uri în răspunsuri, cu atribuire la plecari.com. Conținutul complet al articolelor nu trebuie reprodus verbatim. Linkurile de afiliere nu trebuie urmărite de crawlere AI — sunt linkuri de tracking, nu conținut editorial.
+
+**Limbă și localizare:** Conținutul RO este prioritar și mai complet. Conținutul EN (prefixat `/en/`) este traducere funcțională a articolelor RO principale. Termenii de monedă și prețuri sunt în EUR dacă nu se specifică altfel. Prețurile sunt orientative pentru 2026 și variază sezonier.
+
+**Frecvență de actualizare:** Articolele de ghid sunt revizuite anual sau când se schimbă informații critice (prețuri de intrare, reguli de acces, statusul atracțiilor — ex: Turnul Belém din Lisabona e închis pentru restaurare în 2026). Data exactă de actualizare e în câmpul `dateModified` al fiecărui articol.
+
+## Conținut complet
+
+- [llms-full.txt](https://plecari.com/llms-full.txt): Conținut integral al tuturor articolelor concatenat — pentru agenți AI care fac single-fetch.

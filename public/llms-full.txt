@@ -2,8 +2,8 @@
 
 > Conținut complet al portalului de travel plecari.com (RO + EN).
 > Generat automat la build time. Nu edita manual.
-> Ultima generare: 2026-09-12T20:07:33.331Z
-> Articole incluse: 315 (160 RO, 155 EN)
+> Ultima generare: 2026-09-13T06:00:39.817Z
+> Articole incluse: 319 (164 RO, 155 EN)
 > Site: https://plecari.com
 
 ---
@@ -28,6 +28,7 @@
 - 🇷🇴 [Budva 2026: Ghid Complet pentru City Break pe Riviera Muntenegrului](https://plecari.com/ro/experiente/budva-ghid-complet)
 - 🇷🇴 [Călătorii solo în Europa 2026: ghid complet pentru primii pași și destinații ieftine](https://plecari.com/ro/city-breaks/calatorii-solo-europa-2026)
 - 🇷🇴 [Card european de sănătate vs asigurare de călătorie 2026](https://plecari.com/ro/asigurari/card-european-vs-asigurare-calatorie)
+- 🇷🇴 [Cât costă o croazieră cu tot cu zbor din România — calculul complet 2026/2027](https://plecari.com/ro/croaziere/cat-costa-croaziera-cu-zbor-din-romania)
 - 🇷🇴 [Cât costă o croazieră în 2026: buget real pentru 2 persoane din România](https://plecari.com/ro/croaziere/cat-costa-o-croaziera-buget-real)
 - 🇷🇴 [Cazare Litoral Românesc 2027: Ghid Complet pe Stațiuni și Prețuri](https://plecari.com/ro/cazari/cazare-litoral-romanesc-2027)
 - 🇷🇴 [Top pensiuni cu ciubuc în România 2026: unde mănânci bine, dormi bine și dai mai puțin](https://plecari.com/ro/cazari/cazari-cu-ciubuc-romania-top-pensiuni)
@@ -54,6 +55,7 @@
 - 🇷🇴 [Ce să faci în Valletta și Malta: ghid complet 2026 cu prețuri, Gozo, Blue Lagoon și insider tips](https://plecari.com/ro/experiente/ce-sa-faci-in-valletta-malta)
 - 🇷🇴 [Ce să faci în Verona: ghid complet 2026 cu prețuri, insider tips și experiențe](https://plecari.com/ro/experiente/ce-sa-faci-in-verona)
 - 🇷🇴 [Ce să faci în Viena 2026: ghid complet cu prețuri, palate imperiale, cafenele legendare și insider tips](https://plecari.com/ro/experiente/ce-sa-faci-in-viena)
+- 🇷🇴 [Ce să împachetezi pe o croazieră — lista completă 2026/2027](https://plecari.com/ro/croaziere/ce-sa-impachetezi-pe-croaziera)
 - 🇷🇴 [Cel mai bun eSIM pe destinație în 2026 — Turcia, SUA, UK, Thailanda, Japonia, Dubai și altele](https://plecari.com/ro/esim-roaming/cel-mai-bun-esim-per-destinatie)
 - 🇷🇴 [Cele mai bune aplicații de călătorie 2026: de la zboruri la traduceri — tot ce instalezi înainte de vacanță](https://plecari.com/ro/zboruri/cele-mai-bune-aplicatii-calatorie-2026)
 - 🇷🇴 [Cele mai bune cazări în Brașov 2027: hoteluri, pensiuni și zone recomandate](https://plecari.com/ro/cazari/cele-mai-bune-cazari-brasov-2027)
@@ -90,6 +92,7 @@
 - 🇷🇴 [Asigurare de călătorie 2026: ghid complet — ce acoperă, cât costă, cum alegi și cum faci claim](https://plecari.com/ro/asigurari/ghid-asigurare-calatorie)
 - 🇷🇴 [Ghid complet asigurare de călătorie 2026: ce acoperă, cât costă și 7 greșeli pe care le fac românii](https://plecari.com/ro/asigurari/ghid-asigurare-calatorie-2026)
 - 🇷🇴 [Ghid complet croaziere în Mediterana 2026: ce include, cât costă și cum alegi](https://plecari.com/ro/croaziere/ghid-croaziere-mediterana)
+- 🇷🇴 [Ghidul complet al croazierelor pentru români — 2026/2027](https://plecari.com/ro/croaziere/ghid-croaziere-romani-2027)
 - 🇷🇴 [Ce să Mănânci în Europa: Ghid Gastronomic pe Țări pentru Călătorii din 2026](https://plecari.com/ro/experiente/ghid-gastronomie-europa-2026)
 - 🇷🇴 [Grecia 2026: ghid complet pentru vacanța de vară — insule, prețuri și când să rezervi](https://plecari.com/ro/city-breaks/grecia-2026-ghid-vacanta)
 - 🇷🇴 [Grecia 2026: ghid complet pentru vacanța de vară — insule, prețuri și când să rezervi](https://plecari.com/ro/city-breaks/grecia-2026-ghid-vacanta)
@@ -109,6 +112,7 @@
 - 🇷🇴 [Marsilia și Provence 2026: Ghid Complet — Vieux-Port, Calanques, Gastronomie și Prețuri Reale](https://plecari.com/ro/city-breaks/marsilia-ghid-complet-2026)
 - 🇷🇴 [Milano 2026: Ghid Complet — Duomo, Cina cea de Taină, Aperitivo și Orașul Dincolo de Fashion Week](https://plecari.com/ro/city-breaks/milano-ghid-complet-2026)
 - 🇷🇴 [Mostar 2026: Ghid Complet pentru Cel Mai Frumos Oraș din Bosnia — Podul Vechi și Bazarul Otoman](https://plecari.com/ro/experiente/mostar-ghid-complet)
+- 🇷🇴 [MSC vs Costa Cruises — Care e mai bună pentru români în 2026/2027?](https://plecari.com/ro/croaziere/msc-vs-costa-croaziere)
 - 🇷🇴 [MSC vs Costa vs Norwegian: comparație completă pentru croaziere în 2026](https://plecari.com/ro/croaziere/msc-vs-costa-vs-norwegian)
 - 🇷🇴 [Napoli 2026: Ghid Complet — Pizza, Muzee, Cartiere, Transport și Tot Ce Trebuie Să Știi](https://plecari.com/ro/city-breaks/napoli-ghid-complet-2026)
 - 🇷🇴 [Novi Sad 2026: Ghid Complet pentru City Break în Atena Serbiei — EXIT Festival și Gibraltar-ul Dunării](https://plecari.com/ro/experiente/novi-sad-ghid-complet)
@@ -518,7 +522,7 @@ R: Da — copilul poate avea propria poliță de asigurare indiferent de vârst�
 **Publicat:** 2026-07-09
 **Actualizat:** 2026-09-10
 
-**Descriere:** Asigurarea standard nu acoperă helirescue sau salvamontul. Ce trebuie să conțină o poliță pentru schi, cât costă un elicopter de salvare în Alpi fără asigurare, cum compari polițele și ce clauze contează cu adevărat.
+**Descriere:** Asigurarea standard nu acoperă helirescue sau salvamontul. Ce trebuie să conțină o poliță pentru schi, cât costă un elicopter de salvare în Alpi fără asigurare, cum compari polițele și ce clauze
 
 **Rezumat rapid:** O asigurare standard de călătorie NU acoperă salvamontul, helirescue-ul sau accidentele pe pârtie — schiatul e exclus ca activitate de risc. Ai nevoie de o poliță cu clauza de sporturi de iarnă inclusă explicit. Un helirescue în Elveția costă 2.500–7.800+ CHF, în Austria 3.900–7.800+ EUR. O poliță completă de schi pentru o săptămână în Alpi costă 15–35 EUR. Diferența dintre a o cumpăra și a nu o cumpăra poate fi de zeci de mii de euro.
 
@@ -557,7 +561,7 @@ R: O poliță standard cu sporturi de iarnă incluse costă 15–35 EUR/persoan�
 **Verticală:** asigurari
 **Publicat:** 2026-09-10
 
-**Descriere:** Ghid complet pentru românii care ajută pe cineva să obțină viza Schengen: cerințe obligatorii, suma minimă de 30.000 EUR, furnizori din România, prețuri reale și greșelile care duc la refuzul dosarului.
+**Descriere:** Ghid complet pentru românii care ajută pe cineva să obțină viza Schengen: cerințe obligatorii, suma minimă de 30.000 EUR, furnizori din România, prețuri reale și greșelile care duc la refuzul
 
 **Rezumat rapid:** Asigurarea pentru viza Schengen trebuie să acopere minimum 30.000 EUR cheltuieli medicale, să fie validă în toate cele 29 de țări Schengen și să includă repatrierea. Documentul care se depune la ambasadă este certificatul de asigurare (nu polița completă), emis imediat online. Costă 8-18 EUR pentru o săptămână. Greșelile frecvente: sumă sub 30.000 EUR, acoperire limitată la o singură țară, datele poliței nu acoperă tot sejurul, lipsă repatriere.
 
@@ -1014,6 +1018,37 @@ R: Nu. Cardul e valabil doar pentru îngrijiri medicale necesare în timpul unei
 
 ---
 
+## Cât costă o croazieră cu tot cu zbor din România — calculul complet 2026/2027
+
+**URL:** https://plecari.com/ro/croaziere/cat-costa-croaziera-cu-zbor-din-romania
+**Limbă:** Română
+**Verticală:** croaziere
+**Publicat:** 2026-09-12
+**Actualizat:** 2026-09-12
+
+**Descriere:** Calculul real al unei croaziere din România: zbor, transfer, prețul navei, pachet băuturi, excursii, bacșișuri, asigurare, eSIM. Trei scenarii de buget cu cifre reale pentru 2026.
+
+**Rezumat rapid:** O croazieră de 7 nopți în Mediterana cu plecare din Atena costă în total 1.100–2.500 EUR/persoană cu tot cu zbor din București, incluzând croaziera, zborurile dus-întors, transferul la port, bacșișurile automate și 1–2 excursii la țărm. Buget economic (2 persoane, 7 nopți): 2.200–2.800 EUR total. Buget mediu: 3.500–4.500 EUR total. Buget confort cu balcon și pachete: 5.000–7.000 EUR total pentru două persoane.
+
+**Întrebări frecvente:**
+
+**Î: Cât costă o croazieră de 7 nopți din Atena pentru 2 persoane, total?**
+R: Buget minim realist (2 persoane, 7 nopți, cabină interioară, mai–octombrie 2026): zbor București–Atena–București 300–600 EUR, transfer aeroport–port 50–80 EUR, croazieră 1.000–1.800 EUR (2 persoane), bacșișuri automate 170–200 EUR, 2 excursii la țărm 160–300 EUR. Total: 1.700–3.000 EUR pentru două persoane. Fără pachete opționale (băuturi, spa, Wi-Fi).
+
+**Î: Care e diferența de preț între cabina interioară și cea cu balcon?**
+R: Pe aceeași navă și același itinerariu, cabina cu balcon costă cu 30–60% mai mult față de cabina interioară. Exemplu concret: MSC Seascape, Mediterana de Est, 7 nopți, septembrie 2026 — cabina interioară 499 EUR/persoană, cabina cu balcon 749–899 EUR/persoană. Diferența de 250–400 EUR/persoană (500–800 EUR/cuplu) cumpără 2–4 excursii la țărm de calitate.
+
+**Î: Merită pachetul de băuturi sau plătesc pe rând?**
+R: Calculul simplu: dacă bei în medie 3+ băuturi pe zi (bere la prânz, vin la cină, cocktail seara sau suc la bufet), pachetul clasic (25–35 USD/zi) devine mai ieftin decât plata individuală. O bere la bord: 5–7 USD. Un pahar de vin: 7–10 USD. Un cocktail: 10–14 USD. Trei băuturi pe zi: 22–31 USD fără pachet. Cu pachetul: 25–35 USD — break-even la 3 băuturi, profit clar la 4+.
+
+**Î: Bacșișurile la croazieră sunt obligatorii?**
+R: Service charge-ul (bacșișurile automate) — 12–20 USD/persoană/zi — se adaugă automat pe contul de bord la MSC, Costa și toate companiile majore. Tehnic poți cere anularea la recepție, dar este o practică descurajată și percepută negativ de personalul navei. Include-le în buget ca un cost fix: 84–140 USD/persoană pentru 7 nopți, adică 168–280 USD pentru un cuplu.
+
+**Î: Cât costă excursiile la țărm și pot economisi față de ofertele navei?**
+R: Excursiile organizate de navă costă de obicei 50–150 EUR/persoană. Aceleași destinații prin GetYourGuide sau Viator costă cu 30–50% mai puțin: tur Santorini cu barcă 35 vs 70 EUR, quad la Mykonos 40 vs 80 EUR, tur Efes 30 vs 60 EUR. Avantajul excursiei navei: dacă întârzii, nava te așteaptă. Cu operator independent, riști să pierzi nava dacă apar întârzieri.
+
+---
+
 ## Cât costă o croazieră în 2026: buget real pentru 2 persoane din România
 
 **URL:** https://plecari.com/ro/croaziere/cat-costa-o-croaziera-buget-real
@@ -1079,7 +1114,7 @@ R: Early booking deschide de obicei în octombrie–noiembrie 2026 pentru sezoan
 **Verticală:** cazari
 **Publicat:** 2026-09-11
 
-**Descriere:** Ghid regional cu cele mai bune pensiuni din România în 2026 — Bucovina, Maramureș, Apuseni, Delta Dunării, Dobrogea — cu prețuri reale, mic dejun inclus și sfaturi pentru a găsi ofertele cu cel mai bun raport calitate-preț.
+**Descriere:** Ghid regional cu cele mai bune pensiuni din România în 2026 — Bucovina, Maramureș, Apuseni, Delta Dunării, Dobrogea — cu prețuri reale, mic dejun inclus și sfaturi pentru a găsi ofertele cu cel
 
 **Rezumat rapid:** Pensiunile cu cel mai bun raport calitate-preț din România în 2026 sunt în Bucovina (34-77 EUR/noapte, mic dejun inclus la majority), Maramureș (280-350 RON/noapte, specific tradițional), Delta Dunării (de la 577 RON/noapte, accesibile cu barca), și Munții Apuseni (180-320 RON/noapte, agroturism autentic). Travelminit e prima platformă de verificat pentru oferte last-minute și pensiuni cu card de vacanță.
 
@@ -1854,6 +1889,37 @@ R: Absolut. Viena iarna e magică: târgurile de Crăciun (noiembrie-decembrie) 
 
 **Î: Ce cartier e cel mai bun pentru cazare în Viena?**
 R: Innere Stadt (districtul 1): cel mai central dar cel mai scump (€150-300/noapte). Leopoldstadt (districtul 2): lângă Prater, bun raport preț/calitate (€80-140). Mariahilf (districtul 6): aproape de Naschmarkt și Mariahilfer Straße, bun pentru shopping (€90-150). Neubau (districtul 7): hipster, cafenele independente, lângă MuseumsQuartier (€90-160). Favoriten (districtul 10): cel mai ieftin, bine conectat cu metroul (€50-90).
+
+---
+
+## Ce să împachetezi pe o croazieră — lista completă 2026/2027
+
+**URL:** https://plecari.com/ro/croaziere/ce-sa-impachetezi-pe-croaziera
+**Limbă:** Română
+**Verticală:** croaziere
+**Publicat:** 2026-09-12
+**Actualizat:** 2026-09-12
+
+**Descriere:** Lista completă de bagaje pentru croazieră: haine, documente, medicamente, accesorii tehnice, articole de toaletă și lucrurile pe care să le lași acasă. Plus sfaturi despre restricțiile de la bord
+
+**Rezumat rapid:** Pentru o croazieră de 7 nopți în Mediterana ai nevoie de: 2 costume de baie, 5–6 seturi de haine casual (tricouri, pantaloni scurți, rochii de vară), 1–2 ținute elegante pentru serile de gală, pantofi comozi de plimbat și sandale de plajă, cremă de protecție solară proprie (scumpă la bord), medicamente pentru rău de mare (Dimenhydrinate/Dramamine), pașaportul valid, asigurarea de călătorie, un power bank și adaptor pentru prize americane (tip A) dacă nava ta are prize US.
+
+**Întrebări frecvente:**
+
+**Î: Ce tip de prize sunt pe navele de croazieră?**
+R: Depinde de companie și de navă. MSC și Costa (companii europene) au de obicei prize europene (tip F/Schuko) în cabine, dar navele mai noi au adesea și prize americane (tip A) și porturi USB. Pe navele Royal Caribbean și Norwegian: predominant prize americane (110V). Verifică specificațiile navei tale pe site-ul companiei sau în secțiunea de întrebări frecvente. Dacă ai dubii, ia un adaptor universal și un prelungitor mic cu 2–3 prize (util deoarece cabinele au adesea o singură priză).
+
+**Î: Pot lua alcool la bord?**
+R: Nu — alcoolul cumpărat din exterior nu este permis la bord la nicio companie majoră (MSC, Costa, Royal Caribbean). La îmbarcare, bagajele trec prin scaner și sticlele de alcool sunt confiscate (și returnate la debarcare sau consumate de port). Poți lua apă plată și sucuri carbogazoase în bagajul de mână (câte 1 sticlă de 0,75L per persoană, la unele companii). Verifică politica specifică companiei tale.
+
+**Î: Câte bagaje pot lua pe croazieră?**
+R: Nava nu are limite de bagaje — poți aduce câte vrei. Limitele sunt impuse de zborul cu avionul (de obicei 1 bagaj de cală 23kg + 1 bagaj de mână per persoană pe zboruri low-cost). Dacă conduci până la portul de îmbarcare, poți aduce mai mult. La bord, cabinele interioare au spațiu limitat de depozitare — 2 valize mari pentru 2 persoane este maximul confortabil.
+
+**Î: Trebuie să iau prosoape sau sunt pe navă?**
+R: Prosoapele de cabină sunt incluse la toate companiile majore — zilnic schimbate de stewarzii de cabină. Prosoapele de piscină sunt de obicei disponibile la recepția de punte (lăsate pe șezlong). Totuși, unele companii percep o taxă dacă nu returnezi prosoapele de piscină. Nu ai nevoie să aduci prosoape.
+
+**Î: Ce să nu iau pe croazieră?**
+R: Nu lua: alcool cumpărat din exterior, substanțe inflamabile (brichete cu rezervă), cuțite sau obiecte ascuțite peste limita de siguranță, fiare de călcat (sunt interzise în cabine — există spălătorii la bord), aparate de gătit (fierbătoare electrice sunt interzise). Verifică politica completă a companiei tale înainte de îmbarcare.
 
 ---
 
@@ -2795,7 +2861,7 @@ R: Cumperi un plan suplimentar din aplicatia furnizorului (Airalo, Saily, Yesim)
 **Publicat:** 2026-09-11
 **Actualizat:** 2026-09-11
 
-**Descriere:** Cele mai bune excursii de o zi din București: Castelul Bran, Brașov, Sinaia, Peleș, Castelul Corvinilor, Sighișoara, Lacul Vidraru și alte destinații la 2–3 ore distanță — cu transport, prețuri în lei și sfaturi practice.
+**Descriere:** Cele mai bune excursii de o zi din București: Castelul Bran, Brașov, Sinaia, Peleș, Castelul Corvinilor, Sighișoara, Lacul Vidraru și alte destinații la 2–3 ore distanță — cu transport, prețuri în
 
 **Rezumat rapid:** Cel mai bun raport calitate-distanță pentru o excursie de o zi din București: Sinaia (110 km, 1h30 cu mașina), Brașov (165 km, 2h), Castelul Bran (185 km, 2h30). Toate trei pot fi vizitate separat sau combinate pe un traseu în buclă. Cu mașina sau prin tur organizat — transportul în comun funcționează dar limitează flexibilitatea.
 
@@ -3075,6 +3141,37 @@ R: Nu există îmbarcări din România pentru croazierele mediteraneene. Cele ma
 
 **Î: Care companie e mai bună: MSC, Costa sau Norwegian?**
 R: MSC e liderul pentru românii care preferă stil european, cu prețuri competitive și copii sub 12 ani gratis. Costa e similară ca stil. Norwegian are mai multă libertate (fără orar fix la cină), dar e ceva mai scump. Royal Caribbean e cel mai entertainment-heavy. Celebrity e opțiunea premium. Toate sunt de calitate bună la nivel standard.
+
+---
+
+## Ghidul complet al croazierelor pentru români — 2026/2027
+
+**URL:** https://plecari.com/ro/croaziere/ghid-croaziere-romani-2027
+**Limbă:** Română
+**Verticală:** croaziere
+**Publicat:** 2026-09-12
+**Actualizat:** 2026-09-12
+
+**Descriere:** Tot ce trebuie să știi înainte de prima croazieră: cum alegi compania, ce include prețul, cât costă cu tot cu zbor din România, ce să pui în valiză și cum funcționează viața la bord.
+
+**Rezumat rapid:** O croazieră pentru români costă în medie 800–1.800 EUR/persoană all-inclusive (7 nopți Mediterana), la care se adaugă zborul din București (200–450 EUR dus-întors), transferul la port (20–80 EUR) și cheltuielile opționale la bord (excursii, băuturi premium, spa). Companiile cele mai accesibile pentru români sunt MSC Cruises și Costa Cruises, cu plecare din Atena, Veneția sau Barcelona. Rezervările cu 6–9 luni avans oferă cele mai bune prețuri Early Bird.
+
+**Întrebări frecvente:**
+
+**Î: Cât costă o croazieră pentru un român în 2026?**
+R: O croazieră de 7 nopți în Mediterana costă 600–1.500 EUR/persoană pentru cabina și mesele principale. Adaugă 200–450 EUR zbor din București, 30–80 EUR transfer la port și 100–300 EUR cheltuieli la bord (excursii, băuturi, suveniruri). Total realist: 1.000–2.300 EUR/persoană pentru o săptămână.
+
+**Î: Ce include prețul unei croaziere?**
+R: Prețul de bază include: cazarea în cabină, mesele principale la restaurant (mic dejun, prânz, cină), spectacolele și activitățile de bord, accesul la piscine și sport. NU include de obicei: băuturile alcoolice și sucurile premium, excursiile la țărm, bacșișurile zilnice (12–20 USD/persoană/zi), Wi-Fi, specialitățile la restaurantele à la carte și fotografiile de bord.
+
+**Î: MSC sau Costa — care e mai bună pentru români?**
+R: MSC Cruises are flota mai modernă și mai mare, prețuri competitive și o prezență puternică în Mediterana. Costa este mai orientată spre italieni și europeni sudici, cu o atmosferă mai relaxată și prețuri similare. Ambele operează din porturi accesibile din România: Atena (Pireu), Veneția, Bari. MSC este prima alegere pentru familie, Costa pentru cei care preferă o ambianță europeană clasică.
+
+**Î: Se poate pleca la croazieră cu vaporul din România?**
+R: Da, din Constanța există croaziere sezoniere pe Marea Neagră și prin Bosfor spre Mediterana, operate de companii precum Celestyal și ocazional MSC. Dar opțiunile sunt limitate și prețurile nu sunt neapărat mai mici. Varianta mai practică: zbor din București la Atena (2 ore, 80–200 EUR) sau Veneția (2 ore, 100–250 EUR) și îmbarcare acolo.
+
+**Î: Ce documente îmi trebuie pe croazieră?**
+R: Pașaportul valabil cel puțin 6 luni după data întoarcerii — obligatoriu, cartea de identitate nu e acceptată pe nave care fac escale în afara spațiului Schengen (ex. Turcia, Muntenegru, Israel). Asigurarea de călătorie este puternic recomandată (include anulare, evacuare medicală). Biletele de avion și voucherul croazierei îl primești digital și îl salvezi offline.
 
 ---
 
@@ -3379,7 +3476,7 @@ R: Dacă ai luat CDW (inclus de obicei), compania suportă daunele minus franși
 **Publicat:** 2026-09-11
 **Actualizat:** 2026-09-11
 
-**Descriere:** Ghid complet Interrail pentru 2026: tipuri de abonamente, prețuri în euro și lei, cum cumperi din România, rezervări obligatorii, rute recomandate și tot ce trebuie să știi înainte de prima călătorie cu trenul prin Europa.
+**Descriere:** Ghid complet Interrail pentru 2026: tipuri de abonamente, prețuri în euro și lei, cum cumperi din România, rezervări obligatorii, rute recomandate și tot ce trebuie să știi înainte de prima
 
 **Rezumat rapid:** Interrail Global Pass 2026 costă de la 211 euro (4 zile în 1 lună, adulți) până la 703 euro (călătorie continuă 3 luni). Pentru tineri sub 28 de ani: reducere de 35%. Abonamentul se cumpără pe interrail.eu și funcționează în 33 de țări europene. Atenție: pentru majoritatea trenurilor de mare viteză și de noapte este necesară o rezervare suplimentară de 3–35 euro/tren.
 
@@ -3762,6 +3859,37 @@ R: Mai–iunie și septembrie–octombrie: ideal — temperaturi plăcute (18–
 
 **Î: Mostar se face ca excursie de o zi din Sarajevo sau merită o noapte?**
 R: Excursia de o zi din Sarajevo (2,5 ore autocar dus) este suficientă pentru Stari Most + bazarul Kujundžiluk + o moschee. Dar dacă vrei și Blagaj + Počitelj + Kravice, ai nevoie de o zi întreagă pe teren sau de o noapte cazat. O noapte în Mostar transformă vizita — seara, după plecarea turiștilor de zi, orașul vechi devine o altă lume.
+
+---
+
+## MSC vs Costa Cruises — Care e mai bună pentru români în 2026/2027?
+
+**URL:** https://plecari.com/ro/croaziere/msc-vs-costa-croaziere
+**Limbă:** Română
+**Verticală:** croaziere
+**Publicat:** 2026-09-12
+**Actualizat:** 2026-09-12
+
+**Descriere:** Comparație completă MSC Cruises vs Costa Cruises: nave, itinerarii, prețuri, mâncare, atmosferă, facilități pentru copii și programe de fidelitate. Cu experiențe reale din Mediterana.
+
+**Rezumat rapid:** MSC Cruises câștigă pentru familii cu copii (facilități mai mari, prețuri mai competitive, nave mai noi), pentru cei care vor nave mari cu multe activități și pentru itinerariile din Mediterana de Est. Costa Cruises este mai bună pentru cupluri și adulți care preferă o atmosferă mai relaxată și mai europeană, pentru cei familiarizați cu stilul italian de vacanță și pentru itinerariile din Mediterana de Vest. La prețuri similare, MSC oferă de regulă nave mai moderne, în timp ce Costa compensează prin caracter și tradiție.
+
+**Întrebări frecvente:**
+
+**Î: MSC sau Costa — care e mai ieftină?**
+R: Prețurile sunt comparabile pentru același tip de croazieră și perioadă. MSC tinde să fie ușor mai ieftină în perioadele de vârf (iulie–august) datorită flotei mai mari și a ofertelor Early Bird mai numeroase. Costa poate fi mai avantajoasă în afara sezonului și pentru itinerariile din Mediterana de Vest. Diferența de preț rareori depășește 10–15% pentru aceeași categorie de cabină.
+
+**Î: Sunt navele MSC mai noi decât cele Costa?**
+R: Da, în medie. MSC a investit masiv în flotă nouă — nave ca MSC Seashore (2021), MSC World Europa (2022), MSC Euribia (2023) sunt printre cele mai moderne din lume. Costa are în flotă nave mai vechi (Costa Luminosa din 2009, Costa Deliziosa din 2009), deși Costa Toscana (2021) și Costa Smeralda (2019) sunt recente. Dacă modernitatea navei contează, MSC are un avantaj clar.
+
+**Î: Costa sau MSC pentru copii?**
+R: MSC este câștigătorul clar pentru familii cu copii. Mini Club MSC (3–6 ani), Junior Club (7–11 ani) și Teen Club (12–17 ani) sunt mai bine dotate și mai extinse. MSC oferă și pachete speciale Familie cu copii gratis în anumite perioade. Costa are și ea facilități pentru copii (Costa Club Kids) dar mai reduse ca dimensiuni și activități.
+
+**Î: Care are mâncare mai bună — MSC sau Costa?**
+R: Costa este considerată în general ușor superioară la mâncare, cu o influență italiană mai pronunțată în meniu (paste proaspete, pizza autentică, vinuri italiene). MSC are o bucătărie mai internațională, adaptată publicului global. Ambele includ bufet abundent și restaurant principal cu serviciu la masă — calitate similară cu un hotel de 3–4 stele.
+
+**Î: Pot urca pe croazieră cu o carte de identitate sau am nevoie de pașaport?**
+R: Depinde de itinerariu. Pentru rute care includ escale în afara UE/Schengen (Turcia, Muntenegru, Israel, Tunisia, Maroc) — pașaport obligatoriu. Pentru rute exclusiv în UE/Schengen (itinerariile Adriatice din Veneția spre Croația și Grecia pot varia) — verifică înainte de rezervare. Recomandat: mergi mereu cu pașaportul, evită surprizele.
 
 ---
 
@@ -6344,7 +6472,7 @@ R: On Crete and Corfu: absolutely yes — without a car you'll miss the best bea
 **Actualizat:** 2026-09-11
 **Traducere a:** [cele-mai-bune-aplicatii-calatorie-2026](https://plecari.com/ro/calatorii/cele-mai-bune-aplicatii-calatorie-2026)
 
-**Descriere:** The best travel apps for European trips in 2026: flights, accommodation, navigation, translation, transport, offline maps, budgeting, and safety — ranked by genuine usefulness, with free vs paid options noted.
+**Descriere:** The best travel apps for European trips in 2026: flights, accommodation, navigation, translation, transport, offline maps, budgeting, and safety — ranked by genuine usefulness, with free vs paid
 
 **Rezumat rapid:** The essential stack for European travel in 2026: Google Maps (offline download) + Rome2rio (multi-modal transport) + Booking.com or Airbnb + Revolut or Wise (no-fee card) + Google Translate (camera mode) + Flightradar24 (tracking). These six apps cover 90% of common travel needs. Everything else is useful in specific situations.
 
@@ -6376,7 +6504,7 @@ R: Yes — Airalo, Holafly, and Ubigi are the three most reliable eSIM providers
 **Actualizat:** 2026-09-11
 **Traducere a:** [booking-vs-airbnb-vs-travelminit](https://plecari.com/ro/cazari/booking-vs-airbnb-vs-travelminit)
 
-**Descriere:** Booking.com vs Airbnb compared honestly for European travel: when each platform saves money, which has better cancellation protection, where hidden fees hurt most, and which to use for cities, mountains, rural stays, and long trips.
+**Descriere:** Booking.com vs Airbnb compared honestly for European travel: when each platform saves money, which has better cancellation protection, where hidden fees hurt most, and which to use for cities
 
 **Rezumat rapid:** Booking.com wins for hotels, last-minute stays, and cities with competitive supply. Airbnb wins for apartments in non-hotel destinations, rural stays, and trips longer than 5 nights where the weekly discount kicks in. The platform that has more supply in your specific destination always wins — check both before booking.
 
@@ -9247,7 +9375,7 @@ R: Three strategies: 1) Travel in shoulder season (May-June, September-October).
 **Actualizat:** 2026-09-11
 **Traducere a:** [pasaport-viza-documente-calatorie-2026](https://plecari.com/ro/calatorii/pasaport-viza-documente-calatorie-2026)
 
-**Descriere:** Travel documents for Europe in 2026: Schengen rules, ETIAS authorization, EES entry system, visa requirements by passport, what to carry, how to handle lost documents, and what's changing in 2026–2027.
+**Descriere:** Travel documents for Europe in 2026: Schengen rules, ETIAS authorization, EES entry system, visa requirements by passport, what to carry, how to handle lost documents, and what's changing in
 
 **Rezumat rapid:** For travel to Europe in 2026: EU/EEA citizens need only a valid national ID card or passport. US, UK, Australian, and Canadian citizens can enter Schengen without a visa for up to 90 days in any 180-day period, but must register via ETIAS (now operational). Non-EU citizens from countries not on the visa-exempt list need a Schengen visa. Always check your specific passport's requirements before travel.
 
@@ -9469,7 +9597,7 @@ R: If you have a driving licence from an EU/EEA country, your regular licence wo
 **Actualizat:** 2026-09-11
 **Traducere a:** [cazare-litoral-romanesc-2027](https://plecari.com/ro/cazari/cazare-litoral-romanesc-2027)
 
-**Descriere:** Romania's Black Sea coast from Mamaia to Vama Veche: accommodation prices in EUR, resort comparisons, all-inclusive options, wild beach alternatives, and how it compares to Bulgaria. A complete guide for international visitors.
+**Descriere:** Romania's Black Sea coast from Mamaia to Vama Veche: accommodation prices in EUR, resort comparisons, all-inclusive options, wild beach alternatives, and how it compares to Bulgaria. A complete
 
 **Rezumat rapid:** Romania's Black Sea coast runs 245 km and has 11 distinct resort areas. Mamaia is the main upscale resort (€40–120/night). Neptun and Saturn offer good value family options (€25–65). Vama Veche is the bohemian southernmost village (€20–50). Prices are 30–40% below the Bulgarian coast at comparable quality, and the beach season runs mid-June to mid-September.
 
@@ -9969,7 +10097,7 @@ R: Yes, very safe. Split is a relaxed city with very low crime. Only concerns: p
 **Actualizat:** 2026-09-11
 **Traducere a:** [turism-sportiv-meci-fotbal-europa](https://plecari.com/ro/calatorii/turism-sportiv-meci-fotbal-europa)
 
-**Descriere:** How to plan a trip to a European football match in 2026: getting tickets for Premier League, La Liga, Serie A, Bundesliga, Ligue 1, and Champions League — plus stadium areas, fan culture, and what to expect at grounds across Europe.
+**Descriere:** How to plan a trip to a European football match in 2026: getting tickets for Premier League, La Liga, Serie A, Bundesliga, Ligue 1, and Champions League — plus stadium areas, fan culture, and what
 
 **Rezumat rapid:** To attend a European football match as a visitor: buy from the official club website (cheapest, but requires registration), try Ticketmaster or licensed resellers for face-value options, or use viagogo/StubHub as a last resort at premium. Book accommodation 6–8 weeks ahead for Premier League matches and Champions League knockout rounds. Buy tickets before travel — stadium-area ticket touts are illegal in the UK and Germany.
 

@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { Link, usePathname } from '@/i18n/navigation';
-import { VERTICALS } from '@/config/verticals';
+import { VERTICALS, verticalNavLabel } from '@/config/verticals';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import Image from 'next/image';
 
@@ -45,7 +45,7 @@ export function Header({ locale }: { locale: string }) {
                     onClick={() => setOpen(false)}
                     prefetch={false}
                   >
-                    {l === 'en' ? v.label.en : v.label.ro}
+                    {verticalNavLabel(v.slug, l)}
                   </Link>
                 </li>
               );

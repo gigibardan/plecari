@@ -2,7 +2,11 @@
 export type Vertical = {
   slug: string;
   featured: boolean;
+  /** Numele complet — titlu de hub, breadcrumb, footer, OG title. */
   label: {ro: string; en: string};
+  /** Opțional: varianta scurtă folosită DOAR în meniul de sus, unde
+   *  spațiul e limitat. Fără el, meniul folosește `label`. */
+  navLabel?: {ro: string; en: string};
   desc: {ro: string; en: string};
   intro: {ro: string; en: string};
   image: string;
@@ -76,6 +80,7 @@ export const VERTICALS: Vertical[] = [
     slug: 'esim-roaming',
     featured: false,
     label: {ro: 'eSIM & Roaming', en: 'eSIM & Roaming'},
+    navLabel: {ro: 'eSIM', en: 'eSIM'},
     desc: {ro: 'Internet în străinătate, ieftin.', en: 'Cheap data abroad.'},
     intro: {ro: 'Internet ieftin în străinătate — compară planuri eSIM pentru orice destinație.', en: 'Cheap data abroad — compare eSIM plans for any destination.'},
     image: '/verticals/esim-roaming.webp',
@@ -161,4 +166,12 @@ export function verticalLabel(slug: string, locale: string): string {
   const v = getVertical(slug);
   if (!v) return slug;
   return locale === 'en' ? v.label.en : v.label.ro;
+}
+
+/** Eticheta pentru meniul de sus — varianta scurtă dacă există. */
+export function verticalNavLabel(slug: string, locale: string): string {
+  const v = getVertical(slug);
+  if (!v) return slug;
+  const l = locale === 'en' ? 'en' : 'ro';
+  return (v.navLabel ?? v.label)[l];
 }

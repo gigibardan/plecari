@@ -20,8 +20,24 @@ type Props = {
   cdLinkId?: string;
 };
 
-export function ArticleBody({ html, tours, locale, cdLinkId }: Props) {
+/**
+ * Elimină un <h1> aflat la începutul corpului articolului.
+ *
+ * Titlul paginii este randat de [slug]/page.tsx din `title`-ul din frontmatter.
+ * Unele articole au, în plus, un `# Titlu` la începutul MDX-ului — rezultau
+ * două H1 pe pagină (rău pentru SEO și vizibil urât). Sursa a fost curățată,
+ * dar păstrăm filtrul ca plasă de siguranță pentru articolele viitoare.
+ *
+ * Atinge DOAR un h1 aflat înaintea oricărui alt conținut; un h1 din mijlocul
+ * articolului rămâne neatins, pentru că acolo e o decizie editorială.
+ */
+function stripLeadingH1(html: string): string {
+  return html.replace(/^\s*<h1\b[^>]*>[\s\S]*?<\/h1>\s*/i, '');
+}
+
+export function ArticleBody({ html: rawHtml, tours, locale, cdLinkId }: Props) {
   const defaultLocale = locale === 'en' ? 'en-US' : 'ro-RO';
+  const html = stripLeadingH1(rawHtml);
 
   if (!tours || tours.length === 0) {
     return (

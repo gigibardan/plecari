@@ -127,6 +127,25 @@ export const VERTICALS: Vertical[] = [
         href: 'https://www.getyourguide.com/?partner_id=EKAA80H&utm_medium=online_publisher'
       }
     ]
+  },
+  {
+    slug: 'calatorii',
+    featured: false,
+    label: {ro: 'Călătorii', en: 'Travel'},
+    desc: {ro: 'Ghiduri tematice: Interrail, târguri de Crăciun, turism fotbalistic.', en: 'Themed guides: Interrail, Christmas markets, football tourism.'},
+    intro: {
+      ro: 'Ghiduri tematice de călătorie — Interrail, târguri de Crăciun, turism fotbalistic, acte și aplicații utile.',
+      en: 'Themed travel guides — Interrail, Christmas markets, football tourism, documents and useful apps.'
+    },
+    image: '/verticals/city-breaks.webp',
+    widget: '',
+    widgetHeight: 200,
+    cta: [
+      {
+        label: 'Caută experiențe pe GetYourGuide',
+        href: 'https://www.getyourguide.com/?partner_id=EKAA80H&utm_medium=online_publisher'
+      }
+    ]
   }
 ];
 

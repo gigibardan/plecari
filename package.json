@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "velite && next dev",
-    "build": "velite && node scripts/generate-llms-full.js && next build",
+    "build": "velite && node scripts/generate-llms.js && next build",
     "start": "next start",
     "lint": "next lint",
-    "build:llms": "node scripts/generate-llms-full.js",
+    "build:llms": "node scripts/generate-llms.js",
     "deploy": "opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare upload",
     "preview": "opennextjs-cloudflare preview",

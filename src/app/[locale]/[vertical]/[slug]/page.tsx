@@ -57,16 +57,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const a = findArticle(locale, vertical, slug);
   if (!a) return {};
 
-  const availableLocales = articles
-    .filter((b) => b.vertical === vertical && b.slug === slug)
-    .map((b) => b.locale);
-
   const ogImage = getOgImage(vertical);
 
   return {
     title: a.title,
     description: a.description,
-    alternates: getArticleAlternates(locale, vertical, slug, availableLocales),
+    alternates: getArticleAlternates(locale, vertical, slug),
     openGraph: {
       title: a.title,
       description: a.description,

@@ -51,3 +51,7 @@ next-env.d.ts
 
 !.dev.vars.example
 .velite
+
+# fișiere llms — generate la build de scripts/generate-llms.js
+/public/llms.txt
+/public/llms-full.txt

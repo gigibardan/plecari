@@ -2,3 +2,15 @@
 # https://opennext.js.org/cloudflare/caching#static-assets-caching
 /_next/static/*
   Cache-Control: public,max-age=31536000,immutable
+
+# Fișierele din /public se serveau cu `max-age=0, must-revalidate` — inclusiv
+# hero.webp (193 KB), imaginea LCP. Numele nu au hash, deci folosim 30 de zile
+# cu revalidare în fundal, nu `immutable`.
+/*.webp
+  Cache-Control: public,max-age=2592000,stale-while-revalidate=86400
+/*.png
+  Cache-Control: public,max-age=2592000,stale-while-revalidate=86400
+/*.svg
+  Cache-Control: public,max-age=2592000,stale-while-revalidate=86400
+/*.ico
+  Cache-Control: public,max-age=2592000,stale-while-revalidate=86400

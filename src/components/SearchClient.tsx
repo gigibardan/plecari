@@ -1,4 +1,8 @@
 'use client';
+
+// Fontul de iconițe se încarcă DOAR pe /search, singurul loc unde se folosesc.
+// Importat din globals.css ar fi fost render-blocking pe tot site-ul (~185 KB).
+import '@tabler/icons-webfont/dist/tabler-icons.min.css';
 // src/components/SearchClient.tsx — v2: Tabler icons, sort, reading time, keyboard nav
 
 import { useCallback, useTransition, useRef, useEffect, useState } from 'react';

@@ -44,6 +44,19 @@ export default defineConfig({
         cdLinkId: s.string().optional(), // NOU: Adăugat pentru widget-ul CruiseDirect
         bookingCity: s.string().optional(),
         translationOf: s.string().optional(), // slug-ul RO corespondent; se pune DOAR în articolele EN
+
+        // Widgeturi Kiwi.com (prin Travelpayouts). URL-urile se construiesc în
+        // src/config/kiwi.ts — aici ținem doar datele, nu link-uri scrise de mână.
+        kiwiWidget: s
+          .object({
+            promoId: s.number().optional(),
+            origin: s.string().optional(),
+            destination: s.string().optional()
+          })
+          .optional(),
+        kiwiWidgetGeneral: s
+          .object({ promoId: s.number().optional() })
+          .optional(),
         
         seoOffer: s
           .object({

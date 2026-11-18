@@ -29,6 +29,7 @@ import { articleSchema, productOfferSchema, touristTripSchema } from '@/lib/sche
 import { TranslationPathSetter } from '@/components/TranslationPathSetter';
 import { getTranslationPath } from '@/lib/metadata';
 import { BookingSearch } from '@/components/BookingSearch';
+import { kiwiRouteUrl, kiwiSearchUrl } from '@/config/kiwi';
 type Props = {
   params: Promise<{ locale: string; vertical: string; slug: string }>;
 };
@@ -92,6 +93,13 @@ export default function ArticlePage({ params }: Props) {
 
   const l = locale === 'en' ? 'en' : 'ro';
   const gygLocaleCode = a.gygLocale ?? (l === 'en' ? 'en-US' : 'ro-RO');
+
+  // Kiwi: bara de rută când articolul are o destinație, altfel motorul general.
+  // kiwiRouteUrl întoarce null pentru rute degenerate (ex. București → București).
+  const kiwiRoute = a.kiwiWidget ? kiwiRouteUrl(a.kiwiWidget, l) : null;
+  const kiwiUrl =
+    kiwiRoute ?? (a.kiwiWidgetGeneral ? kiwiSearchUrl(a.kiwiWidgetGeneral, l) : null);
+  const kiwiHeight = kiwiRoute ? 80 : 400;
 
   return (
     <>
@@ -178,6 +186,22 @@ export default function ArticlePage({ params }: Props) {
             minHeight={a.widgetHeight ?? 200}
           />
         )}
+        {kiwiUrl && (
+          <SearchWidget
+            scriptSrc={kiwiUrl}
+            minHeight={kiwiHeight}
+            title={
+              kiwiRoute
+                ? l === 'en'
+                  ? 'Flight prices for this route'
+                  : 'Prețuri la zbor pentru ruta asta'
+                : l === 'en'
+                  ? 'Search flights'
+                  : 'Caută zboruri'
+            }
+          />
+        )}
+
         {a.bookingCity && (
           <BookingSearch city={a.bookingCity} locale={l} />
         )}
